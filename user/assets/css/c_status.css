@@ -1,0 +1,27 @@
+.c_status {cursor:pointer;width: 18px;height: 18px;border-radius: 50%;background: #0dabb6;position: absolute;top: -1px;z-index: 5;left: 20px;display: block ;line-height: 18px;text-align: center;font-size: 10px;border: 1px solid white;cursor: pointer;box-shadow: 0 1px 1px rgba(0,0,0,0.3) inset;cursor: pointer;}
+.c_s1 {background: #ffdf00;}
+.c_s1::before {content: "?";font-weight: bold;color: #bd8216;font-size: 16px;}
+.c_s2 {background: #9ec965;}
+.c_s2::before {content: "✔";font-size: 16px;/* font-weight: bold; */color: #098089;transform: rotate(10deg);position: relative;display: block;}
+.c_s3 {background: #0dabb6;color: white;}
+.c_s3::before {content: "✔";font-size: 16px;/* font-weight: bold; */color: #ffffff;transform: rotate(10deg);position: relative;display: block;}
+.c_s4 {background: #e73219;color: white;}
+.c_s4::before {content: "!";font-size: 18px;font-weight: bold;color: #ffffff;transform: rotate(10deg);position: relative;display: block;}
+.c_s10 {background: #cfeef0;}
+.c_s10::before {content: "✔";font-size: 16px;/* font-weight: bold; */color: #0dabb6;transform: rotate(10deg);position: relative;display: block;}
+
+div#s_box {position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 999;background: rgba(0,0,0,0.5);}
+div#s_box .s_box_wrapper {position: absolute;top: 50%;width: 160px;background: white;z-index: 99;border-radius: 5px;border: 1px solid black;left: -100px;right: -100px;margin: auto;transform: translateY(-50%);}
+div#s_box .closer {width: 30px;height: 30px;position: absolute;top: -20px;left: -20px;background: #e73219;border-radius: 50%;transform: rotate(45deg);cursor:pointer;}
+div#s_box .closer::before {position: absolute;height: 2px;width: 16px;top: 0;bottom: 0;left: 0;right: 0;margin: auto;background: white;display: block;content: "";}
+div#s_box .closer::after {position: absolute;height: 16px;width: 2px;top: 0;bottom: 0;left: 0;right: 0;margin: auto;background: white;display: block;content: "";}
+div#s_box .line {height: 34px;display: flex;align-items: center;padding: 0 26px 0 0;font-size: 16px;opacity: 0.5;border: 1px transparent solid;cursor:pointer;}
+div#s_box .line.selected {opacity: 1;}
+div#s_box .line:hover {opacity: 0.9;border: 1px black solid;}
+div#s_box .line::before {right: 0px;position: absolute;width: 27px;text-align: center;}
+
+.day_event_line .c_status {left: auto;top: 2px;right: 2px;}
+.create_order .c_status {right: 60px;top: 4px;width: 30px;height: 30px;}
+.create_order .c_status::before {line-height: 30px;}
+.box-order .c_status {left: 0;right: 0;margin: auto;top: 2px;width: 30px;height: 30px;}
+.box-order .c_status::before {line-height: 30px;}

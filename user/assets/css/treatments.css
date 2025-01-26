@@ -1,0 +1,115 @@
+.priceTable table {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        width: 100%;
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+        box-sizing: border-box;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .priceTable table > thead {
+        background: #ffffff;
+        border-bottom: 2px solid #f5f5f5;
+        line-height: 32px;
+        font-weight: bold;
+    }
+
+    .priceTable table > thead > tr > th {
+        text-align: center;
+        border: 2px solid #f5f5f5;
+        line-height: 1;
+        padding: 10px 4px;
+        vertical-align: middle;
+        height:40px;
+    }
+    .priceTable table > thead > tr > th:nth-child(1) {
+
+        text-align: center;
+
+    }
+    .priceTable table > tbody > tr {
+        line-height: 32px;
+        color: #666;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .priceTable table > tbody > tr:nth-child(odd) {
+        background: #F9F9F9;
+    }
+    .priceTable table > tbody > tr > td {
+        border: 1px solid #f5f5f5;
+        padding-right: 10px;
+        vertical-align: middle;
+        height:40px;
+        line-height: 32px;
+    }
+	.priceTable table tbody tr td.inputs{font-size:0}
+    .priceTable table tbody tr td input[type='text'], .priceTable table tbody tr td input[type='number'] {
+        line-height: 32px;
+        height: 32px;
+        background: #f5f5f5;
+        border: 0;
+        border-radius: 3px;
+        box-sizing: border-box;
+        outline: none;
+        font-size: 12px;
+        padding: 0 ;
+        box-shadow: -1px 1px 0 rgb(0 0 0 / 20%);
+        margin: 0 auto;
+        width: 33%;
+        font-family: 'Rubik', sans-serif;
+		text-align:center;
+    }
+    input#submitTreats {
+        position: fixed;
+        left: 23px;
+        bottom: 38px;
+        width: 90px;
+        height: 50px;
+        line-height: 50px;
+        color: #ffffff;
+        font-weight: bold;
+        background: #2FC2EB;
+        font-size: 16px;
+        margin-top: 20px;
+        text-shadow: -1px 1px 0 rgb(0 0 0 / 10%);
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+        cursor: pointer;
+        box-shadow: none;
+        -moz-transition: all 0.25s;
+        -webkit-transition: all 0.25s;
+        transition: all 0.25s;
+        text-align: center;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .labelTo {
+        display: block;
+        vertical-align: middle;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+	.pricetype {
+		display: block;
+		margin-bottom: -10px;
+		margin-top: 10px;
+		font-size: 14px;
+		font-weight: normal;
+	}
+
+	.pricetype span {
+		width: 32%;
+		display: inline-block;
+	}
+
+    /*select{background:0 0;font-size:20px;color:#333;padding:0 10px;box-sizing:border-box}*/
+    @media(max-width:900px){
+        .priceTable table tbody tr td input[type='text'] {width:98%}
+    }
+
+    .timeouts .timeout {
+        display: block;
+        float: right;
+        margin: 5px 26px;
+    }

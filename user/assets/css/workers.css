@@ -1,0 +1,281 @@
+.manageItems table {
+	margin-top: 25px;
+	margin-bottom: 10px;
+	width: 100%;
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	box-sizing: border-box;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.manageItems table > thead {
+	background: #ffffff;
+	border-bottom: 2px solid #f5f5f5;
+	line-height: 32px;
+	font-weight: bold;
+}
+
+.manageItems table > thead > tr > th {
+	text-align: right;
+	border: 2px solid #f5f5f5;
+	line-height: 1;
+	padding: 10px 4px;
+	vertical-align: middle;
+}
+.manageItems table > thead > tr > th:nth-child(1) {
+	width: 5%;
+	text-align: center;
+	padding-right: 0;
+}
+.manageItems table > tbody > tr {
+	line-height: 30px;
+	color: #666;
+	cursor: pointer;
+	font-size: 14px;
+}
+.manageItems table > tbody > tr:nth-child(odd) {
+	background: #F9F9F9;
+}
+.manageItems table > tbody > tr > td {
+	border: 1px solid #f5f5f5;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+
+.addNew {
+	height: 30px;
+	padding: 0 20px;
+	border-radius: 15px;
+	color: white;
+	background: #0dabb6;
+	font-size: 16px;
+	cursor:pointer;
+}
+table#workers {
+	text-align: right;
+}
+
+.editItems form {
+    margin-top: 30px;
+    background: #ffffff;
+    padding: 10px;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.checkall {
+    margin-bottom: 10px;
+    line-height: 30px;
+    padding: 0 10px;
+    border-radius: 15px;
+    background: #EEE;
+    display: inline-block;
+    border: 1px #ccc solid;
+    box-sizing: border-box;
+	cursor:pointer;
+}
+
+.mainSectionWrapper {
+    border: 1px solid #f3f3f3;
+    clear: both;
+    /*overflow: hidden;*/
+    /*height: 50px;*/
+    margin-top: 10px;
+}
+.mainSectionWrapper .sectionName {
+    background: #d8d8d8;
+    line-height: 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-align: right;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 10px;
+}
+.inputLblWrap {
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 200px;
+    margin: 4%;
+}
+.editItems input#submitTreats {
+    position: fixed;
+    left: 23px;
+    bottom: 38px;
+    width: 90px;
+    height: 50px;
+    line-height: 50px;
+    color: #ffffff;
+    font-weight: bold;
+    background: #2FC2EB;
+    font-size: 16px;
+    margin-top: 20px;
+    text-shadow: -1px 1px 0 rgb(0 0 0 / 10%);
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    cursor: pointer;
+    box-shadow: none;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+.inputLblWrap .labelTo {
+    display: block;
+    vertical-align: middle;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.editItems input[type='text'], .editItems input[type='password'], .editItems input.submit, .editItems input[type='submit'], .editItems input[type='number'], .editItems textarea {
+    line-height: 32px;
+    height: 32px;
+    background: #f5f5f5;
+    border: 0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 12px;
+    padding: 0 5px;
+    box-shadow: -1px 1px 0 rgb(0 0 0 / 20%);
+    margin: 0 auto;
+    width: 98%;
+    font-family: 'Rubik', sans-serif;
+}
+
+.frameContent {
+    position: relative;
+	text-align:right;
+}
+.checkIb {
+    display: inline-block;
+    margin: 1%;
+    width: 206px;
+}
+.checkLabel .checkBoxWrap {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid #666;
+    background: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+.checkLabel .checkBoxWrap input[type="checkbox"] {
+    display: none;
+}
+.editItems input[type='checkbox'] {
+    margin: 4px !important;
+}
+.editItems input[type='checkbox'] {
+    -webkit-appearance: checkbox !important;
+}
+input, select, textarea {
+    font-family: 'Rubik', sans-serif;
+    border: 1px solid #ccc;
+}
+.checkLabel .checkBoxWrap label {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.checkLabel .checkBoxWrap label::after {
+    content: '';
+    width: 14px;
+    height: 3px;
+    position: absolute;
+    top: 4px;
+    left: 1px;
+    border: 3px solid #666;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0;
+    -webkit-transform: rotate(
+-45deg
+);
+    transform: rotate(
+-45deg
+);
+}
+.checkLabel > label {
+    font-size: 16px;
+    color: #666;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    cursor: pointer;
+}
+.checkLabel .checkBoxWrap input:checked + label:after {
+        opacity: 1;
+    }
+
+    
+    .pers {text-align:right;color:#777777}
+	
+    .pers .per {margin-top:50px}
+    .pers input[type=radio] {display:none}
+    .pers input[type=radio]+label {font-weight:500;padding-right:40px;box-sizing:border-box;font-size:16px;position:relative;cursor:pointer;margin-bottom:15px;display:block;color:#000}
+    .pers input[type=radio]+label::before {content:'';position:absolute;top:50%;right:0;transform:translateY(-50%);width:30px;height:30px;box-sizing:border-box;background:#FFF;border-radius:30px;border:1px solid #13adb8}
+    .pers input[type=radio]:checked+label::after {content: '';position: absolute;top: 50%;right: 5px;transform: translateY(-50%);width: 20px;height: 20px;box-sizing: border-box;background: #13adb8;border-radius: 30px;}
+    .pers span.amount {display:inline-block;min-width:45px}
+    .pers .btn {display:inline-block;width:113px;background:#0dabb6;height:42px;color:#fff;font-size:14px;text-align:center;box-sizing:border-box;border-radius:4px;cursor:pointer}
+    .pers>div>div>div {margin-bottom: 10px;display: block}
+    .pers>div>div>div input {display:none}
+    .pers>div>div>div.edit input {display:inline-block}
+    .pers span.title {min-width:100px;display:inline-block}
+    .pers .btn>div {display:none;vertical-align:middle;width:113px;height:42px;}
+    .pers .btn.edit>div.edit-label {display:table-cell}
+    .pers .btn.save>div.save-label {display:table-cell}
+    .pers .btn.changed>div.changed-label {display:table-cell}
+    .pers input[type=text] {width:50px;height:42px;line-height:40px;border:1px solid #ccc;box-sizing:border-box;border-radius:4px;padding:0 10px;}
+    .pers .include-cleantime input {display:none}
+    .pers .include-cleantime input+label {padding-right:30px;box-sizing:border-box;display:block;position:relative;cursor:pointer;}
+    .pers .include-cleantime input+label::before {content: '';width: 20px;height: 20px;border: 1px solid #ccc;box-sizing: border-box;background: #fff;position: absolute;top: 50%;right: 0;transform: translateY(-50%);}
+    .pers .include-cleantime input:checked+label::after {content: '';position: absolute;top: 50%;right: 4px;width: 10px;height: 3px;border-bottom: 2px solid #0dabb6;border-left: 2px solid #0dabb6;transform: translateY(-50%) rotate(-45deg);}
+     .pers .btn.changed {background: #e73219;}
+
+    .pers>div>div>div .editable {display:none}
+    .pers>div>div>div.edit .editable {display:inline-block}
+    .pers>div>div>div.edit .visible {display:none}
+
+    .pers>div>div>div.edit input.dtstart {width:90px}
+
+
+     .per-single-percent {text-align:right;color:#777777}
+	
+    .per-single-percent .per {margin-top:50px}
+    .per-single-percent input[type=radio] {display:none}
+    .per-single-percent input[type=radio]+label {font-weight:500;padding-right:40px;box-sizing:border-box;font-size:16px;position:relative;cursor:pointer;margin-bottom:15px;display:block;color:#000}
+    .per-single-percent input[type=radio]+label::before {content:'';position:absolute;top:50%;right:0;transform:translateY(-50%);width:30px;height:30px;box-sizing:border-box;background:#FFF;border-radius:30px;border:1px solid #13adb8}
+    .per-single-percent input[type=radio]:checked+label::after {content: '';position: absolute;top: 50%;right: 5px;transform: translateY(-50%);width: 20px;height: 20px;box-sizing: border-box;background: #13adb8;border-radius: 30px;}
+    .per-single-percent span.amount {display:inline-block;min-width:45px}
+    .per-single-percent .btn {display:inline-block;width:113px;background:#0dabb6;height:42px;color:#fff;font-size:14px;text-align:center;box-sizing:border-box;border-radius:4px;cursor:pointer}
+    .per-single-percent>div>div>div {margin-bottom: 10px;display: block}
+    .per-single-percent>div>div>div input {display:none}
+    .per-single-percent>div>div>div.edit input {display:inline-block}
+    .per-single-percent span.title {min-width:100px;display:inline-block}
+    .per-single-percent input[type=text] {width:50px;height:42px;line-height:40px;border:1px solid #ccc;box-sizing:border-box;border-radius:4px;padding:0 10px;}
+    .per-single-percent .include-cleantime input {display:none}
+    .per-single-percent .include-cleantime input+label {padding-right:30px;box-sizing:border-box;display:block;position:relative;cursor:pointer;}
+    .per-single-percent .include-cleantime input+label::before {content: '';width: 20px;height: 20px;border: 1px solid #ccc;box-sizing: border-box;background: #fff;position: absolute;top: 50%;right: 0;transform: translateY(-50%);}
+    .per-single-percent .include-cleantime input:checked+label::after {content: '';position: absolute;top: 50%;right: 4px;width: 10px;height: 3px;border-bottom: 2px solid #0dabb6;border-left: 2px solid #0dabb6;transform: translateY(-50%) rotate(-45deg);}
+
+
+@media (min-width: 992px) {
+    .pers, .per-single-percent {display:flex;align-items:start;justify-content:space-between;max-width:750px;margin:0 10px;}
+
+.inputLblWrap {
+    margin: 4% 1%;
+    width: auto;
+}
+}

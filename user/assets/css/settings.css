@@ -1,0 +1,8 @@
+.vmiddle{vertical-align:middle}
+.inputLblWrap.vmiddle{margin:5px;display:inline-block;vertical-align:middle}
+.labelText{display:inline-block;line-height:20px;max-width:calc(100% - 120px);margin:7px 10px 7px 0;vertical-align:middle}
+body .pay_order.yaadTrans {max-width: 600px;position: relative;margin: auto;left: 0;right: 0;background: white;padding: 10px;z-index:1;box-sizing:border-box}
+.pay_order.yaadTrans .payments>.item {margin-top: 36px;}
+.pay_order .payments>.item .payTop {margin-top: -20px;position: absolute;background: #0dabb6;color: white;display: block;width: 100%;height: 20px;font-size: 14px;line-height: 20px;padding: 0 10px;box-sizing: border-box;}
+.pay_order .payments>.item .payTop .name {float:right}
+.pay_order .payments>.item .payTop .stats {float:left;font-size:14px}

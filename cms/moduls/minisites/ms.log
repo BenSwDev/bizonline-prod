@@ -1,0 +1,3 @@
+<?xml version="1.0"?><SMS_Service><service>add_sender_text</service><status>seccess - 1</status><description>sender SSD added</description></SMS_Service>
+
+<?xml version="1.0"?><SMS_Service><service>add_sender_text</service><status>Error - 308</status><description>This sender already exists in the system</description></SMS_Service>

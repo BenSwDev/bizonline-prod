@@ -1,0 +1,63 @@
+
+.pers {text-align:right;color:#777777}
+
+.pers .per {margin-top:50px}
+.pers input[type=radio] {display:none}
+.pers input[type=radio]+label {font-weight:500;padding-right:40px;box-sizing:border-box;font-size:16px;position:relative;cursor:pointer;margin-bottom:15px;display:block;color:#000}
+.pers input[type=radio]+label::before {content:'';position:absolute;top:50%;right:0;transform:translateY(-50%);width:30px;height:30px;box-sizing:border-box;background:#FFF;border-radius:30px;border:1px solid #13adb8}
+.pers input[type=radio]:checked+label::after {content: '';position: absolute;top: 50%;right: 5px;transform: translateY(-50%);width: 20px;height: 20px;box-sizing: border-box;background: #13adb8;border-radius: 30px;}
+.pers input[type=checkbox] {display:none}
+.pers input[type=checkbox]+label {font-weight:500;padding-right:40px;box-sizing:border-box;font-size:16px;position:relative;cursor:pointer;margin-bottom:15px;display:block;color:#000}
+.pers input[type=checkbox]+label::before {content:'';position:absolute;top:50%;right:0;transform:translateY(-50%);width:30px;height:30px;box-sizing:border-box;background:#FFF;border-radius:30px;border:1px solid #13adb8}
+.pers input[type=checkbox]:checked+label::after {content: '';position: absolute;top: 50%;right: 5px;transform: translateY(-50%);width: 20px;height: 20px;box-sizing: border-box;background: #13adb8;border-radius: 30px;}
+
+.pers span.amount {display:inline-block; min-width:45px; direction:ltr}
+.pers .btn {display:inline-block;width:113px;background:#0dabb6;height:42px;color:#fff;font-size:14px;text-align:center;box-sizing:border-box;border-radius:4px;cursor:pointer}
+.pers>div>div>div {margin-bottom: 10px;display: block}
+.pers>div>div>div input {display:none}
+.pers>div>div>div.edit input {display:inline-block}
+.pers span.title {min-width:100px;display:inline-block}
+.pers .btn>div {display:none;vertical-align:middle;width:113px;height:42px;}
+.pers .btn.edit>div.edit-label {display:table-cell}
+.pers .btn.save>div.save-label {display:table-cell}
+.pers .btn.changed>div.changed-label {display:table-cell}
+.pers input[type=text] {width:50px;height:42px;line-height:40px;border:1px solid #ccc;box-sizing:border-box;border-radius:4px;padding:0 10px;}
+.pers .include-cleantime input {display:none}
+.pers .include-cleantime input+label {padding-right:30px;box-sizing:border-box;display:block;position:relative;cursor:pointer;}
+.pers .include-cleantime input+label::before {content: '';width: 20px;height: 20px;border: 1px solid #ccc;box-sizing: border-box;background: #fff;position: absolute;top: 50%;right: 0;transform: translateY(-50%);}
+.pers .include-cleantime input:checked+label::after {content: '';position: absolute;top: 50%;right: 4px;width: 10px;height: 3px;border-bottom: 2px solid #0dabb6;border-left: 2px solid #0dabb6;transform: translateY(-50%) rotate(-45deg);}
+.pers .btn.changed {background: #e73219;}
+
+.pers>div>div>div .editable {display:none}
+.pers>div>div>div .visible span {line-height:42px}
+.pers>div>div>div.edit .editable {display:inline-block}
+.pers>div>div>div.edit .editable span {line-height:42px}
+.pers>div>div>div.edit .visible {display:none}
+
+.pers>div>div>div.edit input.dtstart {width:90px}
+
+
+.checks {text-align:right;color:#777777;padding-right:40px;text-align:right;position:relative}
+.checks > .checks{display:none}
+.checks input[type=checkbox]:checked  ~ .checks{display:block}
+.checks input[type=checkbox] {display:none}
+.checks input[type=checkbox]+label {font-weight:500;box-sizing:border-box;font-size:16px;cursor:pointer;margin-bottom:15px;display:block;color:#000}
+.checks input[type=checkbox]+label::before {content:'';position:absolute;top:10px;right:0;transform:translateY(-50%);width:30px;height:30px;box-sizing:border-box;background:#FFF;border-radius:30px;border:1px solid #13adb8}
+.checks input[type=checkbox]:checked+label::after {content: '';position: absolute;top: 10px;right: 5px;transform: translateY(-50%);width: 20px;height: 20px;box-sizing: border-box;background: #13adb8;border-radius: 30px;}
+.checks select{margin-right:-30px;height:30px;border:1px #ccc solid}
+
+
+@media (min-width: 992px) {
+  .pers {display:flex;align-items:start;justify-content:space-between;max-width:750px;margin:0 auto;}
+  .checks {max-width:400px;margin:15px auto 0}
+
+}
+
+   
+.checks.withselect input[type=checkbox] + label{display:inline;}
+.checks.withselect input[type=checkbox] ~ select{display:inline;margin:-5px 0;opacity:0.5;pointer-events:none;}
+.checks.withselect input[type=checkbox]:checked ~ select{opacity:1;pointer-events:all;}						
+#typeCancelMain:not(:checked) ~ .cancelLine {display: none;}
+
+.cancelLine input, .cancelLine select {width: 50px;height: 30px;border: 1px solid;margin:0;color:black;text-align:center}
+			.cancelLine {display: flex;align-items: center;color:black}

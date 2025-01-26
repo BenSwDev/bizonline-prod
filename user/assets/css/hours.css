@@ -1,0 +1,243 @@
+
+    #ui-datepicker-div{z-index:999!important}
+td .delete {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%) scale(0.7);border:2px solid #000;border-radius:30px;cursor:pointer;
+}
+td .edit {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    max-width: 20px;
+    cursor: pointer;
+}
+
+td .edit svg {
+    width: 100%;
+    height: auto;
+    fill: #0dabb6;
+}
+
+.priceTable table > tbody > tr > td:first-child {
+    text-align: right;
+}
+
+
+    .priceTable table {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        width: 100%;
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+    .priceTable table > thead {
+        background: #ffffff;
+        border-bottom: 2px solid #f5f5f5;
+        line-height: 32px;
+        font-weight: bold;
+    }
+
+    .priceTable table > thead > tr > th {
+        text-align: center;
+        border: 2px solid #f5f5f5;
+        line-height: 1;
+        padding: 10px 4px;
+        vertical-align: middle;
+        height:40px;
+    }
+    .priceTable table > thead > tr > th:nth-child(1) {
+
+        text-align: center;
+
+    }
+    .priceTable table > tbody > tr {
+        line-height: 32px;
+        color: #666;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .priceTable table > tbody > tr:nth-child(odd) {
+        background: #F9F9F9;
+    }
+    .priceTable table > tbody > tr > td {position:relative;
+        border: 1px solid #f5f5f5;
+        padding-right: 10px;
+        vertical-align: middle;
+        height:40px;
+        line-height: 1;
+    }
+    .priceTable table tbody tr td input[type='text'], .priceTable table tbody tr td input[type='number'],.priceTable table tbody tr td input[type='tel'],.priceTable table tbody tr td select {
+        line-height: 32px;
+        height: 32px;
+        background: #f5f5f5;
+        border: 0;
+        border-radius: 3px;
+        box-sizing: border-box;
+        outline: none;
+        font-size: 12px;
+        padding: 0 5px;
+        box-shadow: -1px 1px 0 rgb(0 0 0 / 20%);
+        margin: 0 auto;
+        width: 32%;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .priceTable table tbody tr td textarea {
+        width:200px;
+        height:45px
+    }
+
+    input#submitTreats {
+        position: fixed;
+        left: 23px;
+        bottom: 38px;
+        width: 90px;
+        height: 50px;
+        line-height: 50px;
+        color: #ffffff;
+        font-weight: bold;
+        background: #2FC2EB;
+        font-size: 16px;
+        margin-top: 20px;
+        text-shadow: -1px 1px 0 rgb(0 0 0 / 10%);
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+        cursor: pointer;
+        box-shadow: none;
+        -moz-transition: all 0.25s;
+        -webkit-transition: all 0.25s;
+        transition: all 0.25s;
+        text-align: center;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .labelTo {
+        display: block;
+        vertical-align: middle;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+	.pricetype {
+		display: block;
+		margin-bottom: -10px;
+		margin-top: 10px;
+		font-size: 14px;
+		font-weight: normal;
+	}
+
+    .shekel {padding-right:5px;line-height:32px}
+
+	.pricetype span {
+		width: 32%;
+		display: inline-block;
+	}
+
+    .holidays td {line-height:1}
+    td input[type=checkbox] {display:none}
+    td input[type=checkbox]+label {position:relative;padding-right:30px;box-sizing:border-box;color:#999999;font-size:14px;cursor:pointer}
+    td input[type=checkbox]+label::before {content:'';position:absolute;top:50%;right:0;transform:translateY(-50%);width:20px;height:20px;border:1px solid #999999;box-sizing:border-box;;background:#fff}
+    td input[type=checkbox]:checked+label::after {content: '';position: absolute;top: 50%;right: 4px;width: 10px;height: 3px;border-bottom: 2px solid #0dabb6;border-left: 2px solid #0dabb6;transform: translateY(-50%) rotate(-45deg);}
+    td input[type=checkbox]:checked+label {color:#0dabb6}
+
+    .addholiday {display:block;max-width:160px;line-height:40px;height:40px;border-radius:8px;margin:0 auto;color:#fff;font-size:16px;background:#0dabb6;cursor:pointer}
+
+
+tr .only-active {display:none}
+tr.active .only-active {display:block}
+tr.active span.only-active{display:inline}
+    .priceTable table > tbody > tr > td .active {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+}
+
+tr .closethis {
+    line-height: 32px;
+	float:right;
+}
+
+tr .closethis span {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background: white;
+    border: 1px black solid;
+    box-sizing: border-box;
+    margin-top: 3px;
+    position: relative;
+}
+
+tr .closethis.checked span {
+    background: #0dabb6;
+}
+
+tr .closethis.checked ~ span{display:none}
+
+tr .closethis.checked span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    width: 10px;
+    height: 3px;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+td .active input[type=checkbox]:checked+label::before {
+    background: #0dabb6;border-color:#000;transition:all .2s ease;
+}
+
+td .active  input[type=checkbox]:checked+label::after {
+    border-color: #FFF;
+}
+.default {
+    display: inline-block;
+}
+
+td .default input[type=checkbox]+label {
+    max-width: 70px;
+    display: inline-block;
+    padding-right: 25px;
+}
+.holiday_pop .inputWrap.half{max-width:48%;margin:0 1% 10px 1%}
+    /*select{background:0 0;font-size:20px;color:#333;padding:0 10px;box-sizing:border-box}*/
+    @media(max-width:900px){
+        .priceTable table tbody tr td input[type='text'] {width:98%}
+.holiday_pop .inputWrap.half{max-width:100%}
+    }
+.lock-td{position:relative;pointer-events:none;}
+.lock-td::after{position:absolute;left:0;right:0;top:0;bottom:0;z-index:8}
+
+
+.priceTable table > tbody > tr > td:nth-last-child(-n + 2) {
+    white-space: nowrap;
+}
+.priceTable table tbody tr td .default+input[type='text'], .priceTable table tbody tr td .default+input[type='text']+input[type='text'] {width:50px}
+.holiday_pop{z-index:99;display:block;position:fixed;top:0;right:0;left:0;bottom:0;width:100%;height:100%;background:rgba(0,0,0,.6)}
+.holiday_pop .container{position:absolute;top:50%;right:50%;transform:translateY(-50%) translate(50%);width:calc(100% - 10px);max-width:650px;height:100%;max-height:calc(100vh - 60px);background:#f5f5f5;border-radius:8px;overflow:auto}
+.holiday_pop .container .close{position:absolute;top:14px;left:14px;cursor:pointer;z-index:2}
+.holiday_pop .container .close svg{fill:#aaa;width:17px;height:17px}
+.holiday_pop .container>.title{display:block;font-weight:500;color:#333;font-size:30px;text-align:center;padding:12px 0 13px;background:#fff;box-shadow:0 0 10px rgba(0,0,0,.5);z-index:1;position:relative}
+.holiday_pop .container>.title .domain-icon {width: 40px;height: 40px;top: 10px;right: 10px;}
+.holiday_pop .form{display:block;padding:20px;box-sizing:border-box;font-size:0;overflow:auto;position:absolute;left:0;right:0;top:60px;bottom:0;height:auto}
+.holiday_pop .inputWrap svg{position:absolute;top:50%;left:10px;transform:translateY(-50%);fill:#0dabb6}
+.holiday_pop .inputWrap{border-radius:3px;font-size:14px;filter:drop-shadow(0 1px 1px rgba(2, 3, 3, .1));position:relative;height:auto;min-height:60px;background-color:#fff;border:1px solid #eee;display:inline-block;width:100%;max-width:98%;margin:0 1% 10px 1%;box-sizing:border-box}
+.holiday_pop .inputWrap.date.four{max-width:58%}
+.holiday_pop .inputWrap.date.time.four{max-width:38%}
+.holiday_pop .inputWrap>label{position:absolute;top:3px;transform:none;right:5px;font-size:14px;color:#0dabb6;font-weight:500;line-height:1;transition:all .2s ease}
+.holiday_pop .inputWrap.signature>label{font-size:20px}
+.holiday_pop .inputWrap>input.empty:not(:focus)+label{font-size:20px;font-weight:400;top:50%;transform:translateY(-50%);padding-right:10px;opacity:.5}
+.holiday_pop .inputWrap>input{font-size:20px;position:absolute;top:0;right:0;left:0;bottom:0;width:100%;height:100%;background:0 0;padding:0 10px;box-sizing:border-box;z-index:2;color:#333}
+.holiday_pop .inputWrap>textarea{color:#000;font-size:20px;width:100%;height:100%;background:0 0;padding:20px 10px 10px;box-sizing:border-box;-webkit-transform:translateZ(0);-webkit-overflow-scrolling:touch}
+.holiday_pop .inputWrap.submit{background:#e73219;color:#fff;text-align:center;font-size:30px;font-weight:500;cursor:pointer;border-radius:3px}
+
+@media(min-width:992px){
+	body:not(.menu-closed) .holiday_pop{right:300px;width:auto}	
+}

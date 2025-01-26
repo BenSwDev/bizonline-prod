@@ -1,0 +1,42 @@
+
+[25-Jan-2025 09:04:17 Asia/Jerusalem] PHP Deprecated:  implode(): Passing glue string after array is deprecated. Swap the parameters in /home/biz2cssd/public_html/user/pages/orders.php on line 142
+[25-Jan-2025 10:38:14 Asia/Jerusalem] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/biz2cssd/public_html/user/pages/clients.php on line 275
+[25-Jan-2025 10:38:14 Asia/Jerusalem] PHP Warning:  file_get_contents(https://www.spaplus.co.il/bizapi/index.php?key=Kew0Rd!Kew0Rd!Kew0Rd!&amp;action=225&amp;siteID=437): failed to open stream: no suitable wrapper could be found in /home/biz2cssd/public_html/user/pages/clients.php on line 275
+[25-Jan-2025 11:49:46 Asia/Jerusalem] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/biz2cssd/public_html/user/pages/clients.php on line 275
+[25-Jan-2025 11:49:46 Asia/Jerusalem] PHP Warning:  file_get_contents(https://www.spaplus.co.il/bizapi/index.php?key=Kew0Rd!Kew0Rd!Kew0Rd!&amp;action=225&amp;siteID=239): failed to open stream: no suitable wrapper could be found in /home/biz2cssd/public_html/user/pages/clients.php on line 275
+[25-Jan-2025 12:25:43 Asia/Jerusalem] PHP Warning:  Invalid argument supplied for foreach() in /home/biz2cssd/public_html/user/ajax_orderFrom.php on line 289
+[25-Jan-2025 12:28:01 Asia/Jerusalem] PHP Warning:  Invalid argument supplied for foreach() in /home/biz2cssd/public_html/user/ajax_orderFrom.php on line 289
+[25-Jan-2025 12:31:28 Asia/Jerusalem] PHP Fatal error:  Uncaught Exception: Access denied to order # in /home/biz2cssd/public_html/user/ajax_spaFrom.php:67
+Stack trace:
+#0 {main}
+  thrown in /home/biz2cssd/public_html/user/ajax_spaFrom.php on line 67
+[25-Jan-2025 12:31:39 Asia/Jerusalem] PHP Fatal error:  Uncaught Exception: Access denied to order # in /home/biz2cssd/public_html/user/ajax_spaFrom.php:67
+Stack trace:
+#0 {main}
+  thrown in /home/biz2cssd/public_html/user/ajax_spaFrom.php on line 67
+[25-Jan-2025 12:31:47 Asia/Jerusalem] PHP Fatal error:  Uncaught Exception: Access denied to order # in /home/biz2cssd/public_html/user/ajax_spaFrom.php:67
+Stack trace:
+#0 {main}
+  thrown in /home/biz2cssd/public_html/user/ajax_spaFrom.php on line 67
+[25-Jan-2025 12:31:47 Asia/Jerusalem] PHP Fatal error:  Uncaught Exception: Access denied to order # in /home/biz2cssd/public_html/user/ajax_spaFrom.php:67
+Stack trace:
+#0 {main}
+  thrown in /home/biz2cssd/public_html/user/ajax_spaFrom.php on line 67
+[25-Jan-2025 13:22:40 Asia/Jerusalem] PHP Warning:  Invalid argument supplied for foreach() in /home/biz2cssd/public_html/user/ajax_orderFrom.php on line 289
+[25-Jan-2025 16:05:13 Asia/Jerusalem] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/biz2cssd/public_html/user/pages/clients.php on line 275
+[25-Jan-2025 16:05:13 Asia/Jerusalem] PHP Warning:  file_get_contents(https://www.spaplus.co.il/bizapi/index.php?key=Kew0Rd!Kew0Rd!Kew0Rd!&amp;action=225&amp;siteID=108): failed to open stream: no suitable wrapper could be found in /home/biz2cssd/public_html/user/pages/clients.php on line 275
+[25-Jan-2025 16:05:31 Asia/Jerusalem] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/biz2cssd/public_html/user/pages/clients.php on line 275
+[25-Jan-2025 16:05:31 Asia/Jerusalem] PHP Warning:  file_get_contents(https://www.spaplus.co.il/bizapi/index.php?key=Kew0Rd!Kew0Rd!Kew0Rd!&amp;action=225&amp;siteID=108): failed to open stream: no suitable wrapper could be found in /home/biz2cssd/public_html/user/pages/clients.php on line 275
+[25-Jan-2025 16:07:04 Asia/Jerusalem] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/biz2cssd/public_html/user/pages/clients.php on line 275
+[25-Jan-2025 16:07:04 Asia/Jerusalem] PHP Warning:  file_get_contents(https://www.spaplus.co.il/bizapi/index.php?key=Kew0Rd!Kew0Rd!Kew0Rd!&amp;action=225&amp;siteID=108): failed to open stream: no suitable wrapper could be found in /home/biz2cssd/public_html/user/pages/clients.php on line 275
+[25-Jan-2025 16:07:19 Asia/Jerusalem] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/biz2cssd/public_html/user/pages/clients.php on line 275
+[25-Jan-2025 16:07:19 Asia/Jerusalem] PHP Warning:  file_get_contents(https://www.spaplus.co.il/bizapi/index.php?key=Kew0Rd!Kew0Rd!Kew0Rd!&amp;action=225&amp;siteID=108): failed to open stream: no suitable wrapper could be found in /home/biz2cssd/public_html/user/pages/clients.php on line 275
+[25-Jan-2025 16:31:29 Asia/Jerusalem] PHP Warning:  Invalid argument supplied for foreach() in /home/biz2cssd/public_html/user/ajax_orderFrom.php on line 289
+[25-Jan-2025 19:19:53 Asia/Jerusalem] PHP Warning:  Invalid argument supplied for foreach() in /home/biz2cssd/public_html/user/ajax_orderFrom.php on line 289
+[25-Jan-2025 19:27:02 Asia/Jerusalem] PHP Warning:  Invalid argument supplied for foreach() in /home/biz2cssd/public_html/user/ajax_orderFrom.php on line 289
+[25-Jan-2025 20:24:33 Asia/Jerusalem] PHP Warning:  Invalid argument supplied for foreach() in /home/biz2cssd/public_html/user/ajax_orderFrom.php on line 289
+[25-Jan-2025 21:05:25 Asia/Jerusalem] PHP Warning:  Invalid argument supplied for foreach() in /home/biz2cssd/public_html/user/ajax_orderFrom.php on line 289
+[25-Jan-2025 21:44:18 Asia/Jerusalem] PHP Warning:  Invalid argument supplied for foreach() in /home/biz2cssd/public_html/user/ajax_orderFrom.php on line 289
+[25-Jan-2025 21:44:35 Asia/Jerusalem] PHP Warning:  Invalid argument supplied for foreach() in /home/biz2cssd/public_html/user/ajax_orderFrom.php on line 289
+[25-Jan-2025 21:44:55 Asia/Jerusalem] PHP Warning:  Invalid argument supplied for foreach() in /home/biz2cssd/public_html/user/ajax_orderFrom.php on line 289
+[25-Jan-2025 21:45:27 Asia/Jerusalem] PHP Warning:  Invalid argument supplied for foreach() in /home/biz2cssd/public_html/user/ajax_orderFrom.php on line 289

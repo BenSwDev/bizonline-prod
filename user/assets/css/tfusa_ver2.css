@@ -1,0 +1,118 @@
+.month-select {font-size: 12px;line-height: 1;height: 40px;border-color: #0dabb6; width: 40%;max-width: 200px;min-width: 60px;border-radius: 5px;background: white;display: inline-block;}
+.month-select #monthselect{height:40px;}
+.tfusa .top-buttons>a {height: 40px;width: 27%;}
+
+.r-side .top{position: relative;top:0;z-index: 16;}
+.tfusa .days-table{max-height: calc(100vh - 186px);overflow:auto;}
+.tfusa:not(.flipped) .days-table .l-side #days{position: relative;top:0;z-index:10;}
+#monthselect{width:100%;height:50px;margin:-1px 0;position:absolute;opacity:0;font-size:18px;top:0;right:0}
+
+
+.tfusa:not(.flipped)  .days-table .r-side{ top:auto !important; }
+
+.tfusa.month .days-table .rooms .row {height: 16px;padding: 1px;}
+.tfusa.month .days-table .r-side{display:none}
+.tfusa.month .days-table .l-side{width:100%;margin:0}
+.tfusa.month .days-table .l-side .rooms .row .order{height:14px;overflow:hidden;margin:0}
+.tfusa.month .days-table .l-side .rooms .row::before{height:14px;width:14px;line-height:14px;font-size:10px;content:attr(data-num);color:#bbb}
+.tfusa.month .days-table .l-side .rooms .row.busy::before{color:white}
+.tfusa.month .days-table .l-side .day { width: calc(100% / 7); border: 1px transparent solid; border-top-color: #b0c7c9; border-left-color: #b0c7c9;box-sizing:border-box }
+.tfusa.month .days-table .l-side .days{overflow:hidden}
+.tfusa.month .days-table .l-side .rooms .row{border:0}
+.tfusa.month .days-table .l-side .daydate{background:white}
+.tfusa.month .days-table .l-side .daydate > div {font-size: 16px;width: 30px;font-weight: bold;display: inline-block;height: 30px;line-height: 30px;}
+.tfusa.month .days-table .l-side .daydate span {font-size: 10px;line-height: 1;width: calc(100% - 30px);font-weight: normal;display: inline-block;text-align: right;height: 30px;vertical-align: middle;white-space: initial;}
+.tfusa.month .days-table .l-side .daydate span div {display: table-cell;vertical-align: middle;height: 30px;}
+.tfusa.month .days-table .l-side .top .row .day-name {padding: 10px 0;}
+.tfusa.month .days-table .l-side .top .row {height: 50px;}
+.tfusa.month .days-table .l-side .rooms .row .order *:not(.show) {display: none !important;}
+.tfusa.month .days-table .l-side .rooms .row .order::after {display: none !important;}
+.tfusa.month .days-table .l-side .rooms .row .order .roomNum { position: absolute; top: 0; font-size: 10px; line-height: 14px; right: 0; width: 16px; text-align: center; }
+.tfusa.month .days-table .l-side .rooms .row .order .roomName { position: relative; margin: -4px; line-height: 14px; font-size: 8px; text-align: right; padding-right: 14px; color: rgba(255,255,255,0.8); }
+
+.tfusa .settings {height: 40px;display: flex;box-sizing: border-box;max-width: 233px;border-radius: 10px;padding: 0;margin-bottom: 10px;margin-right: 4px;margin-left: 4px;}
+.tfusa .view-set {height: 40px;display: flex;box-sizing: border-box;width: 32%;max-width: 160px;background: white;border-radius: 10px;padding: 0;border: 1px #0dabb6 solid;left: 4px;bottom: 0px;font-size: 12px;line-height: 1;align-items: center;overflow: hidden;text-align: center;margin-left: 10px;justify-content: center;cursor: pointer;}
+.tfusa.flipped .view-set {background: #0dabb6;color: white;}
+
+.tfusa .time-set {height: 40px;display: flex;box-sizing: border-box;width: 62%;max-width: 160px;background: white;border-radius: 10px;padding: 0;border: 1px #0dabb6 solid;left: 4px;bottom: 0px;font-size: 12px;line-height: 1;align-items: center;overflow: hidden;}
+.tfusa .time-set div{display: flex;height: 42px;vertical-align: middle;box-sizing: border-box;margin: 0;text-decoration: none;color: #0dabb6;position: relative;border: 0;align-items: center;padding: 0 4px;text-align: center;width:50%;justify-content: center;cursor: pointer;}
+.tfusa .time-set div:first-child {background: #0dabb6;color: white;}
+.tfusa.wide .days-table .l-side .day {width: 160px;}
+.tfusa.wide .time-set div:first-child {background: white;color: #0dabb6;}
+.tfusa.wide .time-set div:nth-child(2) {background: #0dabb6;color: white;}
+
+.calendar-top {display: inline-block;width: calc(100% - 180px);max-width: 400px;float:right}
+.calendar-top.cleft {width: 170px;float: left;margin-left: 5px;}
+.tfusa .top-buttons {padding: 0;margin: 0px 4px 10px;}
+#showSelect {width: 100%;margin-top: 10px;display: flex;line-height: 1;text-align: right;align-items: center;overflow: hidden;}
+#monthview {position: relative;top: auto;width: 100%;left: 0;margin-top: 0;}
+
+.tfusa .days-table .l-side .rooms .row .order.all-day {max-width: none;width: 100%;}
+
+.tfusa .days-table .l-side .day{transition:0.2s all}
+
+.atfusa.flipped .view-set {background: #0dabb6;color: white;}
+
+.tfusa:not(.flipped).flipped .days-table .r-side {top:0 !important}
+
+
+.tfusa.flipped .days-table .r-side {white-space: nowrap;min-width: 100%;display: flex;position: absolute;top: 0px;right: 0;z-index: 99;width: auto;}
+.tfusa.flipped .r-side .top {width: 100px;display: inline-block;white-space: initial;right: 0;top:auto !important}
+.tfusa.flipped .r-side .rooms {white-space: nowrap;display: inline-block;font-size:0}
+.tfusa.flipped .days-table .r-side .rooms .row {display: inline-block;width: 100px;white-space: initial;}
+.tfusa.flipped .days-table .l-side {margin: 0;max-width: none;white-space: initial;padding-right: 100px;position: relative;overflow:visible;min-width: calc(100% - 100px);margin-top: 100px;width: auto;}
+.tfusa.flipped .days-table .l-side #days {width: 100px;position: absolute;top: 0 !important;display: inline-block;right: 0;z-index: 9;}
+
+.tfusa.flipped .days-table {overflow: auto;background: white;}
+.tfusa.flipped .days-table .l-side #days .day {display: block;width: 100px;}
+.tfusa.flipped .days-table .l-side .day {width: auto;white-space: nowrap;display:block;}
+.tfusa.flipped .days-table.daily-view .l-side .rooms .row {display: inline-block;background: repeating-linear-gradient(0deg,#DDD 0px, #DDD 1px,transparent 1px, transparent 16.6%);}
+.tfusa.flipped .days-table .top .row.month .buttons {display: none;}
+.tfusa.flipped .days-table .top .row {width: 100px;}
+
+.tfusa.flipped .days-table.daily-view .l-side .top .row .day-date::after {transform: translateY(50px);position: absolute;left: 0;right: 0;}
+.tfusa.flipped .days-table .l-side .top .row .day-date::before {border-left: 0;width: 100%;left: 0;right: 0;border-top: 1px #ccc solid;bottom: auto;top: 56px;}
+.tfusa.flipped .days-table .l-side .rooms .row .order .cleanbreak {top:auto;right:0}
+
+.tfusa.flipped .day .row{transition:0.2s all}
+.tfusa.wide.flipped .days-table .l-side .day .row, .tfusa.wide.flipped .days-table .r-side .day .row {height: 200px;}
+.tfusa.flipped.wide .days-table .l-side .top .row .day-date::before {top: 106px;}
+.tfusa.flipped.wide .days-table .l-side .top .row .day-date::after {transform: translateY(100px);}
+
+.tfusa.wide.flipped .days-table.weekly .l-side .day .row, .tfusa.wide.flipped .days-table.weekly .r-side .day .row {height: 800px;}
+.tfusa.flipped .days-table.weekly .l-side .day .row, .tfusa.flipped .days-table.weekly .r-side .day .row {height: 400px;}
+
+
+
+.tfusa.flipped .days-table .l-side .top .row .day-name{position:relative;z-index:1;background:#fcf2e2}
+.tfusa.flipped .days-table .l-side .top .row .day-date{position:relative;z-index:2}
+.tfusa.wide.flipped .days-table.weekly .l-side .row::after {line-height: calc(800px / 25);margin-top: calc(800px / 50);}
+.tfusa.flipped .days-table.weekly .l-side .row::after {content: "01:00\A 02:00\A 03:00\A 04:00\A 05:00\A 06:00\A 07:00\A 08:00\A 09:00\A 10:00\A 11:00\A 12:00\A 01:00\A 13:00\A 14:00\A 15:00\A 16:00\A 17:00\A 18:00\A 19:00\A 20:00\A 21:00\A 22:00\A 23:00";white-space: pre;position: absolute;font-size: 12px;color: rgb(0 0 0 /30%);width: 100%;text-align: center;line-height: calc(400px / 25);margin-top: calc(400px / 50);top: 0;right: 0;}
+.tfusa.flipped .days-table.weekly .l-side .row {background: repeating-linear-gradient(0deg,#DDD 0px, #DDD 1px,#fcf2e2 1px, #fcf2e2 calc(100% / 25));}
+.tfusa.flipped .days-table.weekly .l-side .rooms .row {background: repeating-linear-gradient(0deg,#DDD 0px, #DDD 1px,transparent 1px, transparent calc(100% / 25));}
+
+.tfusa.flipped .days-table .l-side .day .rooms {display: inline-flex;min-width: 100%;position:relative}
+.tfusa.flipped .days-table .l-side .rooms .row {min-width: 100px;width: 50%;}
+.tfusa.flipped .r-side .rooms {display: flex;min-width: calc(100% - 100px);box-sizing: border-box;}
+.tfusa.flipped .days-table .r-side .rooms .row {min-width: 100px;width: 50%;}
+.tfusa.flipped .days-table .l-side .rooms .row .shift{margin-top:0}
+.tfusa.flipped .days-table .l-side .rooms .row .order{margin:0 10px;width:calc(100% - 20px) !important}
+
+
+
+.tfusa .days-table.daily-view .l-side .rooms .row::before{display:none}
+
+.tfusa .days-table.daily-view .l-side .top .row .day-date::after {content: "30";position: absolute;left: -1px;transform: translateX(-50%);font-size: 10px;line-height: 14px;font-weight: normal;}
+.tfusa .days-table.daily-view .l-side .top .row .day-date {transform: translateX(50%);text-shadow: 1px 1px 0px #fcf2e2, 1px -1px 0px #fcf2e2, 0px -1px 1px #fcf2e2, -1px -1px 0px #fcf2e2;font-weight: bold;}
+.tfusa.flipped .days-table .l-side .top .row .day-date {transform: translateY(-53px);}
+
+@media(min-width:992px){
+   .month-select {height: 50px;font-size: 14px;width: 40% !important;}
+   .month-select #monthselect{height:50px}
+   .tfusa .top-buttons>a{height: 50px;max-width: 100px;}
+   .tfusa.month .days-table .l-side .rooms .row .order .roomName{font-size:12px;line-height:12px}
+}
+
+
+.tfusa .days-table.fix_bug .l-side .day{position:initial}
+

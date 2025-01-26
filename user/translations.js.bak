@@ -1,0 +1,732 @@
+let translations = {};
+
+// Define RTL languages
+const rtlLanguages = ['he', 'ar', 'fa', 'ur']; // Add other RTL language codes as needed
+
+// Fetch translations.json and assign it to the translations variable
+fetch('translations.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        translations = data;
+
+        // Apply translation based on the current language setting
+        const languagePicker = document.getElementById('language-picker');
+        const currentLang = languagePicker ? languagePicker.value : 'he';
+        if (currentLang !== 'he') {
+            translatePage(currentLang);
+            // No need to call translateWordsInContainer separately
+        }
+
+        // Hide the preloader after translation is complete
+        const holder = document.querySelector('.holder');
+        if (holder) {
+            holder.style.display = 'none';
+        }
+    })
+    .catch(error => {
+        console.error('Error loading translations:', error);
+        // Optionally hide the preloader even if there's an error
+        const holder = document.querySelector('.holder');
+        if (holder) {
+            holder.style.display = 'none';
+        }
+    });
+
+
+/**
+ * Sets the text direction of the document based on the selected language.
+ * @param {string} lang - The target language code.
+ */
+function setDirection(lang) {
+    if (rtlLanguages.includes(lang)) {
+        document.documentElement.setAttribute('dir', 'rtl');
+    } else {
+        document.documentElement.setAttribute('dir', 'ltr');
+    }
+}
+
+/**
+ * Translates a text string, including cases where the string contains numbers.
+ * @param {string} text - The original text to translate.
+ * @param {string} lang - The target language code.
+ * @returns {string} - The translated text with numbers preserved.
+ */
+function translateTextWithNumbers(text, lang) {
+    // Regular expression to match numbers within a string
+    const numberRegex = /\d+/g;
+    const numbers = text.match(numberRegex); // Extract numbers
+    const nonNumberParts = text.split(numberRegex); // Split text into non-numeric parts
+
+    // Translate non-numeric parts
+    const translatedParts = nonNumberParts.map(part => translations[lang][part.trim()] || part);
+
+    // Reassemble the text with numbers
+    let translatedText = '';
+    translatedParts.forEach((part, index) => {
+        translatedText += part;
+        if (numbers && numbers[index]) {
+            translatedText += numbers[index];
+        }
+    });
+
+    return translatedText.trim();
+}
+
+/**
+ * Translates text nodes and attributes within a single element.
+ * @param {HTMLElement} element - The DOM element to translate.
+ * @param {string} lang - The target language code.
+ */
+function translateElement(element, lang) {
+    // Translate text nodes
+    const textNodes = Array.from(element.childNodes).filter(node => node.nodeType === Node.TEXT_NODE);
+    textNodes.forEach(node => {
+        const trimmedText = node.textContent.trim();
+        if (trimmedText.length === 0) return; // Skip empty text nodes
+        const translatedText = translateTextWithNumbers(trimmedText, lang); // Use the new function
+
+        if (translatedText) {
+            node.textContent = translatedText;
+        }
+    });
+
+    // Translate attributes
+    translateAttributes(element, lang);
+
+    // Translate additional attributes like 'alt' and 'data-*'
+    translateAdditionalAttributes(element, lang);
+
+    // Translate <option> elements within <select>
+    translateSelectOptions(element, lang);
+
+    // Translate pseudo-elements
+    translatePseudoElement(element, lang, '::after');
+    translatePseudoElement(element, lang, '::before');
+
+    // If the element is an SVG, translate its text
+    if (element instanceof SVGElement) {
+        translateSVGText(element, lang);
+    }
+
+    // Translate specific elements with classes or data attributes
+    translateSpecificElements(element, lang);
+
+    // Translate <textarea> placeholders
+    translateTextareaPlaceholders(element, lang);
+
+    // Translate tooltips and other attributes
+    translateTooltips(element, lang);
+
+    // Translate inline event handlers
+    translateInlineEventHandlers(element, lang);
+
+    // Optionally, translate HTML comments
+    translateHTMLComments(element, lang); // Uncomment if necessary
+}
+
+/**
+ * Translates attributes like placeholder, title, aria-label, and value.
+ * @param {HTMLElement} element - The DOM element to check.
+ * @param {string} lang - The target language code.
+ */
+function translateAttributes(element, lang) {
+    // List of attributes to translate
+    const attributes = ['placeholder', 'title', 'aria-label', 'value'];
+
+    attributes.forEach(attr => {
+        if (element.hasAttribute(attr)) {
+            const originalText = element.getAttribute(attr).trim();
+            const translatedText = translateTextWithNumbers(originalText, lang); // Use the new function
+
+            if (translatedText) {
+                // For 'value' attributes on input elements, set the property instead of the attribute
+                if (attr === 'value' && (element.tagName === 'INPUT' || element.tagName === 'BUTTON' || element.tagName === 'SELECT')) {
+                    element.value = translatedText;
+                } else {
+                    element.setAttribute(attr, translatedText);
+                }
+            }
+        }
+    });
+}
+
+/**
+ * Translates additional attributes like 'alt' and all 'data-*' attributes (excluding specific ones).
+ * @param {HTMLElement} element - The DOM element to check.
+ * @param {string} lang - The target language code.
+ */
+function translateAdditionalAttributes(element, lang) {
+    // Translate 'alt' attribute for images
+    if (element.hasAttribute('alt')) {
+        const originalAlt = element.getAttribute('alt').trim();
+        const translatedAlt = translations[lang][originalAlt] || null;
+
+        if (translatedAlt) {
+            element.setAttribute('alt', translatedAlt);
+        }
+    }
+
+    // Translate all 'data-*' attributes except specific ones
+    Array.from(element.attributes).forEach(attr => {
+        if (attr.name.startsWith('data-') && !['data-phone', 'data-sms', 'data-mail'].includes(attr.name)) {
+            const originalData = attr.value.trim();
+            const translatedData = translations[lang][originalData] || null;
+
+            if (translatedData) {
+                element.setAttribute(attr.name, translatedData);
+            }
+        }
+    });
+}
+
+/**
+ * Translates <option> elements within <select> inputs.
+ * @param {HTMLElement} element - The DOM element to check.
+ * @param {string} lang - The target language code.
+ */
+function translateSelectOptions(element, lang) {
+    if (element.tagName.toLowerCase() === 'select') {
+        const options = element.querySelectorAll('option');
+
+        options.forEach(option => {
+            const originalText = option.textContent.trim();
+            const translatedText = translations[lang][originalText] || null;
+
+            if (translatedText) {
+                option.textContent = translatedText;
+            }
+        });
+    }
+}
+
+/**
+ * Translates text within <text> elements inside SVGs.
+ * @param {SVGElement} svgElement - The SVG DOM element to traverse.
+ * @param {string} lang - The target language code.
+ */
+function translateSVGText(svgElement, lang) {
+    const textElements = svgElement.querySelectorAll('text');
+
+    textElements.forEach(textEl => {
+        const originalText = textEl.textContent.trim();
+        const translatedText = translations[lang][originalText] || null;
+
+        if (translatedText) {
+            textEl.textContent = translatedText;
+        }
+    });
+}
+
+/**
+ * Translates elements with specific classes or data attributes.
+ * @param {HTMLElement} element - The DOM element to check.
+ * @param {string} lang - The target language code.
+ */
+function translateSpecificElements(element, lang) {
+    // Example: Elements with class 'translate'
+    if (element.classList.contains('translate')) {
+        const originalText = element.textContent.trim();
+        const translatedText = translations[lang][originalText] || null;
+
+        if (translatedText) {
+            element.textContent = translatedText;
+        }
+    }
+
+    // Example: Elements with 'data-translate' attribute
+    if (element.hasAttribute('data-translate')) {
+        const originalText = element.getAttribute('data-translate').trim();
+        const translatedText = translations[lang][originalText] || null;
+
+        if (translatedText) {
+            element.textContent = translatedText;
+        }
+    }
+}
+
+/**
+ * Translates placeholder text within <textarea> elements.
+ * @param {HTMLElement} element - The DOM element to check.
+ * @param {string} lang - The target language code.
+ */
+function translateTextareaPlaceholders(element, lang) {
+    if (element.tagName.toLowerCase() === 'textarea' && element.hasAttribute('placeholder')) {
+        const originalPlaceholder = element.getAttribute('placeholder').trim();
+        const translatedPlaceholder = translations[lang][originalPlaceholder] || null;
+
+        if (translatedPlaceholder) {
+            element.setAttribute('placeholder', translatedPlaceholder);
+        }
+    }
+}
+
+/**
+ * Translates tooltip attributes like 'data-tooltip' or 'title'.
+ * @param {HTMLElement} element - The DOM element to check.
+ * @param {string} lang - The target language code.
+ */
+function translateTooltips(element, lang) {
+    const tooltipAttributes = ['data-tooltip', 'title'];
+
+    tooltipAttributes.forEach(attr => {
+        if (element.hasAttribute(attr)) {
+            const originalTooltip = element.getAttribute(attr).trim();
+            const translatedTooltip = translations[lang][originalTooltip] || null;
+
+            if (translatedTooltip) {
+                element.setAttribute(attr, translatedTooltip);
+            }
+        }
+    });
+}
+
+/**
+ * Translates text within inline event handler attributes.
+ * @param {HTMLElement} element - The DOM element to check.
+ * @param {string} lang - The target language code.
+ */
+function translateInlineEventHandlers(element, lang) {
+    const eventAttributes = ['onclick', 'onmouseover', 'onmouseout', 'onchange', 'oninput', 'onfocus', 'onblur'];
+
+    eventAttributes.forEach(attr => {
+        if (element.hasAttribute(attr)) {
+            const originalContent = element.getAttribute(attr).trim();
+            const translatedContent = translations[lang][originalContent] || null;
+
+            if (translatedContent) {
+                element.setAttribute(attr, translatedContent);
+            }
+        }
+    });
+}
+
+/**
+ * Translates text within HTML comments.
+ * @param {HTMLElement} element - The DOM element to check.
+ * @param {string} lang - The target language code.
+ */
+function translateHTMLComments(element, lang) {
+    // Use a tree walker to traverse all comment nodes
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_COMMENT, null, false);
+    let commentNode;
+
+    while (commentNode = walker.nextNode()) {
+        const originalComment = commentNode.nodeValue.trim();
+        const translatedComment = translations[lang][originalComment] || null;
+
+        if (translatedComment) {
+            commentNode.nodeValue = translatedComment;
+        }
+    }
+}
+
+/**
+ * Translates the content of ::after and ::before pseudo-elements.
+ * @param {HTMLElement} element - The DOM element to check.
+ * @param {string} lang - The target language code.
+ * @param {string} pseudo - The pseudo-element ('::after' or '::before').
+ */
+function translatePseudoElement(element, lang, pseudo) {
+    const computedStyle = window.getComputedStyle(element, pseudo);
+    let content = computedStyle.getPropertyValue('content');
+
+    // Remove surrounding quotes if present
+    content = content.replace(/^["']|["']$/g, '').trim();
+
+    // Ignore empty content or content like "none"
+    if (!content || content.toLowerCase() === 'none') return;
+
+    // Look up the translation
+    const translatedText = translations[lang][content] || null;
+
+    if (translatedText) {
+        // Create or select a style element to inject CSS rules
+        let styleSheet = document.getElementById('pseudo-element-translations');
+        if (!styleSheet) {
+            styleSheet = document.createElement('style');
+            styleSheet.id = 'pseudo-element-translations';
+            document.head.appendChild(styleSheet);
+        }
+
+        // Generate a unique class name to override the pseudo-element content
+        const uniqueClass = 'translated-' + lang + '-' + Math.random().toString(36).substr(2, 9);
+        element.classList.add(uniqueClass);
+
+        // Inject the new CSS rule
+        try {
+            styleSheet.sheet.insertRule(
+                `.${uniqueClass}${pseudo} {
+                    content: "${translatedText}" !important;
+                }`,
+                styleSheet.sheet.cssRules.length
+            );
+        } catch (e) {
+            console.error('Failed to insert CSS rule for pseudo-element translation: ' + e);
+        }
+    }
+}
+
+/**
+ * Translates a single node and its children.
+ * @param {HTMLElement} node - The DOM node to translate.
+ * @param {string} lang - The target language code.
+ */
+function translateAllElementsForNode(node, lang) {
+    translateElement(node, lang);
+    const descendants = node.querySelectorAll('*');
+    descendants.forEach(child => {
+        translateElement(child, lang);
+    });
+}
+
+/**
+ * Translates all elements in the document.
+ * @param {string} lang - The target language code.
+ */
+function translateAllElements(lang) {
+    const allElements = document.querySelectorAll('*');
+
+    allElements.forEach(element => {
+        translateElement(element, lang);
+    });
+}
+
+/**
+ * Translates the entire page based on the selected language.
+ * @param {string} lang - The target language code.
+ */
+function translatePage(lang) {
+    if (!translations[lang]) return; // Exit if no translations exist for the selected language
+
+    // Set text direction based on language
+    setDirection(lang);
+
+    // Translate all elements
+    translateAllElements(lang);
+
+    // Translate exact phrases within container elements
+    translateWordsInContainer(lang);
+
+    // Translate date strings within container elements
+    translateDateStringsInContainer(lang);
+
+    // Translate usage types within container elements
+    translateUsageTypesInContainer(lang);
+
+    // **Invoke the new function here**
+    translateSpecificPatterns(lang);
+}
+
+/**
+ * Debounce function to limit the rate of function execution.
+ * @param {function} func - The function to debounce.
+ * @param {number} wait - The delay in milliseconds.
+ * @returns {function} - The debounced function.
+ */
+function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func.apply(this, args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Initialize MutationObserver to handle dynamically added content
+const observer = new MutationObserver(debounce((mutationsList, observer) => {
+    const languagePicker = document.getElementById('language-picker');
+    const currentLang = languagePicker ? languagePicker.value : 'he';
+    if (currentLang !== 'he') {
+        mutationsList.forEach(mutation => {
+            mutation.addedNodes.forEach(node => {
+                if (node.nodeType === Node.ELEMENT_NODE) {
+                    translateAllElementsForNode(node, currentLang);
+                    translateWordsInContainer(currentLang); // Existing function
+                    translateDateStringsInContainer(currentLang); // Existing function
+                    translateUsageTypesInContainer(currentLang); // Existing function
+                    // **Invoke the new function here**
+                    translateSpecificPatterns(currentLang);
+                }
+            });
+        });
+    }
+}, 300)); // 300ms debounce delay
+
+// Start observing the document body for changes
+observer.observe(document.body, { childList: true, subtree: true });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const languagePicker = document.getElementById('language-picker');
+    if (languagePicker) {
+        // Initialize Select2 for language picker if not already initialized
+        if (typeof $().select2 === 'function') {
+            $(languagePicker).select2({
+                minimumResultsForSearch: -1 // Hides the search box
+            });
+        }
+
+        // Listen for language changes and apply translation
+        languagePicker.addEventListener('change', function() {
+            const selectedLang = this.value;
+            if (selectedLang === 'he') {
+                location.reload(); // Reload to reset to Hebrew
+            } else {
+                translatePage(selectedLang); // Translate to selected language
+            }
+        });
+    }
+});
+
+/**
+ * New Function: translateWordsInContainer
+ * Iterates through all elements with the class 'container' and their descendants.
+ * For each text node, it replaces exact phrases as defined in the translations JSON.
+ * Handles Hebrew and RTL languages properly.
+ * @param {string} lang - The target language code.
+ */
+function translateWordsInContainer(lang) {
+    if (!translations[lang]) return; // Exit if no translations exist for the selected language
+
+    const containers = document.querySelectorAll('.container');
+
+    // Gather all translation keys for the selected language
+    const translationKeys = Object.keys(translations[lang]);
+
+    // Sort phrases by length descending to prioritize longer phrases
+    translationKeys.sort((a, b) => b.length - a.length);
+
+    // Escape special regex characters in phrases
+    const escapeRegExp = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+    // Create an array of escaped phrases
+    const escapedPhrases = translationKeys.map(phrase => escapeRegExp(phrase));
+
+    // Join escaped phrases into a single regex pattern
+    const phraseRegex = new RegExp(`(${escapedPhrases.join('|')})`, 'g');
+
+    containers.forEach(container => {
+        const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
+        let node;
+
+        while (node = walker.nextNode()) {
+            let text = node.nodeValue;
+
+            // Replace exact phrases using the regex
+            text = text.replace(phraseRegex, (match) => {
+                return translations[lang][match] || match;
+            });
+
+            // Update the text node with translated content
+            node.nodeValue = text;
+        }
+    });
+}
+
+/**
+ * New Function: translateDateStringsInContainer
+ * Iterates through all elements with the class 'container' and their descendants.
+ * For each text node, it replaces date strings of the format "25 בנובמבר 2024"
+ * by translating the month part while preserving the numerical values.
+ * Handles Hebrew and RTL languages properly.
+ * @param {string} lang - The target language code.
+ */
+function translateDateStringsInContainer(lang) {
+    if (!translations[lang]) return; // Exit if no translations exist for the selected language
+
+    const containers = document.querySelectorAll('.container');
+
+    // Define Hebrew month names without the "ב" prefix
+    const hebrewMonths = [
+        "ינואר", "פברואר", "מרץ", "אפריל", "מאי", "יוני",
+        "יולי", "אוגוסט", "ספטמבר", "אוקטובר", "נובמבר", "דצמבר"
+    ];
+
+    // Create a regex pattern to match date strings
+    // Pattern Explanation:
+    // (\d{1,2})\s+          -> Day: 1 or 2 digits followed by one or more spaces
+    // (ב?(ינואר|פברואר|...)) -> Month: Optional "ב" prefix followed by a Hebrew month name
+    // \s+(\d{4})            -> Year: 4 digits preceded by one or more spaces
+    const monthPattern = hebrewMonths.join('|'); // "ינואר|פברואר|מרץ|..."
+    const dateRegex = new RegExp(`(\\d{1,2})\\s+(ב?(${monthPattern}))\\s+(\\d{4})`, 'g');
+
+    containers.forEach(container => {
+        const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
+        let node;
+
+        while (node = walker.nextNode()) {
+            let text = node.nodeValue;
+
+            // Replace date strings using the regex
+            text = text.replace(dateRegex, (match, day, fullMonth, month, year) => {
+                // Attempt to translate the full month (with "ב" if present)
+                const translatedFullMonth = translations[lang][fullMonth];
+                if (translatedFullMonth) {
+                    return `${day} ${translatedFullMonth} ${year}`;
+                }
+
+                // If full month translation not found, try translating the month without "ב"
+                if (fullMonth.startsWith('ב')) {
+                    const monthWithoutPrefix = fullMonth.slice(1); // Remove "ב"
+                    const translatedMonth = translations[lang][monthWithoutPrefix];
+                    if (translatedMonth) {
+                        // Prepend "in" or appropriate preposition based on language
+                        // Assuming "ב" translates to "in" in target language
+                        // Adjust accordingly for languages other than English
+                        const preposition = (lang === 'en') ? 'in' : 'en'; // Example for English and Spanish
+                        return `${day} ${preposition} ${translatedMonth} ${year}`;
+                    }
+                }
+
+                // If no translation found, return the original match
+                return match;
+            });
+
+            node.nodeValue = text;
+        }
+    });
+}
+
+/**
+ * New Function: translateUsageTypesInContainer
+ * Iterates through all elements with the class 'usageTypes' and their child divs.
+ * For each div, it replaces the Hebrew text after the dynamic number and hyphen
+ * with its corresponding translation from the translations JSON.
+ * @param {string} lang - The target language code.
+ */
+function translateUsageTypesInContainer(lang) {
+    if (!translations[lang]) return; // Exit if no translations exist for the selected language
+
+    const usageTypesElements = document.querySelectorAll('.usageTypes');
+
+    usageTypesElements.forEach(element => {
+        const divs = element.querySelectorAll('div'); // Select all child divs within usageTypes
+        divs.forEach(div => {
+            const text = div.textContent.trim();
+            // Regular expression to match patterns like "0 - הנפקות"
+            const regex = /^(\d+)\s*-\s*(.+)$/;
+            const match = regex.exec(text);
+
+            if (match) {
+                const number = match[1];       // Captures the number (e.g., "0")
+                const hebrewPhrase = match[2]; // Captures the Hebrew text (e.g., "הנפקות")
+
+                const translatedPhrase = translations[lang][hebrewPhrase];
+
+                if (translatedPhrase) {
+                    // Reconstruct the string with the original number and hyphen
+                    div.textContent = `${number} - ${translatedPhrase}`;
+                }
+                // If translation not found, leave the original text unchanged
+            }
+        });
+    });
+}
+
+/**
+ * New Function: translateSpecificPatterns
+ * Handles specific translation patterns without affecting other translations.
+ * - Translates partial Hebrew strings within elements.
+ * - Replaces specific substrings while preserving dynamic content.
+ * @param {string} lang - The target language code.
+ */
+function translateSpecificPatterns(lang) {
+    if (!translations[lang]) return; // Exit if no translations exist for the selected language
+
+    // **1. Handle <div class="changed-label">**
+    const changedLabels = document.querySelectorAll('.changed-label div');
+    changedLabels.forEach(div => {
+        const text = div.textContent.trim();
+        // Check if text starts with "ישתנה ל"
+        if (text.startsWith('ישתנה ל')) {
+            // Extract the part to translate ("ישתנה ל")
+            const prefix = 'ישתנה ל';
+            const suffix = text.slice(prefix.length); // e.g., "%"
+
+            // Get the translation for "ישתנה ל"
+            const translatedPrefix = translations[lang][prefix] || prefix;
+
+            // Reconstruct the text with the translated prefix and original suffix
+            div.textContent = `${translatedPrefix}${suffix}`;
+        }
+    });
+
+    // **2. Handle <span> with two Hebrew substrings separated by comma**
+    const spans = document.querySelectorAll('span');
+    spans.forEach(span => {
+        const text = span.textContent.trim();
+        if (text.includes(',')) {
+            const parts = text.split(',');
+            if (parts.length === 2) {
+                const [firstPart, secondPart] = parts.map(part => part.trim());
+
+                const translatedFirstPart = translations[lang][firstPart] || firstPart;
+                const translatedSecondPart = translations[lang][secondPart] || secondPart;
+
+                // Reconstruct the text with translated parts
+                span.textContent = `${translatedFirstPart}, ${translatedSecondPart}`;
+            }
+        }
+    });
+
+    // **3. Handle <label> with Hebrew substrings inside and outside parentheses**
+    const labels = document.querySelectorAll('label');
+    labels.forEach(label => {
+        const originalHTML = label.innerHTML;
+        // Use regex to find Hebrew substrings outside and inside parentheses
+        // Assuming Hebrew characters are in Unicode range \u0590-\u05FF
+
+        // Replace Hebrew phrases outside parentheses
+        label.childNodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                let text = node.textContent;
+                // Replace Hebrew phrases
+                Object.keys(translations[lang]).forEach(hebrew => {
+                    // Use word boundaries to match exact phrases
+                    const regex = new RegExp(`\\b${hebrew}\\b`, 'g');
+                    text = text.replace(regex, translations[lang][hebrew]);
+                });
+                node.textContent = text;
+            }
+        });
+
+        // Replace Hebrew text inside parentheses
+        // Using regex on the innerHTML to replace text inside parentheses
+        const updatedHTML = originalHTML.replace(/\(([^)]+)\)/g, (match, p1) => {
+            let translated = p1;
+            // Translate each Hebrew phrase within the parentheses
+            Object.keys(translations[lang]).forEach(hebrew => {
+                const regex = new RegExp(`\\b${hebrew}\\b`, 'g');
+                translated = translated.replace(regex, translations[lang][hebrew]);
+            });
+            return `(${translated})`;
+        });
+
+        label.innerHTML = updatedHTML;
+    });
+
+    // **4. Handle <td> elements with specific Hebrew words**
+    const tableData = document.querySelectorAll('td');
+    tableData.forEach(td => {
+        const divs = td.querySelectorAll('div');
+        divs.forEach(div => {
+            const text = div.textContent.trim();
+            // Check if text starts with "ממוצע"
+            if (text.startsWith('ממוצע')) {
+                const prefix = 'ממוצע';
+                const suffix = text.slice(prefix.length); // e.g., " ₪110.00"
+
+                const translatedPrefix = translations[lang][prefix] || prefix;
+
+                div.textContent = `${translatedPrefix}${suffix}`;
+            }
+        });
+    });
+}

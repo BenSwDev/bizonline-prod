@@ -1,0 +1,231 @@
+.txtAreaWrap.cat {padding: 20px;box-sizing: border-box;}
+    .priceTable table:not(.not) {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        width: 100%;
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+        box-sizing: border-box;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .priceTable table:not(.not) > thead {
+        background: #ffffff;
+        border-bottom: 2px solid #f5f5f5;
+        line-height: 32px;
+        font-weight: bold;
+    }
+
+    .priceTable table:not(.not) > thead > tr > th {
+        text-align: center;
+        border: 2px solid #f5f5f5;
+        line-height: 1;
+        padding: 10px 4px;
+        vertical-align: middle;
+        height:40px;
+    }
+    .priceTable table:not(.not) > thead > tr > th:nth-child(1) {
+
+        text-align: center;
+
+    }
+    .priceTable table:not(.not) > tbody > tr {
+        line-height: 32px;
+        color: #666;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .priceTable table:not(.not) > tbody > tr:nth-child(odd) {
+        background: #F9F9F9;
+    }
+    .priceTable table:not(.not) > tbody > tr > td {
+        border: 1px solid #f5f5f5;
+        padding-right: 10px;
+        vertical-align: middle;
+        height:40px;
+        line-height: 32px;
+    }
+    .priceTable table:not(.not) tbody tr td input[type='text'], .priceTable table:not(.not) tbody tr td input[type='number'] {
+        line-height: 32px;
+        height: 32px;
+        background: #f5f5f5;
+        border: 0;
+        border-radius: 3px;
+        box-sizing: border-box;
+        outline: none;
+        font-size: 12px;
+        padding: 0 5px;
+        box-shadow: -1px 1px 0 rgb(0 0 0 / 20%);
+        margin: 0 auto;
+        width: 32%;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .priceTable table:not(.not) tbody tr td textarea {
+        width:200px;
+        height:45px
+    }
+
+    input#submitTreats {
+        position: fixed;
+        left: 23px;
+        bottom: 38px;
+        width: 90px;
+        height: 50px;
+        line-height: 50px;
+        color: #ffffff;
+        font-weight: bold;
+        background: #2FC2EB;
+        font-size: 16px;
+        margin-top: 20px;
+        text-shadow: -1px 1px 0 rgb(0 0 0 / 10%);
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+        cursor: pointer;
+        box-shadow: none;
+        -moz-transition: all 0.25s;
+        -webkit-transition: all 0.25s;
+        transition: all 0.25s;
+        text-align: center;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .labelTo {
+        display: block;
+        vertical-align: middle;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+	.pricetype {
+		display: block;
+		margin-bottom: -10px;
+		margin-top: 10px;
+		font-size: 14px;
+		font-weight: normal;
+	}
+
+	.pricetype span {
+		width: 32%;
+		display: inline-block;
+	}
+
+    /*select{background:0 0;font-size:20px;color:#333;padding:0 10px;box-sizing:border-box}*/
+    @media(max-width:900px){
+        .priceTable table:not(.not) tbody tr td input[type='text'] {width:98%}
+    }
+
+    .priceTable {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .priceTable .cat div {position:relative;padding-right:40px;}
+    .priceTable .cat h2 {padding-bottom:10px}
+    .priceTable .cat {
+        margin: 20px 0;
+        text-align: right;
+    }
+    .checks {text-align:right;color:#777777;padding-right:40px;position:relative}
+    .checks > .checks{display:none}
+    .checks input[type=checkbox]:checked  ~ .checks{display:block}
+    .checks input[type=checkbox] {display:none}
+    .checks input[type=checkbox]+label {font-weight:500;box-sizing:border-box;font-size:16px;cursor:pointer;margin-bottom:17px;display:inline-block;color:#000}
+    .checks input[type=checkbox]+label::before {content:'';position:absolute;top:10px;right:0;transform:translateY(-50%);width:30px;height:30px;box-sizing:border-box;background:#FFF;border-radius:30px;border:1px solid #13adb8}
+    .checks input[type=checkbox]:checked+label::after {content: '';position: absolute;top: 10px;right: 5px;transform: translateY(-50%);width: 20px;height: 20px;box-sizing: border-box;background: #13adb8;border-radius: 30px;}
+
+    .checks table input[type=checkbox]+label::before {top:15px}
+    .checks table input[type=checkbox]:checked+label::after {top:15px}
+
+    @media (min-width: 992px) {
+        .priceTable .cat {width:23%;min-width:300px;margin-left:2%}
+    }
+
+
+	.priceTable table:not(.not) .col {
+    /*display: inline-block;
+    border: 1px solid #777;*/
+    font-size: 16px;
+    height: 32px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    padding: 0;
+    width: 90px;
+    line-height: 30px;
+}
+.priceTable table:not(.not) .col label {
+    display: inline-block;
+    width: 25px;
+    position: relative;
+    height: 35px;
+    margin-top: 5px;margin-bottom:0;
+}
+.checks .col input[type=checkbox]+label::before {
+    width: 25px;
+    height: 25px;
+}
+
+.checks .col input[type=checkbox]+label::after {
+    width: 15px;
+    height: 15px;
+}
+
+.cat.popSettings label {
+    display: block;
+}
+
+.cat.popSettings .inputWrap {
+    margin: 0 0 10px 0;
+}
+.cat.minMax input {
+    border: 1px solid #000;
+    height: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.cat.popSettings select {
+    border: 1px solid #000;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+.cat.popSettings input {
+    border: 1px solid #000;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+.cat.orderTypesForShow input[type=text] {
+    border: 1px solid #000;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    max-width:120px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+.txtAreaWrap.cat input[type=text] {
+    border: 1px solid #000;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    max-width:200px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+.txtAreaWrap input[type=tel] {
+    border: 1px solid #000;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width:260px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+table.not td {
+    height: 31px;
+    line-height: 31px;
+}

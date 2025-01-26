@@ -1,0 +1,24 @@
+2022-07-07 12:44:16
+<?xml version="1.0" encoding="UTF-8"?><SMS_Service><service>send_sms</service><Message>שלום אורלי קשר, לצפייה בפרטי ההזמנה שלך
+https://bizonline.co.il/signature2.php?guid=00CE0031-EC16-4A78-AB48-D09FAA5FA22C</Message><Source>BizOnline</Source><sms_recipients><sms_0>
+            <Message_id>560086987</Message_id>
+            <Destination>972507231181</Destination>
+            <Status>Message in Action</Status>
+            <Send_time>2022-07-07 12:44:16</Send_time>
+            </sms_0></sms_recipients><Total_sms>1</Total_sms><Total_Charge>1</Total_Charge></SMS_Service>200------------------------------------
+2022-07-07 12:46:23
+<?xml version="1.0" encoding="UTF-8"?><SMS_Service><service>send_sms</service><Message>שלום שוש, לצפייה בפרטי ההזמנה שלך
+https://bizonline.co.il/signature2.php?guid=94D1D4A0-EFDF-4269-A90C-853E02465511</Message><Source>BizOnline</Source><sms_recipients><sms_0>
+            <Message_id>560091242</Message_id>
+            <Destination>972546329240</Destination>
+            <Status>Message in Action</Status>
+            <Send_time>2022-07-07 12:46:22</Send_time>
+            </sms_0></sms_recipients><Total_sms>1</Total_sms><Total_Charge>1</Total_Charge></SMS_Service>200------------------------------------
+2022-07-07 12:49:37
+<?xml version="1.0" encoding="UTF-8"?><SMS_Service><service>send_sms</service><Message>שלום חי, לצפייה בפרטי ההזמנה שלך
+https://bizonline.co.il/signature2.php?guid=04C44EC3-786B-4C4D-882F-32E34DF784E7</Message><Source>BizOnline</Source><sms_recipients><sms_0>
+            <Message_id>560097288</Message_id>
+            <Destination>972504290801</Destination>
+            <Status>Message in Action</Status>
+            <Send_time>2022-07-07 12:49:37</Send_time>
+            </sms_0></sms_recipients><Total_sms>1</Total_sms><Total_Charge>1</Total_Charge></SMS_Service>200------------------------------------

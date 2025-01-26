@@ -1,0 +1,8 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 50" width="40" height="50">
+	<title>lock</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #000000 } 
+	</style>
+	<path id="lock" fill-rule="evenodd" class="shp0" d="M4 20L5 20L5 15C5 6.72 11.72 0 20 0C28.28 0 35 6.72 35 15L35 20L36 20C38.21 20 40 21.79 40 24L40 46C40 48.21 38.21 50 36 50L4 50C1.79 50 0 48.21 0 46L0 24C0 21.79 1.79 20 4 20ZM15 33C15 35.05 16.23 36.81 18 37.58L18 42C18 43.1 18.9 44 20 44C21.1 44 22 43.1 22 42L22 37.58C23.77 36.81 25 35.05 25 33C25 30.24 22.76 28 20 28C17.24 28 15 30.24 15 33ZM9 15L9 20L31 20L31 15C31 8.92 26.08 4 20 4C13.92 4 9 8.92 9 15Z" />
+</svg>

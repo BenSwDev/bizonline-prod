@@ -1,0 +1,37 @@
+body.ltr .create_order .container{transform: translateY(-50%) translate(-50%);}
+body.ltr .giftpop .container{transform: translateY(-50%) translate(-50%);}		
+body.ltr .cuponpop .container{transform: translateY(-50%) translate(-50%);}		
+body.ltr .popup .popup_container {transform: translateY(-50%) translate(-50%);}		
+body.ltr .global_edit .container{transform: translateY(-50%) translate(-50%);}		
+body.ltr .pay_order .container{transform: translateY(-50%) translate(-50%);}		
+body.ltr .sendPop .container{transform: translateY(-50%) translate(-50%);}
+body.ltr .holiday_pop .container{transform: translateY(-50%) translate(-50%);}
+body.ltr .cuponspop .container{transform: translateY(-50%) translate(-50%);}
+
+body.ltr:not(.menu-closed) .luz-pop	{right:0;left:300px}
+
+body.ltr  .arrow_cls::after{transform: rotate(-45deg);}
+
+body.ltr .fast-find .inputWrap .submit{transform: translateY(-50%) rotate(180deg);}		
+body.ltr td.control div.pay.refunded, .bottom-btns div.pay.refunded {word-break: break-all;line-height: 1;}
+body.ltr div#add_date {font-size: 16px;}
+body.ltr .create_order .inputWrap .radios div label {word-break: break-all;}
+body.ltr .treats .items>div::before{ transform: scaleX(-1) rotate(45deg)  translateY(-50%);}
+body.ltr #couponTypes > li.show .showTheseCoupons {padding: 5px;}
+body.ltr .addings>.title::after {transform: rotate(-45deg);}
+body.ltr .addings.closed>.title::after {transform: rotate(135deg);}
+body.ltr .addings>.adding input:checked ~ label::after{transform:scaleX(-1) translateY(-50%) rotate(-45deg)}
+body.ltr .month-select::after{transform: rotate(-45deg);}
+	
+body.ltr .name .V::before{transform:scaleX(-1) rotate(45deg)}
+body.ltr.menu-closed .menu-opener::before {bottom: -13px; top:0}
+body.ltr.menu-closed .menu-opener::after {top: -13px;bottom:0}
+body.ltr .add-new{float:left}
+body.ltr .priceTable td input[type=checkbox]:checked+label::after{transform:scaleX(-1) translateY(-50%) rotate(45deg)}
+
+body.ltr .issue-reporter-widget{right:auto;left:20px}
+body.ltr .reporter-panel{right:auto;left:20px}
+body.ltr .fast-find{max-width:340px}
+body.ltr .pay_order .payments>.item.health .paytype	{max-width:calc(60% - 260px)}
+body.ltr .pay_order .payments>.item.health .buttons-flex {width: 260px;}
+body.ltr .searchCms{max-width:260px}

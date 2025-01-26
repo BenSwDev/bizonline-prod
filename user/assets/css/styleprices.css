@@ -1,0 +1,1542 @@
+* {margin:0;padding:0;outline:0;border:0;vertical-align:top}
+
+body {font-family:'Rubik', arial;direction:rtl;padding:30px}
+
+header {height:59px;background:#0dabb5;position:relative;padding-left:0px;box-sizing:border-box}
+header .logo {margin-top:6px;display:inline-block;margin-right:12px;text-align:center}
+header .logo div {font-size:12px;color:#fff;display:block;margin-top:3px}
+header #user {float:left;margin-top:10px;color:#fff;font-size:14px;max-width:calc(100% - 150px); box-sizing:border-box;padding-left:50px;position:relative}
+header #user img {display:inline-block;margin-right:10px;width:40px;height:40px;border-radius:50%;position:absolute;left:0;top:0}
+header #user > div {display:block;height:40px;overflow:hidden}
+header #user > div > a {display:table-cell;vertical-align:middle;line-height:14px;color:white;text-align:left;height:40px;text-decoration:none}
+header .logout {text-decoration:none;width:60px;font-size:14px;height:59px;background:#53c0e4;position:absolute;top:0;left:0;text-align:center;color:#fff}
+header .logout svg {margin-top:14px;margin-bottom:5px}
+header .logout span {display:block;width:100%;}
+
+
+.local-loader {position:absolute;top:0;right:0;left:0;bottom:0;background:rgba(100,100,100,0.7); z-index:10000; display:none}
+.local-loader .loaderContainer {position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%)}
+
+.local-loader .loaderContainer .lds {color: white;display: inline-block;position: relative;width: 64px;height: 64px;}
+.local-loader .loaderContainer .lds div {transform-origin: 32px 32px;animation: lds 1.2s linear infinite;}
+.local-loader .loaderContainer .lds div:after {content: " ";display: block;position: absolute;top: 3px;left: 29px;width: 5px;height: 14px;border-radius: 20%;background: #fff;}
+.local-loader .loaderContainer .lds div:nth-child(1) {transform: rotate(0deg);animation-delay: -1.1s;}
+.local-loader .loaderContainer .lds div:nth-child(2) {transform: rotate(30deg);animation-delay: -1s;}
+.local-loader .loaderContainer .lds div:nth-child(3) {transform: rotate(60deg);animation-delay: -0.9s;}
+.local-loader .loaderContainer .lds div:nth-child(4) {transform: rotate(90deg);animation-delay: -0.8s;}
+.local-loader .loaderContainer .lds div:nth-child(5) {transform: rotate(120deg);animation-delay: -0.7s;}
+.local-loader .loaderContainer .lds div:nth-child(6) {transform: rotate(150deg);animation-delay: -0.6s;}
+.local-loader .loaderContainer .lds div:nth-child(7) {transform: rotate(180deg);animation-delay: -0.5s;}
+.local-loader .loaderContainer .lds div:nth-child(8) {transform: rotate(210deg);animation-delay: -0.4s;}
+.local-loader .loaderContainer .lds div:nth-child(9) {transform: rotate(240deg);animation-delay: -0.3s;}
+.local-loader .loaderContainer .lds div:nth-child(10) {transform: rotate(270deg);animation-delay: -0.2s;}
+.local-loader .loaderContainer .lds div:nth-child(11) {transform: rotate(300deg);animation-delay: -0.1s;}
+.local-loader .loaderContainer .lds div:nth-child(12) {transform: rotate(330deg);animation-delay: 0s;}
+@keyframes lds {0% {opacity: 1;}100% {opacity: 0;}}
+
+/* LOGIN */
+section.login{    width: 310px;    height: 110px;    margin: 100px auto;    position: relative;}
+section.login > .logo{position: relative;width: 110px;height: 110px;float: right;border: 4px solid #00cbff;box-sizing: border-box;background-image: url(../img/logo.png);background-size: 80px auto;background-position: center center;background-repeat: no-repeat;background-color: #fff;border-radius: 100%;z-index: 10;}
+section.login > .logo > .nqms-nqms{    color:#ffffff;    font-size: 28px;    text-align: center;    margin: auto;    height: 22px;    position: absolute;    top: 0;    bottom: 0;    left: 0;    right: 0;}
+section.login > .form{ position: absolute;    top: 20px;    bottom: 0;    left: 0;    margin: auto;    height: 80px;    width: 225px;}
+section.login > .form > form > .user{    width: 82%;    background: #ffffff;    border-radius: 5px;    margin-bottom: 5px;}
+section.login > .form > form > .user > input{    font-size: 18px;    width: 100%;    box-sizing: border-box;    border: 0;    background: none;    padding-right: 30px;    outline: none;}
+section.login > .form > form > .pass{    width: 82%;    background: #ffffff;    border-radius: 5px;}
+section.login > .form > form > .pass > input{    font-size: 18px;    width: 100%;    box-sizing: border-box;    border: 0;    background: none;    padding-right: 30px;    outline: none;}
+section.login > .form > form > .login {    position: absolute;    left: 0px;    top: -3px;    bottom: 0;    height: 65px;    width: 65px;    border: 4px solid #E9E9E9;    box-sizing: border-box;    border-radius: 100%;overflow: hidden;}
+section.login > .form > form > .login > input{    display: block;    width: 100%;    height: 100%;    background-color:#0058b1;    background-image: url("../img/login.png");    background-repeat: no-repeat;    background-position: center;    background-size: 50%;border: 2px solid #fff;;    cursor: pointer;    margin: 0;    padding: 0;    border-radius: 100%;    outline: none;}
+section.login > .support{ display:none;   position: absolute;    bottom:10px;    right: 100px;    width: 100%;}
+section.login > .support > a{    display: inline-block;    font-size: 14px;    line-height: 20px;    padding-right: 20px;    background-repeat: no-repeat;    background-size: auto 80%;    background-position: right center;}
+section.login > .support > a.forgot {    background-image: url("../images/lock.png");    padding-left: 7px;    margin-left: 3px;    border-left: 1px solid rgba(0,0,0,0.1);}
+section.login > .support > a.error {    background-image: url("../images/error.png");}
+section.login .error{position: absolute;bottom: 0;text-align: center;right: 0;left: 0;color: red;}
+
+
+#rightMenu {background:#fff;border-left:1px solid #0dabb5;min-width:250px;float:right;max-height:calc(100vh - 59px);height:calc(100vh - 59px);box-sizing:border-box;overflow:auto}
+#rightMenu ul {list-style:none;display:block;width:100%}
+#rightMenu ul li {cursor:pointer;font-weight:500;transition:all .2s ease;height:49px;line-height:49px;font-size:18px;display:block;width:100%;padding-right:15px;box-sizing:border-box;border-bottom:1px solid #84d2ec;padding-left:15px}
+#rightMenu ul li i {color: #0dabb5;font-size: 26px;vertical-align: middle;position: relative;margin-top:-2px;display:inline-block}
+#rightMenu ul li svg {margin-top:-2px;display:inline-block;vertical-align:middle}
+#rightMenu ul li:hover, #rightMenu ul li.active {background:#e5f5fa}
+#rightMenu ul li a {color:#000;text-decoration:none;display:block}
+#rightMenu ul li.menuTitle {position:relative;font-weight:400;font-size:16px;height:52px;line-height:52px;color:#0dabb5;background:#f5f5f5;padding-top:5px;border-color:#0dabb5}
+#rightMenu ul li.menuTitle svg {width:auto;height:0;fill:#0dabb5}
+
+#rightMenu ul li i:not([class^="icon-"]) {font-size:18px!important;font-style:normal;width:26px;text-align:center}
+
+#leftSide {position:absolute;top:0;right:0;left:0;bottom:0;width:100%;height:100%;overflow-y: scroll;-webkit-overflow-scrolling: touch;}
+#leftSide .tab {max-height:100vh;overflow:hidden;position:absolute;top:0;right:-100vw;width:100%;transition:all .2s ease;background:#fff;height:100%}
+#leftSide .tab.active {right:0;max-height:none;overflow:visible;left:0;width:100%}
+.tabin.orders #tabOrders {max-width:720px}
+.tabin.orders #tabOrders .order .info_place {background:#ececec}
+.tabin.orders #tabOrders .order {box-shadow:0px 2px 6px rgba(0,0,0,0.2);margin-bottom:40px}
+.tabin.orders #tabOrders .order .orderComments {padding:10px 0;margin:10px 0;display:block;border-top:1px solid #0dabb5}
+.tabin.orders #tabOrders .order .orderComments textarea {    border: 1px solid #aeaeae;padding-top: 10px;padding-right: 10px;font-size: 15px;height: 100px;display: block;width: 100%;}
+.tabin.orders #tabOrders .order .orderComments .msgBtn {    transition: all .4s ease;line-height: 40px;height: 40px;background: #0dabb5;display: inline-block;box-sizing: border-box;padding: 0 20px;border: 1px solid #a3a3a3;color: #fff;border-radius: 10px;cursor: pointer;margin-top:10px}
+
+.tabin.orders #ordersTabs {margin-bottom:20px}
+.tabin.orders #ordersTabs .item {line-height:36px;min-width:120px;text-align:center;transition:all .2s ease;box-sizing:border-box;border:1px solid #0dabb5;display:inline-block;border-radius:50px;height:36px;color:#0dabb5;font-size:14px;cursor:pointer;margin-left:10px}
+.tabin.orders #ordersTabs .item:hover, #leftSide .tab.orders #ordersTabs .item.active {background:#0dabb5;color:#fff}
+
+.tabin.purchases .purchaseHistory {text-align:right;width:100%}
+.tabin.purchases .purchaseHistory thead th{background:#0dabb5;color:#fff;line-height:30px;padding:0 10px;box-sizing:border-box}
+.tabin.purchases .purchaseHistory tbody td {font-weight:300;line-height:30px;border-bottom:1px solid #ccc;padding:0 10px;box-sizing:border-box}
+
+.tabin .tabTitle {font-size:24px;padding-bottom:40px}
+.tabin.roomSettings {}
+.tabin.roomSettings #roomSettings {max-width:780px}
+.tabin.roomSettings #roomSettings .roomsForm{overflow: auto;white-space: nowrap;padding-right: 100px;}
+
+.tabin.roomSettings #roomSettings .roomsForm .rgtCol{position: absolute;right: 0px;background: white;padding-right: 10px;padding-left:5px}
+.tabin.roomSettings #roomSettings .cell .roomSettings-right {white-space:nowrap}
+.tabin.roomSettings #roomSettings .cell .roomSettings-right div {font-size:12px}
+.tabin.roomSettings #roomSettings .row:first-child {position: relative;}
+.tabin.roomSettings #roomSettings .row:first-child .cell span {display:block;font-size:12px;color:#0dabb5}
+.tabin.roomSettings #roomSettings .row {height:40px;transition:all .2s ease}
+.tabin.roomSettings #roomSettings .row .cell:not(:first-child) {max-width:80px}
+.tabin.roomSettings #roomSettings .row:hover {background:#ceedf7}
+.tabin.roomSettings #roomSettings input:not([type=submit]), .tabin.roomSettings #roomSettings select {line-height: 32px;height: 32px;background: #f5f5f5;border: 0;border-radius: 3px;box-sizing: border-box;outline: none;font-size: 12px;padding: 0 5px;box-shadow: -1px 1px 0 rgba(0,0,0,0.2);margin: 0 auto;width: 80px;font-family: 'Rubik', sans-serif;}
+.tabin.roomSettings #roomSettings input.roomName {background:transparent;box-shadow:none;height:0;font-family:inherit}
+.tabin.roomSettings #roomSettings input.roomName:focus {z-index:2;height:auto; position:absolute;border:1px #CCC solid;border-radius:4px;background:white;width:160px;margin-right:-40px}
+.tabin.roomSettings #roomSettings .rTitle {margin-top:-20px;font-size:12px;width:80px;height:28px;overflow:hidden;white-space:normal}
+.tabin.roomSettings #roomSettings input.roomName:focus + .rTitle {z-index:2;white-space: normal;font-size: 0;position: absolute;margin-top: 34px;width: 160px;height: auto;background: #ffffaa;padding: 5px;text-align:center;margin-right:-40px;box-sizing:border-box}
+.tabin.roomSettings #roomSettings input.roomName:focus + .rTitle::after {font-size:14px;content:"כדי שהשם החדש ישמר יש לבצע שליחה";}
+
+.tabin.roomSettings #roomSettings .right, .tabin.roomSettings #roomSettings .room {display:inline-block}
+.tabin.roomSettings #roomSettings .right  {position:absolute;right:0;padding-left:5px;padding-right:10px;background:white;z-index:1}
+.tabin.roomSettings #roomSettings input[type=submit], .popup.seoHours input[type=submit] {display:block;margin:0 auto;clear:both;    transition: all .4s ease;line-height: 40px;height: 40px;background: #0dabb5;box-sizing: border-box;padding: 0 20px;border: 1px solid #a3a3a3;color: #fff;border-radius: 10px;cursor: pointer;}
+
+
+.tabin.priceList {}
+
+.tabin.priceList #priceList {max-width:780px}
+.tabin.priceList #priceList .tableLike > .row:first-child .cell {box-sizing:border-box;padding:0 30px 10px 30px;color:#333333;font-weight:500}
+.tabin.priceList #priceList .cell .priceList-right {white-space:nowrap}
+.tabin.priceList #priceList .cell .priceList-right div {font-size:12px}
+.tabin.priceList #priceList .cell .middleweek {font-size:14px;width:55px;display:inline-block;margin-left:5px}
+.tabin.priceList #priceList .cell .endofweek {font-size:14px;width:50px;display:inline-block}
+.tabin.priceList #priceList .cell .endofweek > span {color:#0dabb5}
+.tabin.priceList #priceList .cell .middleweek > span {color:#777777}
+.tabin.priceList #priceList .cell .middleweek input:not([type=submit]), .tabin.priceList #priceList .cell .endofweek input:not([type=submit]) {width:55px}
+
+.tabin.priceList .periodsPrices {padding:20px 0;display:block;}
+.tabin.priceList .periodsPrices.perRoom {height:0;transition:0.5s all;padding:0;overflow:hidden}
+.tabin.priceList .periodsPrices.perRoom.open {height:90px/*110px*/;padding:20px 0}
+.tabin.priceList .perRoomB {margin-bottom:20px;display:inline-block;}
+.tabin.priceList .roomNameCal {font-size:18px;color:#000;font-weight:bold}
+.tabin.priceList .topof .r {width:300px;display:inline-block;position:relative;line-height:40px;text-align:center}
+.tabin.priceList .periodsPrices .r {min-width:240px;display:inline-block;padding-top: 0px;font-size:16px;}
+.tabin.priceList .periodsPrices .r div {color: #333;line-height: 34px;border-bottom: 1px #ccc solid;}
+.tabin.priceList .periodsPrices .l {display:inline-block}
+.tabin.priceList .periodsPrices .l .day {display:inline-block;min-width:85px;text-align:center;font-size:16px}
+.tabin.priceList .periodsPrices .l .day .title {color:#767676}
+.tabin.priceList .periodsPrices .l .day.on .title {color:#0eace1}
+.tabin.priceList .periodsPrices .l .day select {display:block;width:60px;height:30px;margin:10px auto;padding-right:0;text-align:center;font-size:20px;max-width: 100%;}
+.tabin.priceList .periodsPrices .l .day label {font-size:14px;width:40px;display:inline-block}
+.tabin.priceList .periodsPrices .l .day label span {font-size:0}
+.tabin.priceList .periodsPrices .l .day input:checked + label {font-size:0}
+.tabin.priceList .periodsPrices .l .day input:checked + label span {font-size:14px; color:#0dabb5}
+
+.tabin.priceList #pricePeriods {white-space: nowrap;overflow: auto;}
+.tabin.priceList  .item {background:#fff;min-width:120px;text-align:center;transition:all .2s ease;box-sizing:border-box;border:1px solid #0dabb5;display:inline-block;border-radius:3px;height:36px;color:#0dabb5;font-size:14px;padding-top:2px;cursor:pointer;margin-left: 2px;}
+
+.tabin.priceList #pricePeriods .item:hover, .tabin.priceList #pricePeriods .item.active {background:#0dabb5;color:#fff}
+.tabin.priceList #pricePeriods .item:empty {line-height:36px;padding-top:0}
+.tabin.priceList #pricePeriods .item:before {content:attr(data-period);display:block}
+.tabin.priceList #pricePeriods .item > div {font-size:11px}
+
+.tabin.priceList #priceList .cell.inputs {font-size:0;text-align:center;}
+.tabin.priceList #priceList .cell.inputs > div > span {padding-bottom:5px;display:block}
+.tabin.priceList #priceList .cell.inputs input {font-size:16px}
+.tabin.priceList #priceList .row:first-child .cell span {display:block;font-size:14px;color:#0dabb5}
+.tabin.priceList #priceList .row {height:40px;transition:all .2s ease}
+.tabin.priceList #priceList .row .cell:not(:first-child) {max-width:80px}
+.tabin.priceList #priceList .row:hover {background:#ceedf7}
+.tabin.priceList #priceList input:not([type=submit]) {line-height: 32px;height: 32px;background: #f5f5f5;border: 0;border-radius: 3px;box-sizing: border-box;outline: none;font-size: 12px;padding: 0 5px;box-shadow: -1px 1px 0 rgba(0,0,0,0.2);margin: 0 auto;width: 80px;font-family: 'Rubik', sans-serif;}
+
+.tabin.clicks {}
+
+
+
+.tabin.clicks .container {max-width:880px;}
+.tabin.clicks .auto-campaign {border-radius:6px;background-color:#0dabb6;height:100px;position:relative;transition:all .2s ease;}
+.tabin.clicks .auto-campaign > .rgt {float:right;width:260px;background:#fff;border-radius:6px;box-sizing:border-box;border:2px solid #cccccc;height:100%}
+.tabin.clicks .auto-campaign > .rgt .qmark {margin-top:7px;margin-right:9px;width:30px;height:30px;display:inline-block;box-sizing:border-box;font-size:18px;font-weight:500;color:#777777;border:2px solid #aaaaaa;border-radius:30px;text-align:center;line-height:26px;cursor:pointer}
+.tabin.clicks .auto-campaign > .rgt .title {display:inline-block;color:#111111;font-size:24px;font-weight:500;padding-top:15px;padding-right:10px}
+.tabin.clicks .auto-campaign > .rgt input[type=checkbox] {display:none}
+.tabin.clicks .auto-campaign > .rgt .toggle {display:inline-block;margin-top:11px;margin-right:14px}
+.tabin.clicks .auto-campaign > .rgt .take {display:inline-block;font-size:14px;font-weight:500;margin-right:10px;margin-top:7px}
+.tabin.clicks .auto-campaign > .lft {padding-top:15px;padding-right:25px;color:#fff;display:inline-block;box-sizing:border-box;max-width:calc(100% - 265px)}
+.tabin.clicks .auto-campaign > .lft .title {font-size:22px;font-weight:500}
+.tabin.clicks .auto-campaign > .lft .desc {font-size:14px;font-weight:500;padding-top:5px;}
+.tabin.clicks .auto-campaign > .lft .rgt {display:inline-block}
+.tabin.clicks .auto-campaign > .lft svg {fill:#fff;display:inline-block;margin-top:-1px;margin-right:100px}
+.tabin.clicks .auto.on .auto-campaign > .lft svg {margin-right:0;margin-top:0}
+.tabin.clicks .auto .auto-campaign .off {display:block}
+.tabin.clicks .auto .auto-campaign .on {display:none}
+.tabin.clicks .auto.on .auto-campaign .off {display:none}
+.tabin.clicks .auto.on .auto-campaign .on {display:block}
+.tabin.clicks .auto.on .auto-campaign {background-color:#0bae37}
+.tabin.clicks .auto.on .auto-campaign .lft .rgt .rgt {margin-right:10px;max-width:calc(100% - 175px)}
+.tabin.clicks .auto.on .auto-campaign .slider {background-color:#0bac32}
+.tabin.clicks .auto.on .auto-campaign .switch .active {color:#fff}
+
+.tabin.clicks .twoBlocks {display:block;width:100%;margin-top:30px;text-align:center;}
+.tabin.clicks .twoBlocks .block {margin-left:20px;width:320px;min-height:270px;border-radius:6px;box-sizing:border-box;background:#f0fbff;border:1px solid #0dabb6;display:inline-block;position:relative;}
+.tabin.clicks .auto.on + .twoBlocks .block {background: #f9fffa;border-color:#0bae37}
+.tabin.clicks .twoBlocks .block:last-child {margin-left:0}
+.tabin.clicks .twoBlocks .block .qmark {background:#fff;top:7px;right:9px;width:30px;height:30px;position:absolute;box-sizing:border-box;font-size:18px;font-weight:500;color:#777777;border:2px solid #aaaaaa;border-radius:30px;text-align:center;line-height:26px;cursor:pointer}
+.tabin.clicks .twoBlocks .block .blockTitle {font-size:24px;font-weight:500;padding-top:20px;padding-bottom:15px;}
+.tabin.clicks .twoBlocks .block .blockTitle div {font-size:18px;font-weight:400;padding-top:5px}
+.tabin.clicks .twoBlocks .block .blockAutomatic .toggle div {font-size:14px}
+.tabin.clicks .twoBlocks .block .blockAutomatic .toggle input {display:none}
+.tabin.clicks .twoBlocks .block .blockAutomatic {display:inline-block}
+.tabin.clicks .twoBlocks .block .blockAutomatic .off {display:block}
+.tabin.clicks .twoBlocks .block .blockAutomatic .on {display:none}
+.tabin.clicks .twoBlocks .block .blockAutomatic .on > div {width:60px;height:30px;position:relative;display:inline-block;background:#9eebc7;border-radius:15px;}
+.tabin.clicks .twoBlocks .block .blockAutomatic .on > div:before {content:'';width:32px;height:32px;background:#0bac32;border-radius:32px;position:absolute;top:-1px;right:50%;transform:translateX(50%)}
+.tabin.clicks .twoBlocks .block .blockAutomatic .on svg {fill:#fff;position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);z-index:1}
+.tabin.clicks .auto.on .twoBlocks .block .blockAutomatic .on {display:block}
+.tabin.clicks .auto.on .twoBlocks .block .blockAutomatic .off {display:none}
+.tabin.clicks .twoBlocks .block .dailyGoal {display:inline-block;box-sizing:border-box;width:60px;height:50px;border-radius:6px;border:1px solid #000000;background:transparent;font-size:20px;text-align:center;font-family:inherit;margin-right:20px;padding:0 5px;}
+.tabin.clicks .twoBlocks .block .dailyGoalAuto {display:none;width:60px;height:50px;box-sizing:border-box;text-align:center;line-height:50px;color:#fff;font-size:14px;background:#0bac32;border-radius:5px;margin-right:20px}
+.tabin.clicks .auto.on .twoBlocks .block .dailyGoalAuto {display:inline-block}
+.tabin.clicks .auto.on .twoBlocks .block .dailyGoal {display:none}
+.tabin.clicks .twoBlocks .block .monthlyBudget {display:inline-block;box-sizing:border-box;width:80px;height:50px;border-radius:6px;border:1px solid #000000;background:transparent;font-size:20px;text-align:center;font-family:inherit;padding:0 5px;}
+.tabin.clicks .twoBlocks .block .selectBudget {display:inline-block;box-sizing:border-box;width:80px;height:30px;border-radius:6px;border:1px solid #000000;background:#fff;font-size:18px;font-family:inherit;padding:0 5px;}
+.tabin.clicks .twoBlocks .block input[type=button] {width:80px;height:30px;background:#0dabb6;font-size:18px;color:#fff;border-radius:6px;border:0;margin-right:15px;display:inline-block}
+.tabin.clicks .twoBlocks .block .capacity {display:inline-block;font-weight:500;font-size:14px;margin-right:15px;padding-top:8px;min-width:80px}
+.tabin.clicks .twoBlocks .block.dailygoal .blockbDays {display:none}
+.tabin.clicks .twoBlocks .block.dailygoal.on .blockbDays {display:block}
+.tabin.clicks .twoBlocks .block.dailygoal .blockbweeknums {display:block}
+.tabin.clicks .twoBlocks .block.dailygoal.on .blockbweeknums {display:none}
+.tabin.clicks .twoBlocks .block .dailySEO {margin-top:8px;display:block;width:100%;padding:0 15px;box-sizing:border-box;}
+.tabin.clicks .twoBlocks .block .dailySEO .rgt {float:right;font-size:14px;padding-top:10px;width:100%;text-align:center}
+.tabin.clicks .twoBlocks .block .dailySEO .rgt span {cursor:pointer;color:#0dabb6;text-decoration:underline}
+.tabin.clicks .twoBlocks .block .dailySEO .item {display:inline-block;margin-left:10px}
+.tabin.clicks .twoBlocks .block .dailySEO .item:last-child {margin-left:0}
+.tabin.clicks .twoBlocks .block .dailySEO .item label {font-size:16px;font-weight:500;width:50px;height:50px;border-radius:6px;box-sizing:border-box;transition:all .2s ease;border:2px solid #ff5039;color:#ff5039;display:block;cursor:pointer;position:relative}
+.tabin.clicks .twoBlocks .block .dailySEO .item label div {position:absolute;top:50%;right:0;left:0;text-align:center;transform:translateY(-50%)}
+.tabin.clicks .twoBlocks .block .dailySEO .item label div span {display:block;font-size:24px;line-height:1}
+.tabin.clicks .twoBlocks .block .dailySEO .item input {display:none}
+.tabin.clicks .twoBlocks .block .dailySEO .item input:checked + label, .tabin.clicks .twoBlocks .block .dailySEO .item label:hover {background:#ff5039;color:#fff}
+.tabin.clicks .twoBlocks .block .dailySEO .notactive {display:block}
+.tabin.clicks .twoBlocks .block .dailySEO .notactive > div {width:100px;height:50px;border-radius:6px;background:#ff5039;color:#fff;font-size:18px;font-weight:500;margin:0 auto;box-sizing:border-box;line-height:1;margin:0 auto;padding-top:6px;cursor:pointer}
+.tabin.clicks .twoBlocks .block .dailySEO .active {display:none}
+.tabin.clicks .twoBlocks .block .dailySEO.active .notactive {display:none}
+.tabin.clicks .twoBlocks .block .dailySEO.active .active {display:block}
+.tabin.clicks .twoBlocks .block .block-bottom {height:54px;background:#fff;border-radius:6px;width:95%;border:1px solid #cccccc;box-sizing:border-box;position:absolute;bottom:5px;right:50%;transform:translateX(50%)}
+.tabin.clicks .twoBlocks .block .days {width:100%;text-align:right;padding-top:3px}
+.tabin.clicks .twoBlocks .block .row.off {display:block}
+.tabin.clicks .twoBlocks .block .row.on {display:none}
+.tabin.clicks .twoBlocks .block.on .row.on {display:block}
+.tabin.clicks .twoBlocks .block.on .row.off {display:none}
+.tabin.clicks .twoBlocks .block .blockbDays {pointer-events:none}
+.tabin.clicks .twoBlocks .block.on .blockbDays {pointer-events:auto}
+/*.tabin.clicks .twoBlocks .block.settings .blockbDays .day {pointer-events:auto}*/
+.tabin.clicks .twoBlocks .block.settings .days, .tabin.clicks .twoBlocks .block.settingsW .days {font-size:0;padding:0 10px;box-sizing:border-box}
+.tabin.clicks .twoBlocks .block .days .day {display:inline-block;width:30px;font-size:14px;color:#777;font-weight:500;text-align:center; pointer-events:none}
+.tabin.clicks .twoBlocks .block .days .day .sum {display:none}
+.tabin.clicks .twoBlocks .block.settings .days .day, .tabin.clicks .twoBlocks .block.settingsW .days .day {color:#000;font-size:18px;width:14.2%; pointer-events:auto}
+.tabin.clicks .twoBlocks .block.settings .days .day .sum, .tabin.clicks .twoBlocks .block.settingsW .days .day .sum {display:block}
+.tabin.clicks .twoBlocks .block.settings .days .day .d, .tabin.clicks .twoBlocks .block.settingsW .days .day .d {cursor:pointer;width:26px;height:26px;margin-top:4px}
+.tabin.clicks .twoBlocks .block.settings .days .day .d.disabled, .tabin.clicks .twoBlocks .block.settingsW .days .day .d.disabled {}
+.tabin.clicks .twoBlocks .block .days input {display:none}
+.tabin.clicks .twoBlocks .block .days .settings {float:left;margin-left:10px;width:34px;margin-top:5px;cursor:pointer}
+.auto.on + div .settings svg path {fill: #0bae37;}
+.tabin.clicks .twoBlocks .block .days .pricesLastWeek {float:left;margin-left:10px;width:34px;font-size:12px;color:#0dabb6;margin-top:0;cursor:pointer}
+.tabin.clicks .twoBlocks .block.settings .block-bottom, .tabin.clicks .twoBlocks .block.settingsW .block-bottom.blockbweeknums {height:auto;background:transparent;border:0;border-radius: 6px;width: 100%;padding:0 6px;box-sizing: border-box;position: absolute;top:auto;right:0;left:0;bottom:25px;display: block;transform:none}
+.tabin.clicks .twoBlocks .block.settings .block-bottom .settings, .tabin.clicks .twoBlocks .block.settingsW .block-bottom.blockbweeknums .settings {display:none}
+.tabin.clicks .twoBlocks .block .days .day > div {font-size:12px;font-weight:normal;padding-top:5px}
+.tabin.clicks .twoBlocks .block .days .day .d {background:#cccccc;width:6px;height:6px;border-radius:50%;display:block;padding:0;margin:1px auto 0 auto}
+.tabin.clicks .twoBlocks .block .days .day input:checked + .d {background:#ff5039}
+.tabin.clicks .twoBlocks .block .days .day .d.active {background:#ff5039}
+.tabin.clicks .twoBlocks .block .days .day .d.disabled {opacity:0.8}
+.tabin.clicks .twoBlocks .block .block-bottom .notice {font-size:12px;color:#777777;padding-top:5px}
+.tabin.clicks .twoBlocks .block .block-bottom .notice .rgt {display:inline-block;text-align:right}
+.tabin.clicks .twoBlocks .block .block-bottom .notice .rgt svg {margin-top:9px;margin-left:10px}
+.tabin.clicks .twoBlocks .block .blockSettings {display:none}
+.tabin.clicks .twoBlocks .block .blockNormal {display:block}
+.tabin.clicks .twoBlocks .block.settings .blockNormal, .tabin.clicks .twoBlocks .block.settingsW .blockNormal {display:none}
+.tabin.clicks .twoBlocks .block.settings .blockSettings, .tabin.clicks .twoBlocks .block.settingsW .blockSettings {display:block;position:absolute;top:5px;right:5px;left:5px;bottom:5px;background:#fff;border-radius:6px;border:1px solid #cccccc;padding:10px;box-sizing:border-box;text-align:right}
+.tabin.clicks .twoBlocks .block.settings .blockSettings .blockClose, .tabin.clicks .twoBlocks .block.settingsW .blockSettings .blockClose {cursor:pointer;position:absolute;top:10px;left:10px;}
+.tabin.clicks .twoBlocks .block.settings .blockSettings .used, .tabin.clicks .twoBlocks .block.settingsW .blockSettings .used {font-size:16px;display:block;text-align:center;font-weight:normal;padding-top:20px}
+.tabin.clicks .twoBlocks .block.settings .blockSettings .used strong, .tabin.clicks .twoBlocks .block.settingsW .blockSettings .used strong {font-size:18px;font-weight:bold;vertical-align:middle}
+
+.tabin.clicks .beforeList {margin-top:75px;min-height:46px;font-size:0}
+.tabin.clicks .beforeList .rButtons {display:inline-block}
+.tabin.clicks .beforeList .datesInputs {display:none}
+.tabin.clicks .beforeList .datesInputs.active {display:inline-block;border-radius:6px 0 0 6px;border-right:none}
+.tabin.clicks .beforeList .datesInputs {height:36px;background:transparent;color:#000;border:1px solid #777777;border-radius:6px;font-size:14px;box-sizing:border-box;font-family:inherit;transition:all .2s ease}
+.tabin.clicks .beforeList .datesInputs input {width:82px;height:34px;border-left:1px solid #ccc;background:transparent;box-sizing:border-box;padding:0 10px;text-align:center;font-family:inherit}
+.tabin.clicks .beforeList #datesPickerMini {width:30px;height:30px;font-size:30px;display:none;cursor:pointer;padding-top:3px}
+.tabin.clicks .beforeList #datesPickerMini.active {display:inline-block}
+.tabin.clicks .beforeList input[type=button] {width:90px;height:36px;background:transparent;color:#0dabb6;border:1px solid #0dabb6;border-radius:18px;box-sizing:border-box;margin-left:10px;font-family:inherit;transition:all .2s ease;cursor:pointer}
+.tabin.clicks .beforeList input[type=button]:hover, .tabin.clicks .beforeList input[type=button].active {background:#0dabb6;color:#fff}
+.tabin.clicks .beforeList select {width:130px;height:36px;background:transparent;color:#000;border:1px solid #777777;border-radius:6px;font-size:18px;padding:0 10px;box-sizing:border-box;font-family:inherit;transition:all .2s ease}
+.tabin.clicks .beforeList select.active {border-left:none;border-radius:0 6px 6px 0}
+.tabin.clicks .beforeList .lButton {cursor:pointer;width:100px;height:46px;border:2px solid #0dabb6;box-sizing:border-box;color:#0dabb6;border-radius:23px;position:relative;float:left;margin-right:10px;transition:all .2s ease;margin-top:-5px}
+.tabin.clicks .auto.on ~ .beforeList .lButton {border-color: #0bae37;color: #0bae37;}
+.tabin.clicks .beforeList .lButton#clickSeo {border-color:#0bac32;color:#0bac32}
+.tabin.clicks .beforeList .lButton#clickSeo div {font-size:0}
+.tabin.clicks .beforeList .lButton#clickSeo div > div {display:block;font-size:14px}
+.tabin.clicks .beforeList .lButton:hover {background:#0dabb6;color:#fff}
+.tabin.clicks .beforeList .lButton#clickSeo:hover {background:#0bac32;color:#fff}
+.tabin.clicks .beforeList .lButton svg {position:absolute;top:50%;left:10px;transform:translateY(-50%);fill:currentColor}
+.tabin.clicks .beforeList .lButton > div {float:right;font-size:14px;font-weight:500;max-width:40px;padding-right:17px;padding-top:5px}
+.tabin.clicks .beforeList .lButton div > div {display:none}
+
+.tabin.clicks .list {}
+.tabin.clicks .list > div {display:none}
+.tabin.clicks .list > div.active {display:block}
+.tabin.clicks .list > .clickList table {display:block;overflow:hidden;height:420px;position:relative;white-space:nowrap}
+.tabin.clicks .list > .clickList table thead {display:block;margin-right:8px}
+.tabin.clicks .list > .clickList table thead th {border-bottom:1px solid #555555;line-height:49px;height:49px}
+.tabin.clicks .list > .clickList table .date {width:187px;text-align:right;padding-right:10px;box-sizing:border-box}
+.tabin.clicks .list > .clickList table .click {width:180px;text-align:right}
+.tabin.clicks .list > .clickList table .ad {width:230px;text-align:right}
+.tabin.clicks .list > .clickList table .position {width:123px;text-align:center}
+.tabin.clicks .list > .clickList table .bid {width:80px;text-align:right}
+.tabin.clicks .list > .clickList table .cost {width:80px;text-align:right}
+.tabin.clicks .list > .clickList tbody {max-height:320px;overflow:auto;display:block;margin-right:8px;width:calc(100% - 8px);border-bottom:1px solid #555555}
+.tabin.clicks .list > .clickList table tbody td {border-bottom:1px solid #cccccc}
+.tabin.clicks .list > .clickList table tbody tr:last-child {position:absolute;bottom:0;right:0;margin-left:8px;font-weight:500;left:0;}
+.tabin.clicks .list > .clickList table tbody tr:last-child td {border-bottom:none}
+.tabin.clicks .list > .clickList table tbody tr:last-child td.date {padding-right:18px}
+.tabin.clicks .list > .clickList table tbody tr:last-child td:last-child {position:absolute;top:0;left:25px}
+.tabin.clicks .list > .clickList tbody::-webkit-scrollbar-track{border-radius: 10px;background-color: #cccccc;}
+.tabin.clicks .list > .clickList tbody::-webkit-scrollbar{width: 8px;background-color: #cccccc;}
+.tabin.clicks .list > .clickList tbody::-webkit-scrollbar-thumb{border-radius: 10px;background-color: #555555;}
+.tabin.clicks .list > .clickList {margin-top:20px;height:420px;max-height:420px;width:100%;border-radius:6px;border:1px solid #555555;box-sizing:border-box;min-height:420px}
+.tabin.clicks .list > .clickList td {height:49px;line-height:49px}
+.tabin.clicks .list > .daysList table {display:block;overflow:hidden;height:420px;position:relative;white-space:nowrap}
+.tabin.clicks .list > .daysList table thead {display:block;margin-right:8px}
+.tabin.clicks .list > .daysList table thead th {border-bottom:1px solid #555555;line-height:49px;height:49px}
+.tabin.clicks .list > .daysList table .date {width:185px;text-align:right;padding-right:10px;box-sizing:border-box}
+.tabin.clicks .list > .daysList table .average {width:130px;text-align:right;box-sizing:border-box}
+.tabin.clicks .list > .daysList table .clicks {width:120px;text-align:right}
+.tabin.clicks .list > .daysList table .views {width:120px;text-align:right}
+.tabin.clicks .list > .daysList table .ratio {width:105px;text-align:center}
+.tabin.clicks .list > .daysList table .position {width:110px;direction:ltr;text-align:right}
+.tabin.clicks .list > .daysList table .cost {width:80px;text-align:right}
+.tabin.clicks .list > .daysList tbody {max-height:320px;overflow:auto;display:block;margin-right:8px;width:calc(100% - 8px);border-bottom:1px solid #555555}
+.tabin.clicks .list > .daysList table tbody td {border-bottom:1px solid #cccccc}
+.tabin.clicks .list > .daysList table tbody tr:last-child {position:absolute;bottom:0;right:0;margin-left:8px;font-weight:500;left:0;}
+.tabin.clicks .list > .daysList table tbody tr:last-child td {border-bottom:none}
+.tabin.clicks .list > .daysList table tbody tr:last-child td.date {padding-right:18px}
+.tabin.clicks .list > .daysList table tbody tr:last-child td:last-child {position:absolute;top:0;left:25px}
+.tabin.clicks .list > .daysList tbody::-webkit-scrollbar-track{border-radius: 10px;background-color: #cccccc;}
+.tabin.clicks .list > .daysList tbody::-webkit-scrollbar{width: 8px;background-color: #cccccc;}
+.tabin.clicks .list > .daysList tbody::-webkit-scrollbar-thumb{border-radius: 10px;background-color: #555555;}
+.tabin.clicks .list > .daysList {margin-top:20px;height:420px;max-height:420px;width:100%;border-radius:6px;border:1px solid #555555;box-sizing:border-box;min-height:420px}
+.tabin.clicks .list > .daysList td {height:49px;line-height:49px}
+.tabin.clicks .list .item {margin-top:20px;display:block;width:100%;border:1px solid #0dabb6;border-radius:6px;height:70px;box-sizing:border-box;}
+.tabin.clicks .list .item.total {background:#f0fbff}
+.tabin.clicks .list .item .title {width:200px;display:inline-block;padding:0 20px 0 37px;box-sizing:border-box;color:#111111;font-size:18px;font-weight:500}
+.tabin.clicks .list .item .title div {display:table-cell;height:70px;vertical-align:middle}
+/*.tabin.clicks .list .item .auto {display:inline-block;text-align:center;width:75px}
+.tabin.clicks .list .item .auto input {display:none}
+.tabin.clicks .list .item .auto .toggle > div {font-size:12px;color:#0dabb6;padding-bottom:3px}
+.tabin.clicks .list .item .auto .toggle {height:70px;vertical-align:middle;display:table-cell}
+.tabin.clicks .list .item .auto .toggle .off {display:block}
+.tabin.clicks .list .item .auto .toggle .on {display:none}
+.tabin.clicks .auto.on .list .item .auto .toggle .off {display:none}
+.tabin.clicks .auto.on .list .item .auto .toggle .on {display:block}
+.tabin.clicks .auto.on .list .item .auto .toggle .on > div {width:60px;height:30px;position:relative;display:inline-block;background:#9eebc7;border-radius:15px;}
+.tabin.clicks .auto.on .list .item .auto .toggle .on > div:before {content:'';width:32px;height:32px;background:#0bac32;border-radius:32px;position:absolute;top:-1px;right:50%;transform:translateX(50%)}
+.tabin.clicks .auto.on .list .item .auto .toggle .on svg {fill:#fff;position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);z-index:1}
+.tabin.clicks .list .item .max {width:85px;display:inline-block;text-align:center}
+.tabin.clicks .list .item .max > div {display:table-cell;vertical-align:middle;height:70px;font-size:12px;color:#777777}
+.tabin.clicks .list .item .max input {display:block;text-align:center;padding:0 5px;margin-top:3px;display:block;width:60px;height:32px;font-size:18px;font-family:inherit;color:#0dabb6;border-radius:6px;box-sizing:border-box;border:1px solid #82878c}
+.tabin.clicks .list .item .max .on {display:none;text-align:center;padding:0 5px;margin-top:3px;width:60px;height:32px;line-height:32px;font-size:14px;font-family:inherit;color:#fff;border-radius:6px;box-sizing:border-box;background:#0bac32;margin-right:auto;margin-left:auto}
+.tabin.clicks .auto.on .list .item .max input {display:none}
+.tabin.clicks .auto.on .list .item .max .on {display:block}*/
+.tabin.clicks .list .item .actually {display:inline-block;width:80px;}
+.tabin.clicks .list .item .actually > div {display:table-cell;height:70px;vertical-align:middle;font-size:12px;color:#0dabb6;text-align:center;}
+.tabin.clicks .list .item .actually > div span {display:block;color:#111111;font-size:18px;padding-top:6px}
+
+.tabin.clicks .list .item .clicks {display:inline-block;width:60px;}
+.tabin.clicks .list .item .clicks > div {display:table-cell;height:70px;vertical-align:middle;font-size:12px;color:#0dabb6;text-align:center;}
+.tabin.clicks .list .item .clicks > div span {display:block;color:#111111;font-size:18px;padding-top:6px}
+.tabin.clicks .list .item .views {display:inline-block;width:60px;}
+.tabin.clicks .list .item .views > div {display:table-cell;height:70px;vertical-align:middle;font-size:12px;color:#0dabb6;text-align:center;}
+.tabin.clicks .list .item .views > div span {display:block;color:#111111;font-size:18px;padding-top:6px}
+.tabin.clicks .list .item .ratio {display:inline-block;width:60px;}
+.tabin.clicks .list .item .ratio > div {display:table-cell;height:70px;vertical-align:middle;font-size:12px;color:#0dabb6;text-align:center;}
+.tabin.clicks .list .item .ratio > div span {display:block;color:#111111;font-size:18px;padding-top:6px}
+.tabin.clicks .list .item .position {display:inline-block;width:90px;}
+.tabin.clicks .list .item .position > div {display:table-cell;height:70px;vertical-align:middle;font-size:12px;color:#0dabb6;text-align:center;}
+.tabin.clicks .list .item .position > div span {display:block;color:#111111;font-size:18px;padding-top:6px}
+.tabin.clicks .list .item .totalpaid {display:inline-block;width:150px;}
+.tabin.clicks .list .item .totalpaid > div {display:table-cell;height:70px;vertical-align:middle;font-size:12px;color:#0dabb6;text-align:center;}
+.tabin.clicks .list .item .totalpaid > div span {display:block;color:#111111;font-size:18px;padding-top:6px;font-weight:500}
+/*.tabin.clicks .list .item .details {display:inline-block;}
+.tabin.clicks .list .item .details a {font-size:18px;color:#0dabb6;font-weight:500;line-height:68px;text-decoration:none;}*/
+
+.tabin.clicks .yourPlan {display:block;width:100%;margin-top:60px}
+.tabin.clicks .yourPlan .yourPlanTitle {display:block;width:100%;text-align:center;font-size:24px;font-weight:500}
+.tabin.clicks .yourPlan .checkbox {display:block;text-align:center}
+.tabin.clicks .yourPlan .checkbox > div {display:inline-block;vertical-align:middle}
+.tabin.clicks .yourPlan .checkbox label {vertical-align:middle;display:inline-block}
+.tabin.clicks .yourPlan .checkbox input:checked + label.switch > span.slider.round {background:#0dabb5;color:#0dabb5}
+.auto.on + div .on span.slider.round {background: #0bae37;}
+.tabin.clicks .yourPlan .checkbox input {display:none;vertical-align:middle}
+.tabin.clicks .yourPlan .yourPlanTitle > div {font-size:18px}
+.tabin.clicks .yourPlan .plans {display:block;width:100%;margin-top:25px;text-align:center}
+.tabin.clicks .yourPlan .plans .plan {display:inline-block;margin-left:50px;cursor:pointer;}
+.tabin.clicks .yourPlan .plans .plan:last-child {margin-left:0}
+.tabin.clicks .yourPlan .plans .plan > span {font-size:20px;transition:all .2s ease;font-weight:500;width:100px;height:100px;border-radius:100px;box-sizing:border-box;text-align:center;background:#f4f4f4;border:2px solid #cccccc;display:inline-block;line-height:98px}
+.tabin.clicks .yourPlan .plans .plan:hover > span {background:#f0fbff;border-color:#f0fbff}
+.tabin.clicks .yourPlan .plans .plan.active > span {background:#0dabb6;border-color:#0dabb6;color:#fff}
+.tabin.clicks .yourPlan .plans .plan > div {margin-top:11px;font-weight:500;font-size:14px}
+.tabin.clicks .yourPlan .plans .plan > div > div {font-weight:normal;padding-top:5px}
+.tabin.clicks .yourPlan .plans .plan > div > div > div {font-size:12px}
+
+.mt15 {margin-top:15px}
+
+.topof {text-align:center}
+
+#buttonPriceForm{display: none;}
+.tabin.priceList {}
+.tabin.priceList button, .tabin.priceList .npgo {transition: all .4s ease;line-height: 40px;height: 40px;background: #0dabb5;display: inline-block;box-sizing: border-box;padding: 0 20px;border: 1px solid #a3a3a3;color: #fff;border-radius: 10px;cursor: pointer;}
+.tabin.priceList .npgo{font-size:16px;margin:10px}
+.tabin.priceList button:hover{background: #035570;}
+.editRoomsPrices {max-width:400px;display:inline-block;box-sizing: border-box;font-size:0;margin: 20px 0;background: #fff;position: relative;overflow: hidden;border-bottom: 1px solid #cccccc;}
+.editRoomsPrices .editRoomsPrices-periods {overflow: hidden;position: relative;box-sizing:border-box;width:100%;display:inline-block;border-left:1px solid #ccc;border-top: 1px solid #cccccc;border-right: 1px solid #cccccc;}
+
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .tableLike .row:first-child > .cell {height:60px;line-height:60px}
+
+.editRoomsPrices .topof .rgtPeriodsArrow{position: absolute;right:0;top: 0;cursor: pointer;z-index: 9;}
+.editRoomsPrices .topof .lftPeriodsArrow{position: absolute;left:0;top: 0;cursor: pointer;z-index: 9;}
+.editRoomsPrices .topof .rgtPeriodsArrow i{color: #0d6582;font-size: 40px;}
+.editRoomsPrices .topof .lftPeriodsArrow i{color: #0d6582;font-size: 40px;}
+
+.editRoomsPrices .editRoomsPrices-months {box-sizing:border-box;font-size:14px;width:70%;display:inline-block;border-right:1px solid #ccc;border-left: 1px solid #cccccc;border-top: 1px solid #cccccc;}
+.editRoomsPrices .editRoomsPrices-periods .editRoomsPrices-roomTitle {color:#333333;font-size:20px;padding:51px 20px 0 0;font-weight:500}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel {width:100%;position:relative;overflow: hidden;}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .owl-controls {color:#0d6582;font-size:40px;line-height:40px}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .owl-prev {position:absolute;top:0;right:0;}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .owl-next {position:absolute;top:0;left:0;}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period {}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period > span {font-size:24px;line-height:40px;display:block;width:100%;text-align:center;padding: 35px 0 0;}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .tableLike {display:block;}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .tableLike .row {font-size:0;display:block;width:100%}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .tableLike .row .cell {display:inline-block;width:33.33%;font-size:16px;white-space:nowrap}
+
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .tableLike .row:not(:first-child) .cell {height:50px;border-bottom:1px solid #ccc;padding-top:8px;box-sizing:border-box;}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .tableLike .row:not(:first-child) .cell span {display:none}
+
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .tableLike .row:last-child .cell {border-bottom:none}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .tableLike .cell > div {font-size:12px}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .tableLike .cell input {max-width:100%;display:block;margin:0 auto}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .tableLike .row:first-child .cell {text-align:center;border-bottom:1px solid #cccccc;font-size:14px;color:#777777}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .tableLike .row:first-child .cell.endof {color:#0dabb5}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .tableLike .row .cell:first-child {box-sizing:border-box;padding-right:5px}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period input:not([type=submit]) {line-height: 32px;height: 32px;background: #f5f5f5;border: 0;border-radius: 3px;box-sizing: border-box;outline: none;font-size: 16px;padding: 0 5px;box-shadow: -1px 1px 0 rgba(0,0,0,0.2);margin: 0 auto;width: 80px;font-family: 'Rubik', sans-serif;border:1px #ccc solid}
+.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period input:not([type=submit]).endofweek {background: #ecf6f7;box-shadow: -1px 1px 0 #0dabb6;}
+
+.editRoomsPrices .editRoomsPrices-months .rgtWeekArrow{position: absolute;right: -10px;top: 35px;cursor: pointer;}
+.editRoomsPrices .editRoomsPrices-months .lftWeekArrow{position: absolute;left: -10px;top: 35px;cursor: pointer;}
+.editRoomsPrices .editRoomsPrices-months .rgtWeekArrow i{color: #0d6582;font-size: 40px;}
+.editRoomsPrices .editRoomsPrices-months .lftWeekArrow i{color: #0d6582;font-size: 40px;}
+
+
+
+.editRoomsPrices .editRoomsPrices-months .monthscarousel {position:relative}
+.editRoomsPrices .editRoomsPrices-months .monthscarousel .owl-controls {color:#0d6582;font-size:40px;line-height:40px}
+.editRoomsPrices .editRoomsPrices-months .monthscarousel .owl-prev {position:absolute;top:0;right:-10px;padding-top:35px}
+.editRoomsPrices .editRoomsPrices-months .monthscarousel .owl-next {position:absolute;top:0;left:-10px;padding-top:35px}
+.editRoomsPrices .editRoomsPrices-months .monthscarousel .editRoomsPrices-day {text-align:center;width: calc(100% / 7);float: right;}
+.editRoomsPrices .editRoomsPrices-months .monthscarousel .editRoomsPrices-day > div:first-child {height:93px;border-bottom:1px solid #ccc;box-sizing:border-box;padding-top:30px;color:#777777}
+.editRoomsPrices .editRoomsPrices-months .monthscarousel .editRoomsPrices-day > div.weekend {color:#0dabb5}
+.editRoomsPrices .editRoomsPrices-months .monthscarousel .editRoomsPrices-day > div.weekend > div > div {color:#777777}
+.editRoomsPrices .editRoomsPrices-months .monthscarousel .editRoomsPrices-day > div:first-child > div {font-weight:500;padding-top:5px}
+.editRoomsPrices .editRoomsPrices-months .monthscarousel .editRoomsPrices-day > div:first-child > div > div {padding-top:5px}
+.editRoomsPrices .editRoomsPrices-months .monthscarousel .editRoomsPrices-day > div:first-child > div > div.busy {color:#ff5039}
+.editRoomsPrices .editRoomsPrices-months .monthscarousel .editRoomsPrices-day .row .cell {height:50px;font-size:16px;padding-top:8px;box-sizing:border-box;border-bottom:1px solid #ccc;color:#999999;position:relative}
+.editRoomsPrices .editRoomsPrices-months .monthscarousel .editRoomsPrices-day .row .days {position:absolute;top:5px;right:0;width:100%;text-align:center;font-size:12px;color:#0dabb5}
+.editRoomsPrices .editRoomsPrices-months .monthscarousel .editRoomsPrices-day .row:last-child .cell {border-bottom:none}
+.editRoomsPrices-day.newPeriod{pointer-events: none;background: rgba(9,165,217,0.2);}
+
+
+
+.tabin {padding:40px 30px 0 30px;box-sizing:border-box;}
+.tabin.tfusa {padding:40px 0}
+.tabin.benefits {}
+.tabin.benefits .benefitsList {}
+.tabin.benefits .benefitsList .benefit {transition:all .2s ease;max-width:880px;min-height:70px;border:1px solid #e0e0e0;box-sizing:border-box;border-radius:6px;font-size:0;background:#f4f4f4;position:relative;margin-bottom:20px}
+.tabin.benefits .benefitsList .benefit.hidden, .tabin.benefits .benefitsList .benefit[data-benefitid="0"] {display:none;visibility:hidden;opacity:0}
+.tabin.benefits .benefitsList .benefit.bzi {z-index:10}
+.tabin.benefits .benefitsList .benefit .clickZone {position:absolute;top:0;left:0;bottom:0;right:0;z-index:1}
+.tabin.benefits .benefitsList .benefit.on {border-color:#0dabb6;background-color:white}
+.tabin.benefits .benefitsList .benefit .col {width:31.5%;display:inline-block;font-size:16px;min-height:70px;position:relative}
+.tabin.benefits .benefitsList .benefit.on .col .right {background:#0dabb6}
+.tabin.benefits .benefitsList .benefit.on .col {}
+.tabin.benefits .benefitsList .benefit .col .right {box-sizing:border-box;width:80px;display:inline-block;height:70px;background:#e0e0e0;border-radius:35px 0 0 35px;padding-right:25px;color:#5b5b5b;padding-top:20px;position:relative;transition:all .2s ease;z-index:2}
+.tabin.benefits .benefitsList .benefit .col .right .toggle {position:absolute;top:50%;left:15px;transform:translateY(-50%)}
+.tabin.benefits .benefitsList .benefit .col .right .toggle *{cursor:pointer}
+.tabin.benefits .benefitsList .benefit .col .right .toggle input {display:none}
+.tabin.benefits .benefitsList .benefit .col > .sale {margin-top:15px;float:left;margin-left:10px;padding-right:5px;display:inline-block;font-weight:500;color:#999999}
+.tabin.benefits .benefitsList .benefit .col > .sale > div {display:none}
+.tabin.benefits .benefitsList .benefit .col > .sale > div.active {display:block}
+.tabin.benefits .benefitsList .benefit .col > .sale > div.membership {color:#fe5039}
+.tabin.benefits .benefitsList .benefit .col:after {content:'';width:1px;height:45px;background:#cccccc;position:absolute;top:50%;left:0;transform:translateY(-50%)}
+
+.tabin.benefits .benefitsList .benefit .col:first-child {width:40%}
+.tabin.benefits .benefitsList .benefit .priceBenefit {display:inline-block}
+.tabin.benefits .benefitsList .benefit .col:nth-child(2) {width:35%}
+.tabin.benefits .benefitsList .benefit .col:nth-child(3) {width:19.5%;text-align:center;}
+.tabin.benefits .benefitsList .benefit .col:last-child {width:5.5%}
+.tabin.benefits .benefitsList .benefit .col:last-child:after {content:none}
+.tabin.benefits .benefitsList .benefit .benefitPriceSec {display:none;font-size:0;margin-top:10px;margin-right:5px;width:140px;position:relative;}
+.tabin.benefits .benefitsList .benefit .benefitPriceSec.active {display:inline-block}
+.plus, .minus {font-size: 16px;margin-top: 10px;display: inline-block;width: 28px;height: 28px;cursor: pointer;line-height: 26px;box-sizing: border-box;border: 2px solid #a6a6a6;border-radius: 50%;color: #a6a6a6;position: relative;text-align: center;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;z-index:2}
+.tabin.benefits .benefitsList .benefit .benefitPriceSec .benefitPrice {font-size:16px;text-align:center;display:inline-block;width:84px;}
+.tabin.benefits .benefitsList .benefit .benefitPriceSec .benefitPrice .f {color:#fe5039;font-weight:500;font-size:14px;}
+.tabin.benefits .benefitsList .benefit .benefitPriceSec .benefitPrice .l {font-size:12px;font-weight:500;color:#555555;position:absolute;bottom:-15px;right:50%;transform:translateX(50%);width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.tabin.benefits .benefitsList .benefit .benefitPriceSec .benefitPrice .price {color:#fe5039;font-weight:500;font-size:20px}
+.tabin.benefits .benefitsList .benefit .freeNight {line-height:70px;display:none;color:#fe5039;font-weight:500;font-size:20px;width:140px;text-align:center}
+.tabin.benefits .benefitsList .benefit .freeNight.active {display:inline-block}
+
+.tabin.benefits .benefitsList .benefit .benefitType {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;cursor:pointer;position:relative;margin-right:10px;margin-top:15px;background:#fff;display:inline-block;width:50px;height:40px;box-sizing:border-box;border:1px solid #ededed;z-index:2}
+.tabin.benefits .benefitsList .benefit .benefitType input {display:none}
+.tabin.benefits .benefitsList .benefit .benefitType > i.bTI {color: #0dabb5;font-size:18px;vertical-align: middle;position: relative;margin-top: -2px;font-style:normal;font-weight:500;line-height:38px;padding-right:8px}
+.tabin.benefits .benefitsList .benefit .benefitType > i.bTI svg {display:inline-block;vertical-align:middle}
+.tabin.benefits .benefitsList .benefit .benefitType > .icon {position:absolute;top:50%;left:5px;transform:translateY(-50%)}
+.tabin.benefits .benefitsList .benefit .benefitType > .icon svg {display:inline-block;vertical-align:middle}
+.tabin.benefits .benefitsList .benefit .benefitType ul {display:none;z-index:1;list-style:none;width:230px;box-sizing:border-box;background:#fff;position:absolute;top:40px;left:0;border:1px solid #0dabb6}
+.tabin.benefits .benefitsList .benefit .benefitType.active ul {display:block}
+.tabin.benefits .benefitsList .benefit .benefitType ul li {padding:0 10%;transition:all .2s ease;font-size:14px;line-height:50px;position:relative;height:50px;box-sizing:border-box;}
+.tabin.benefits .benefitsList .benefit .benefitType ul li:hover, .tabin.benefits .benefitsList .benefit .benefitType ul li.active {background:#cfedf7}
+.tabin.benefits .benefitsList .benefit .benefitType ul li:before {width:90%;top:0;position:absolute;right:50%;transform:translateX(50%);height:1px;background:#cccccc;content:''}
+.tabin.benefits .benefitsList .benefit .benefitType ul li:first-child:before {content:none}
+.tabin.benefits .benefitsList .benefit .benefitType ul li i {color: #0dabb5;font-size:18px;vertical-align: middle;position: relative;margin-top: -2px;float:left;font-style:normal;font-weight:500}
+.tabin.benefits .benefitsList .benefit .benefitType ul li i svg {display:inline-block;vertical-align:middle}
+
+.tabin.benefits .benefitsList .benefit .benefitIf {margin-top:15px;color:#555555;padding-right:10px;font-weight:500;display:inline-block}
+.tabin.benefits .benefitsList .benefit .benefitIf p {display:inline-block}
+.tabin.benefits .benefitsList .benefit .benefitIf > div > span {display:none;}
+.tabin.benefits .benefitsList .benefit .benefitIf > div > span.active {display:inline-block}
+.tabin.benefits .benefitsList .benefit .benefitIf > span {display:none;}
+.tabin.benefits .benefitsList .benefit .benefitIf > span.active {display:block;}
+.tabin.benefits .benefitsList .benefit .benefitIfDays {display:none;width:140px;font-size:0;float:left;margin-left:15px;margin-top:10px;text-align:center}
+.tabin.benefits .benefitsList .benefit .benefitIfDays.active, .tabin.benefits .benefitsList .benefit .benefitEveryOrder.active {display:inline-block}
+.tabin.benefits .benefitsList .benefit .benefitEveryOrder {display:none;width:140px;font-size:16px;font-weight:500;float:left;margin-left:15px;margin-top:15px;text-align:center}
+.tabin.benefits .benefitsList .benefit .benefitIfDays .benefitIfD {padding-top:10px;width:84px;text-align:center;display:inline-block;font-size:20px;color:#555555;font-weight:500}
+.tabin.benefits .benefitsList .benefit .benefitIfDays .benefitIfD div {font-size:12px}
+.tabin.benefits .benefitsList .benefit .benefitInfo {display:inline-block;width:100%;text-align:center;margin-top:10px;font-weight:500;color:#999999}
+.tabin.benefits .benefitsList .benefit .col .close {display:block;width:100%;height:70px;}
+.tabin.benefits .benefitsList .benefit .col .close svg {position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);cursor:pointer;fill:#888888}
+.tabin.benefits .benefitsList .benefit .selectedRooms {font-size: 12px;color: #555555;display: block;width: 90%;margin: 0 auto;white-space: nowrap;text-align: center;text-overflow: ellipsis;overflow: hidden;}
+.tabin.benefits .benefitsList .addBenefit {width:150px;height:40px;color:#fff;text-align:center;line-height:40px;border-radius:6px;background:#0dabb6;margin:80px 0 20px 0;font-size:18px;font-weight:500;cursor:pointer}
+
+
+.tabin.breakfast {}
+.tabin.breakfast .inputs {}
+.tabin.breakfast .inputs .inputWrap {display:inline-block;margin-left:95px;text-align:center}
+.tabin.breakfast .inputs .inputWrap label {font-size:16px;display:block}
+.tabin.breakfast .inputs .inputWrap input {width:60px;height:30px;border:1px solid #010101;box-sizing:border-box;padding:0 5px;margin-top:5px}
+.tabin.breakfast .radios {display:block;padding-top:25px;padding-bottom:50px}
+.tabin.breakfast .radios input {display:none}
+.tabin.breakfast .radios input:checked + label::after {content:'';width:20px;height:20px;background:#0dabb5;border-radius:50%;position:absolute;top:5px;right:5px;cursor:pointer}
+.tabin.breakfast .radios label {display:inline-block;position:relative;margin-left:50px;padding-right:40px;line-height:30px}
+.tabin.breakfast .radios label::before {cursor:pointer;content:'';width:30px;height:30px;box-sizing:border-box;border:1px solid #979797;border-radius:50%;position:absolute;top:0;right:0}
+.tabin.breakfast .table {display:inline-block;font-size:0;border-top:1px solid #000000;border-right:1px solid #000000}
+.tabin.breakfast .table .r {display:inline-block;width:130px;border-left:1px solid #000000;font-size:16px;font-weight:500}
+.tabin.breakfast .table .r .cell {box-sizing:border-box;position:relative}
+.tabin.breakfast .table .r .cell > div {position:absolute;top:50%;right:0;transform:translateY(-50%);padding-right:10px;padding-left:10px;box-sizing:border-box}
+.tabin.breakfast .table .r .cell .sub {line-height:1;font-size:12px;font-weight:normal;padding-top:5px}
+.tabin.breakfast .table .cell {height:80px;border-bottom:1px solid #000000;box-sizing:border-box}
+.tabin.breakfast .table .cell.title {height:40px;line-height:40px}
+.tabin.breakfast .table .allRooms, .tabin.breakfast .table .singleRoom {display:none}
+.tabin.breakfast .table .allRooms.active, .tabin.breakfast .table .singleRoom.active {display:inline-block}
+.tabin.breakfast .table .singleRoom .slide {width:800px;direction:rtl}
+.tabin.breakfast .table .singleRoom .slide .owl-nav .disabled {display:none!important}
+.tabin.breakfast .table .singleRoom .slide .owl-prev {position:absolute;top:5px;right:-15px;width:30px;height:30px;border:1px solid #000;border-radius:50%;background:#fff}
+.tabin.breakfast .table .singleRoom .slide .owl-prev::before {content:'';width:10px;height:10px;border-top:2px solid #000;border-right:2px solid #000;position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%) rotate(45deg)}
+.tabin.breakfast .table .singleRoom .slide .owl-next {position:absolute;top:5px;left:-15px;width:30px;height:30px;border:1px solid #000;border-radius:50%;background:#fff}
+.tabin.breakfast .table .singleRoom .slide .owl-next::before {content:'';width:10px;height:10px;border-bottom:2px solid #000;border-left:2px solid #000;position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%) rotate(45deg)}
+.tabin.breakfast .table .singleRoom .slide .item {width:99%!important}
+.tabin.breakfast .table .singleRoom .slide.aauto {width:auto}
+.tabin.breakfast .table .item {font-size:11px;width:160px;display:inline-block;border-left:1px solid #000000;direction:rtl}
+.tabin.breakfast .table .item .cell.title {text-align:center;font-size:16px;font-weight:500}
+.tabin.breakfast .table .item .radios {font-size:0;padding-top:15px;padding-bottom:0}
+.tabin.breakfast .table .item .radios .inputWrap {font-size:11px;display:inline-block;width:50%;text-align:center}
+.tabin.breakfast .table .item .radios .inputWrap.disabled {opacity:0.5;-webkit-opacity:0.5;-moz-opacity:0.5;position:relative}
+.tabin.breakfast .table .item .radios .inputWrap.disabled::before {content:'';width:100%;position:absolute;top:0;right:0;left:0;bottom:0;z-index:10}
+.tabin.breakfast .table .item .radios label {line-height:1;margin-left:0;padding-right:0;height:50px;}
+.tabin.breakfast .table .item .radios label::before {top:15px;right:50%;transform:translateX(50%)}
+.tabin.breakfast .table .item .radios input:checked + label::after {top:20px;right:50%;transform:translateX(50%)}
+.tabin.breakfast button{transition: all .4s ease;line-height: 40px;height: 40px;background: #0dabb5;display: inline-block;box-sizing: border-box;padding: 0 20px;border: 1px solid #a3a3a3;color: #fff;border-radius: 10px;cursor: pointer;margin-top:20px}
+.tabin.breakfast button:hover{background: #035570;}
+
+
+.tableLike {display: table;width: 100%;}
+.tableLike .row{display: table-row;position: relative;}
+.tableLike .cell{display: table-cell;vertical-align: top;}
+.tableLike .cell{vertical-align: middle;}
+
+.clearfix {clear:both}
+
+.personimg {width: 30px;height: 30px;background-position: center center;border: 1px solid #14a6d8;box-sizing: border-box;border-radius: 50%;background-size: cover;}
+
+.info_place{min-height: 130px;}
+.info_place .infoSec{display:inline-block;width: 100%;box-sizing: border-box;padding: 10px 10px;}
+.info_place .infoSec .title {text-align: right;margin-top:0}
+.info_place .infoSec .title .sub {font-size: 18px;padding-top: 10px;font-weight: 500;}
+.info_place .infoSec .title .orderNumber {font-weight:500}
+.info_place .infoSec .title a {color:inherit}
+.info_place .infoSec .title .orderNumber span {display:inline-block;padding-right:15px;font-weight:normal}
+.info_place .infoSec .title .sub span{font-size: 16px;font-weight:normal;padding-right:100px}
+.info_place .infoSec .title .sub span > span {padding-right:15px}
+.info_place .infoSec .dates .type{font-size: 16px;line-height: 24px;font-weight: 500;}
+.info_place .infoSec .dates .day, .info_place .infoSec .dates .hour{font-size: 14px;}
+.info_place .infoSec .tableLike {width:250px}
+.info_place .infoSec .orderStatus {margin:20px 0 0 0;display:block;position:relative;float:right;width:100%;line-height:30px}
+.info_place .infoSec .orderStatus .r {float:right}
+.info_place .infoSec .orderStatus .btn {padding:0 10px;color:#fff;border-radius:6px;cursor:pointer;}
+.info_place .infoSec .orderStatus .ccinfo {color:#0dabb5;border:1px #0dabb5 solid;position:absolute;top:0;right:0}
+.info_place .infoSec .orderStatus .accept {float:left;background:#0fa950;margin-right:10px}
+.info_place .infoSec .orderStatus .cancel {float:left;background:#c0392b}
+
+
+/*generic pop style create by js function*/
+.globalPopWrap{height: 100vh;position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 9999;background: rgba(0,0,0,0.9); display: flex;justify-content: center;align-content: center;}
+.globalPopWrap .popFrameCont{min-width:300px;max-width:1000px;max-height:90vh;background: #ededed;margin: auto;border-radius: 6px;box-sizing: border-box;border: 1px solid #fff;position: relative;}
+.globalPopWrap .popFrameCont .closePopBtn{float: left;cursor: pointer;}
+.globalPopWrap .popFrameCont .popText{clear:both;overflow: auto;max-height: calc(90vh - 38px);width: 100%;box-sizing:border-box;padding: 10px;}
+/*end of pop style */
+
+.orderBottom {background:#fff;min-height:100px}
+.orderBottom .flotRight {float:right;max-width:65%}
+.orderBottom .flotRight {float:right;max-width:65%}
+.orderBottom .info_bold {font-weight:bold}
+.orderBottom .order_summary .inner_row {border-bottom:none;padding:10px}
+.orderBottom .order_summary {padding:10px;margin-bottom:5px;box-shadow:none;position:relative;}
+.orderBottom .order_summary:after {content:'';width:95%;position:absolute;bottom:0;right:50%;transform:translateX(50%);height:1px;background:#cccccc}
+.order_summary .inner_row .info_link {position:relative}
+.order_summary .inner_row .info_link a {font-size: 16px;position: absolute;top: 0;left: 0;text-decoration: underline;white-space: nowrap;color: #0dabb5;}
+.orderMsgs {width:95%;margin:0 auto;padding-bottom:5px}
+.orderMsgs .orderToggleMsgs {border-radius:6px;margin-right:25px;float:left;font-size:14px;color:#0dabb6;line-height:30px;padding:0 8px;text-decoration:underline;height:30px;transition:all .2s ease;cursor:pointer;}
+.orderMsgs .orderToggleMsgs {background:#0dabb6;color:#fff}
+.orderMsgs .orderToggleMsgs span {font-size:0}
+.orderMsgs.open .orderToggleMsgs {color:#555}
+.orderMsgs .orderMsgs-phone {line-height:30px;padding-left:31px;display:inline-block;font-size:14px;position:relative}
+.orderMsgs .orderMsgs-phone span {font-size:16px;float:left;font-weight:bold;margin-right:15px}
+.orderMsgs .orderMsgs-phone span i {border:2px solid #111111;border-radius:50%;width:22px;height:22px;line-height:18px;font-size:14px;text-align:center;box-sizing:border-box;position:absolute;top:50%;left:0;transform:translateY(-50%)}
+.orderMsgs .orderMsgs-phone .personimg {float:right;margin-left:10px}
+.orderMsgs-count {font-size:14px;color:#0dabb6;line-height:30px;float:left}
+
+.orderMsgs .orderMsgs-items {max-width:540px;margin:0 auto;display:inline-block;height: 0;overflow: hidden;padding: 0 64px;box-sizing: border-box;}
+.orderMsgs.open .orderMsgs-items{height: auto;}
+.orderMsgs .orderMsgs-area {text-align:center;overflow:hidden}
+.orderMsgs .orderMsgs-area form textarea {resize: vertical;width:98%;max-width:540px;margin:0 auto;border-radius:6px;display:block;margin-top:12px;min-height:80px;box-shadow:0px 0px 6px 2px rgba(0, 0, 0, 0.3);padding:10px;box-sizing:border-box;}
+
+.orderMsgs .orderMsgs-area form .talkSend{-moz-transition: all 0.5s;-webkit-transition: all 0.5s;transition: all 0.5s;outline:0;cursor:pointer;margin:15px 0;display:inline-block;direction:ltr;font-size:14px;border: 1px solid #0dabb5;padding: 10px 20px;border-radius: 7px;}
+.orderMsgs .orderMsgs-area form .talkSend:hover{background: #0dabb5;border:1px solid #7ea0ac}
+.orderMsgs .orderMsgs-area form button i {vertical-align:middle;font-size:28px}
+.orderMsgs .orderMsgs-items > div {margin-top:12px;position:relative;background:#cfedf7;border-radius:6px;padding:15px;box-sizing:border-box;float:right;min-width:300px}
+.orderMsgs .orderMsgs-items > div.him {float:left}
+.orderMsgs .orderMsgs-items > div:before {content: '';width: 9px;height: 9px;border-top: 1px solid #cfedf7;border-right: 1px solid #cfedf7;position: absolute;top: 20px;background: #cfedf7;right: -5px;transform: rotate(45deg);}
+.orderMsgs .orderMsgs-items > div > div {text-align:right;position:relative;font-size:14px}
+.orderMsgs .orderMsgs-items > div > div.orderMsgs-item-time {font-size:12px;color:#888888;padding-top:10px}
+.orderMsgs .orderMsgs-items > div > .senderimg {font-size:24px;color:#fff;line-height:40px;font-weight:500;text-align:center;background:#09779b;float:right;width:42px;height:42px;border-radius:50%;box-sizing:border-box;right:-63px;position:absolute;top:0}
+.orderMsgs .orderMsgs-items > div > .senderimg .personimg {width:100%;height:100%}
+.orderMsgs .orderMsgs-items > div.him > .senderimg {right:auto;left:-63px;}
+.orderMsgs .orderMsgs-items > div.him {background:#e7e7e7}
+.orderMsgs .orderMsgs-items > div.him:before {right:auto;left:-5px;background:#e7e7e7}
+.orderMsgs.open {}
+.orderMsgs.open .orderToggleMsgs {background:rgba(0,0,0,0.1);font-size:0;border-radius:6px}
+.orderMsgs.open .orderToggleMsgs span {font-size:14px}
+
+.calendarWrap{max-width:840px;box-sizing:border-box;border:4px solid #bababa;margin: 20px 0;background: #fff;position: relative;overflow: hidden;}
+.calendarWrap .topSection{height: 70px;box-sizing:border-box;border-bottom:1px solid #bababa;position: relative;overflow: hidden;}
+.calendarWrap .topSection .closeCal{cursor: pointer;margin-right: 10px;width: 30px;height: 30px;background: url('/cms/images/closeCal.png') no-repeat center center;float: right;margin-top: 22px;}
+.calendarWrap .topSection .calTitle{font-weight: bold;font-size: 20px;float: right;margin-right: 20px;color: #696969;line-height: 74px;}
+.calendarWrap .topSection .newEventBtn{width: 44px;height: 44px;background:#f46f54  url('/cms/images/addEventPop.png') no-repeat center center;border-radius:100px;cursor: pointer;position: absolute;left:100px;top: 12px;	}
+.calendarWrap .topSection .switchWrap{position: absolute;left: 20px;top: 14px;}
+.calendarWrap .topSection .switchWrap .switchTtl{text-align: center;font-size: 12px;color: #696969;}
+.switch {position: relative;display: inline-block;width: 60px;height: 30px;}
+.switch input {display:none}
+.slider:before {position: absolute;content: "";height: 30px;width: 30px;left: 0px;bottom: 0px;background-color: white;-webkit-transition: .4s;transition: .4s;z-index: 1;border:1px solid #CCC;box-sizing:border-box}
+.toggle input:checked + label .slider:before{-webkit-transform: translateX(30px);-ms-transform: translateX(30px);transform: translateX(30px);}
+.calendarWrap .monthLine{position: relative;height: 50px;border-bottom:1px solid #f0f0f0;}
+.calendarWrap .monthLine .monthName{text-align: center;line-height: 50px;font-size: 16px;color: #000;}
+.calendarWrap .monthLine .rArrowMonth{position: absolute;right: 11%;top: 5px;font-size: 40px;color: #000;cursor: pointer;}
+.calendarWrap .monthLine .lArrowMonth{position: absolute;left: 5px;top: 5px;font-size: 40px;color: #000;cursor: pointer;}
+
+.slider {position: absolute;cursor: pointer;top: 0;left: 0;right: 0;bottom: 0;background-color: #f4f4f4;-webkit-transition: .4s;transition: .4s;}
+input:checked + .slider {background-color: #f4f4f4;}
+input:focus + .slider {box-shadow: 0 0 1px #2196F3;}
+input:checked + .slider:before {-webkit-transform: translateX(26px);-ms-transform: translateX(26px);transform: translateX(26px);}
+.slider.round {border-radius: 15px;box-shadow: inset 0px 3px 3px rgba(0,0,0,0.2);}
+.on span.slider.round {background:#0dabb5;color:#0dabb5}
+.slider.round:before {border-radius: 50%;}
+.switch .active {position:absolute;top:50%;left:5px;transform:translateY(-50%);font-size:12px;color:#fff}
+.switch .off {position:absolute;top:50%;right:5px;transform:translateY(-50%);font-size:12px;color:#777777}
+
+.calendar.right{position: absolute;right: -100%;z-index: 99;top: 121px;background: #fff;animation-name: slideFromRight;animation-duration: 0.5s;animation-direction: alternate;animation-fill-mode: forwards;}
+.calendar.left{position: absolute;left: -100%;z-index: 99;top: 121px;background: #fff;animation-name: slideFromLeft;animation-duration: 0.5s;animation-direction: alternate;animation-fill-mode: forwards;}
+
+.calendar{display: table;width: 100%;border-collapse: collapse;table-layout: fixed;background: #fff;}
+.calendar .tableRow{/* display: table-row; */border-bottom:1px solid #f0f0f0;position: relative;margin-right: 90px;}
+.calendar .tableRow .tblCell:first-child{position: absolute !important;right: -90px !important;display: block !important;width: 90px !important;}
+.calendar .tableRow .tblCell:last-child{border-left: 1px solid #f0f0f0;}
+.calendar .tableRow .tblCell{display: table-cell;border-right:1px solid #f0f0f0;width: 100px;box-sizing:border-box;height: 70px;position: relative;}
+.calendar .divScroll { overflow-y: auto;height: 150px;background: #fff;width: 100%;border-top: 0;overflow-x: hidden;}
+.calendar .tableRow.date .tblCell .specialDate{line-height: 18px;position: absolute;bottom: -9px;background:#1e8fca;color: #fff;font-size: 14px;box-sizing:border-box;padding-right: 10px;z-index: 1;}
+.calendar .tableRow.date .tblCell .fLine{text-align: center;font-size: 14px;color: #555;margin-top: 15px;}
+.calendar .tableRow.date .tblCell .sLine{text-align: center;font-size: 14px;color: #777;font-weight: bold;margin-top: 8px;}
+.calendar .tableRow.date .rArrowWeek{position: absolute;right: 0;top: calc(50% - 20px);font-size: 40px;color: #000;cursor: pointer;}
+.calendar .tableRow.date .lArrowWeek{position: absolute;left: 5px;top: calc(50% - 20px);font-size: 40px;color: #000;cursor: pointer;}
+.calendar .tableRow.sum .tblCell{overflow: hidden;vertical-align: middle;}
+.calendar .tableRow.sum .tblCell:first-child{text-align: center;vertical-align: middle;font-weight: bold;font-size: 14px;line-height: 70px;}
+.calendar .tableRow.sum .tblCell .free{width: 50%;text-align: center;float: right;}
+.calendar .tableRow.sum .tblCell .occ{width: 50%;text-align: center;float: right;}
+.calendar .tableRow.sum .tblCell .free .num{font-size: 16px;font-weight: bold;color: #000;}
+.calendar .tableRow.sum .tblCell .free .label{font-size: 10px;font-weight: bold;color: #000;}
+.calendar .tableRow.sum .tblCell .occ .num{font-size: 16px;color: #aaaaaa;}
+.calendar .tableRow.sum .tblCell .occ .label{font-size: 10px;color: #aaaaaa;}
+.calendar .tableRow.site .tblCell .topCellSite{height: 100%;max-height: 69px;position: relative;}
+.calendar .tableRow.site .tblCell .topCellSite .siteTDetails{position: relative;overflow: hidden;height: 100%;}
+.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .unitDet{width: 50%;text-align: center;float: right;margin-top: 22px;position: relative;}
+.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .unitDet .freeArr{position: absolute;left: 4px;top: 4px;font-size: 22px;color: #1e8fca;cursor: pointer;}
+.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .unitDet .occArr{position: absolute;right: 4px;top: 4px;font-size: 22px;color: #f79a87;cursor: pointer;}
+.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .unitDet:first-child .num{font-size: 16px;font-weight: bold;color: #1e8fca;}
+.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .unitDet:first-child .lbl{font-size: 10px;font-weight: bold;color: #1e8fca;}
+.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .unitDet:nth-child(2) .num{font-size: 16px;color: #f79a87;}
+.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .unitDet:nth-child(2) .lbl{font-size: 10px;color: #f79a87;}
+.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .all{background: #fff;position: absolute;width: 18px;height: 18px;line-height: 18px;border:1px solid #c0c0c0;border-radius:18px;color: #c0c0c0;font-size: 12px;box-sizing:border-box;text-align: center;margin: 0 auto;left: 0;right: 0;top: 8px;}
+
+.calendar .tableRow.site .tblCell:first-child{cursor: pointer;text-align: center;vertical-align: middle;color: #1e8fca;font-size: 14px;font-weight: bold;}
+.calendar .tableRow.site .tblCell:first-child .topCellSite .siteTDetails{padding-right: 36px;background: url('/cms/images/plusCal.png') no-repeat center right 10px; position: absolute;top: 50%;left: 50%;transform: translate(-40%, -50%);height: auto;}
+
+.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .sep {position: absolute;left: 0;right: 0;top: 0;width: 1px;border-right:1px dotted #e0e0e0;height: 70px;margin: auto;z-index: 0;}
+
+.calendar .tableRow.siteOcc{border-bottom:0;height: 0;overflow: hidden;}
+.calendar .tableRow.siteOcc.open{height: auto;overflow: visible;}
+.calendar .tableRow.siteOcc:last-child{border-bottom: 1px solid #f0f0f0;}
+.calendar .tableRow.siteOcc .tblCell{height: 35px;border-bottom:0;position: relative;}
+.calendar .tableRow.siteOcc .tblCell .siteNum{font-weight: bold;font-size: 14px;color:#1e8fca;text-align: center;line-height: 35px;position: relative;}
+.calendar .tableRow.siteOcc .tblCell .siteNum::before{content:'•';position: absolute;right: 18px;font-size: 22px;}
+.calendar .tableRow.siteOcc .tblCell .event{width: calc(100% - 6px);box-sizing:border-box;line-height: 18px;margin:7.5px auto 0;}
+.calendar .tableRow.siteOcc .tblCell .free{border:1px solid #1e8fca;height: 20px;line-height: 20px;text-align: right;padding-right: 10px;color: #1e8fca;font-size: 14px;cursor: pointer;position: absolute;z-index: 1;top: 7.5px;box-sizing: border-box;right: 3px;width: calc(100% - 6px);}
+.calendar .tableRow.siteOcc .tblCell .occ{border:1px solid #f46f54;background:rgba(244,111,84,0.7);color: #fff;position: absolute;z-index: 2;top: 7.5px;box-sizing: border-box;line-height: 18px;right: 3px;width: calc(100% - 6px);padding-right: 10px;}
+.calendar .tableRow.siteOcc .tblCell .occNames{right: 3px;border:1px solid #f46f54;background:rgba(244,111,84,1);color: #fff;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;position: absolute;z-index: 2;top: 7.5px;box-sizing: border-box;line-height: 18px;}
+.mobTtl{display: none;font-weight: bold;font-size: 12px;color: #fff;line-height: 14px;}
+.calendar .tableRow.site .mobTtl{background:#8ec7e4}
+.calendar .tableRow.sum .mobTtl{background: #d6d6d6}
+.calendarWrap.mobOpen .calendar .tableRow.siteOcc{height: auto;overflow: visible;}
+
+.reviewOuter{border-bottom: 1px solid #ddd;margin: 0 0 30px 0;width: 100%;right: auto!important;top: auto!important;position: relative!important;padding: 0;overflow: visible;cursor: pointer;box-sizing: border-box;display: inline-block;vertical-align: top;}
+.reviewOuter .review{border: none;padding: 0;margin-bottom: 20px;overflow: hidden;}
+.reviewOuter .review .upperSec{float: right;width: 170px;overflow: hidden;}
+.reviewOuter .review .rgtSec {float: right;position: relative;width: 100%;text-align: right;}
+.reviewOuter .review .rgtSec .pic{height: 40px;width: 40px;display: inline-block;border-radius: 50%;background: #09779b;color: #fff;font-size: 24px;font-weight: 500;text-align: center;line-height: 40px;}
+.reviewOuter .review .rgtSec .rank {margin-right: 5px;display: inline-block;vertical-align: top;width: calc(100% - 50px);}
+.reviewOuter .review .revName {font-size: 16px;font-weight: 500;color: #333333;text-align: right;line-height: 20px;}
+.reviewOuter .review .revDay{color: #888888;font-size: 12px;text-align: right;}
+.reviewOuter .review .stars {color: #24b7c9;font-size: 14px;}
+.inc_minisite .midwrapper .rank .stars span {display: inline-block;padding-top: 3px;margin-top: 2px;}
+.starsTop.fr {float: right;margin-left: 4px;padding-top: 0;}
+.starsTop {color: #b0b0b0;position: relative;}
+.reviewOuter .review .starsTop i {font-size: 18px;}
+.starsTop i {text-align: center;display: inline-block;margin: 0 -4px 0 0;font-size: 20px;}
+.starsTop .starsBot {color: #0dabb5;position: absolute;top: 0;overflow: hidden;white-space: nowrap;}
+.reviewOuter .review .starsTop .starsBot i {font-size: 18px;}
+.starsTop .starsBot i {text-align: center;display: inline-block;font-size: 20px;}
+.reviewOuter .review .revTtl {text-align: right;color: #0dabb5;font-size: 16px;font-weight: 500;line-height: 20px;margin: 0 0 4px 0;}
+.reviewOuter .review .revText {transition: all .2s ease;position: relative;padding-bottom: 20px;margin-bottom: 20px;color: #000;font-size: 14px;text-align: right;line-height: 18px;overflow: hidden;}
+.reviewOuter .review .ranksep {display: none;box-sizing: border-box;border-radius: 6px;width: 0;transition: width .2s ease;position: absolute;top: 0;right: 160px;margin-top: 0;left: 0;font-size: 0;background: #fff;z-index: 100;}
+.reviewOuter .review .upperSec:hover ~ .ranksep {max-width: 540px;padding: 5px 5px 0 5px;right: 160px;transition: width .2s ease;border: 1px solid #ccc;left: 0;width: auto;box-shadow: 0 0 3px rgba(0,0,0,0.2);display:block;}
+.reviewOuter .review .upperSec:hover ~ .ranksep::after {content: "";width: 10px;height: 10px;border-right: 1px #CCC solid;border-top: 1px #ccc solid;transform: rotate(45deg);background: white;position: absolute;right: -6px;top: 48px;box-shadow: 1px -1px 1px rgba(0,0,0,0.2);}
+.reviewOuter .review .ranksep ul {width: 25%;display: inline-block;margin: 5px 0;box-sizing: border-box;padding-right: 12px;overflow: hidden;list-style-type: none;padding: 0;color: #0dabb5;font-size: 16px;position: relative;}
+.reviewOuter .review .ranksep ul li.ranktxtCont {font-size: 14px;width: 100%;max-width: none;display: block;float: none;vertical-align: middle;}
+.reviewOuter .ranktxt{padding-left: 0;}
+.reviewOuter .review .ranksep ul li {width: 100%;max-width: none;display: block;float: none;vertical-align: middle;}
+
+.reviewOuter .responseSection{padding-bottom: 20px;overflow: hidden;}
+.reviewOuter .responseSection .responseBtn{}
+.reviewOuter .responseSection .responseText{display: none;margin-top: 20px;max-width: 560px;}
+.reviewOuter .responseSection .responseText.show{display: block;}
+.reviewOuter .responseSection .responseText textarea{border: 1px solid #aeaeae;padding-top: 10px;padding-right: 10px;font-size: 15px;height: 100px;display: block;width: 96%;}
+.reviewOuter .responseSection .msgBtn{margin: 10px 0;transition:all .4s ease;line-height: 40px;height: 40px;background: #0dabb5;display: inline-block;box-sizing: border-box;padding: 0 20px;border: 1px solid #a3a3a3;color: #fff;border-radius: 10px;cursor: pointer;}
+.reviewOuter .responseSection .revBtn{margin: 10px 0;transition:all .4s ease;line-height: 40px;height: 40px;background: #09d96f;display: inline-block;box-sizing: border-box;padding: 0 20px;border: 1px solid #a3a3a3;color: #fff;border-radius: 10px;cursor: pointer;}
+.reviewOuter .responseSection .msgBtn:hover{background: #035570;}
+.reviewOuter .responseSection .revBtn:hover{background: #007a3c;}
+.reviewOuter .responseSection .responseText .msgBtn{float: left;margin-top: 10px;}
+.reviewOuter .responseSection form{overflow: hidden;}
+.reviewOuter .responseSection form.reviewIns .responseText textarea{border: none;resize: none;height: auto;}
+.reviewOuter .responseSection form.reviewIns .responseText .msgBtn{display: none;}
+
+.reviewOuter .responseSection .responseBtn .switchWrap{margin: 10px 0;display: inline-block;margin-right: 5px;}
+.reviewOuter .responseSection .responseBtn .switchWrap .switch input:checked + .slider{background-color: #09d96f;}
+
+
+.reviewOuter .responseSection .comments{}
+.reviewOuter .responseSection .comments .comment{}
+.reviewOuter .responseSection .comments .comment .upperSec{}
+.reviewOuter .responseSection .comments .comment .upperSec .pic{margin-top: 10px;}
+.reviewOuter .responseSection .comments .comment .upperSec .pic img{max-width:100px;margin: 2px;}
+.reviewOuter .responseSection .comments .comment .upperSec .titles{margin-top: 10px;}
+.reviewOuter .responseSection .comments .comment .upperSec .titles .title{font-size: 18px;font-weight: bold;}
+.reviewOuter .responseSection .comments .comment .upperSec .titles .date{}
+
+
+.reviewOuter .responseSection .messagesSection{max-width: 560px;margin-top: 30px;height: 0;overflow: hidden;}
+.reviewOuter .responseSection .messagesSection.show{height: auto;}
+
+.popup .popupTitle {font-size:24px;font-weight:500;color:#111111;height:70px;line-height:70px;display:block;text-align:center;width:100%}
+.popup .popupSubTitle {font-size:14px;color:#111;display:block;width:100%;text-align:center}
+.popup .popupSubTitle svg {display:inline-block;vertical-align:bottom}
+.popup {position:fixed;top:0;right:0;left:0;bottom:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.4);z-index:100}
+
+.popup .prices-pop {box-sizing:border-box;padding:40px 10px 20px 10px;position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);background:#fff;min-height:100px;max-height:90%;min-width:320px;max-width:320px}
+.popup .prices-pop .prices-pop-tabs {margin-top:15px;display:block;width:100%;font-size:0}
+.popup .prices-pop .prices-pop-tabs > div {cursor:pointer;transition:all .2s ease;line-height:32px;height:32px;text-align:center;width:50%;display:inline-block;font-size:16px}
+.popup .prices-pop .prices-pop-tabs > div:hover, .popup .prices-pop .prices-pop-tabs > div.active {background:#0dabb5;color:#fff}
+.popup .prices-pop .prices-pop-tab {display:none}
+.popup .prices-pop .prices-pop-tab.active {display:block}
+.popup .prices-pop .prices-pop-tab.passover span.dates {color:#0dabb5;font-size:14px;padding-top:20px;padding-bottom:20px;display:block}
+.popup .prices-pop .prices-pop-tab.passover .item {margin-bottom:20px;font-size:0;width:100%;display:block}
+.popup .prices-pop .prices-pop-tab.passover .item .item-right {font-size:16px;width:45%;display:inline-block}
+.popup .prices-pop .prices-pop-tab.passover .item .item-right span {font-size:12px;display:block;width:100%}
+.popup .prices-pop .prices-pop-tab.passover .item .item-center {width:22.5%;display:inline-block}
+.popup .prices-pop .prices-pop-tab.passover .item .item-left {box-sizing:border-box;padding:0 5px;width:32.5%;display:inline-block;font-size:12px}
+.popup .prices-pop .prices-pop-tab.passover .item .item-left > div {min-height:32px;text-align:center;padding-top:2px;box-sizing:border-box}
+.popup .prices-pop .prices-pop-tab.passover .item .item-left .highlight {background:#ff5039;border-radius:6px;color:#fff;}
+.popup .prices-pop .prices-pop-tab.passover .item .item-left > div > div {font-weight:bold}
+.popup .prices-pop .prices-pop-tab.passover .item .item-left > div.without {line-height:32px}
+.popup .prices-pop .prices-pop-tab.passover .item .item-left .highlightc {color:#ff5039}
+.popup .prices-pop .prices-pop-tab.passover .item input:not([type=submit]) {line-height: 32px;height: 32px;background: #f5f5f5;border: 0;border-radius: 3px;box-sizing: border-box;outline: none;font-size: 16px;padding: 0 5px;box-shadow: -1px 1px 0 rgba(0,0,0,0.2);margin: 0 auto;width: 100%;font-family: 'Rubik', sans-serif;}
+.popup .prices-pop .updateButton {width:200px;text-align: center;line-height: 40px;background:#0dabb5;border:0;outline:0;color:#fff;margin:0 auto;display:block;font-size:20px;font-family: 'Rubik', sans-serif;cursor:pointer}
+.popup .pop-close {position:absolute;top:10px;left:10px;cursor:pointer}
+
+.editPeriodPopup .removeButton {display:inline-block;margin:10px 0;width:auto;height:40px;line-height:40px;padding-right:40px;padding-left:10px;color:#fff;text-align:center;border-radius:6px;background:#d64541;cursor:pointer;font-size:14px;position:relative;}
+.editPeriodPopup .removeButton  svg {fill:#fff;height:24px;width:auto;position:absolute;top:50%;right:10px;transform:translateY(-50%)}
+.tabin.priceList .editPeriodPopup button {width:100%;height:50px;line-height:48px;font-size:18px}
+
+.popup .popup_container {color: #111;background: #ededed;margin: auto;width: 60%;border-radius: 6px;z-index: 1000;left: 0;top: 30px;height: 90%;max-height:400px;right: 0;position: absolute;box-sizing: border-box;min-width: 320px;max-width: 320px;border: 1px solid #fff;padding:10px}
+.popup .popup_container .popup-close {float:left}
+.popup.orderinfo .popup_container{max-height:90vh;height:90vh;width:100vw;max-width:700px;min-width:auto}
+.popup .popup_container .popTitle {display:block;padding:10px 0;font-weight:bold;font-size:18px;text-align:center}
+.popup.orderinfo .orderinfo-pop {position:absolute;left:0;right:0;top:50px;bottom:0;overflow:auto}
+
+.popup .categoriesDetailsPop {width:90%;max-width:800px;max-height:600px;overflow:auto;height:80%;position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);background:#fff;border-radius:6px}
+.popup .categoriesDetailsPop .cats {display:block;width:100%;padding:0 20px;box-sizing:border-box}
+.popup .categoriesDetailsPop .cats .cat {width:100%;line-height:45px;height:45px;margin-top:5px;background:#ebebeb;font-size:18px;transition:all .2s ease}
+.popup .categoriesDetailsPop .cats .cat:hover {background:#fff}
+.popup .categoriesDetailsPop .cats > div {display:inline-block;font-size:14px;font-weight:normal!important}
+.popup .categoriesDetailsPop .cats .cat > div {display:inline-block}
+.popup .categoriesDetailsPop .cats .name {width:210px;box-sizing:border-box;padding-right:25px;font-weight:500}
+.popup .categoriesDetailsPop .cats .actually {width:87px}
+.popup .categoriesDetailsPop .cats .clicks {width:70px}
+.popup .categoriesDetailsPop .cats .views {width:70px}
+.popup .categoriesDetailsPop .cats .ratio {width:70px}
+.popup .categoriesDetailsPop .cats .position {width:90px}
+.popup .categoriesDetailsPop .cats .totalpaid {width:130px;font-weight:500;text-align:center}
+
+.popup .seoHoursPop {width:90%;max-width:800px;max-height:390px;height:80%;position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);background:#fff;border-radius:6px;padding-bottom:20px}
+.popup .seoHoursPop form {max-height:320px;overflow:auto}
+.popup .seoHoursPop .hours {width:100%;display:block;padding:0 20px;box-sizing:border-box;font-size:0}
+.popup .seoHoursPop .hours .hour {display:inline-block;font-size:18px;width:16%;border:2px solid #ebebeb;height:60px;line-height:60px}
+.popup .seoHoursPop .hours .hour span {color:#777777;font-size:18px;font-weight:500;padding-right:8px}
+.popup .seoHoursPop .hours .hour label {cursor:pointer;width:40px;height:40px;float:left;transition:all .2s ease;border:1px solid #ff5039;background:#ff5039;border-radius:40px;text-align:center;line-height:38px;vertical-align:middle;box-sizing:border-box;margin-top:9px;margin-left:9px;position:relative}
+.popup .seoHoursPop .hours .hour label svg {fill:#fff;width:14px;height:13px;position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%)}
+.popup .seoHoursPop .hours .hour > input:checked + label {border-color:#acacac;background:transparent;}
+.popup .seoHoursPop .hours .hour > input:checked + label svg {fill:#dadada}
+.popup .seoHoursPop .hours .hour > input {display:none}
+
+.popup .adsSeoPop {width:100%;max-width:800px;max-height:600px;overflow:auto;height:100%;position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);background:#fff;border-radius:6px}
+.popup .adsSeoPop .ads {display: block;width: 100%;box-sizing: border-box;padding: 0 10px;position: absolute;top: 100px;bottom: 0;overflow: auto;padding-top: 90px;}
+.popup .adsSeoPop .ads .ad {font-size:0}
+.popup .adsSeoPop .ads .ad.header {position: fixed;right: 10px;left: 10px;margin-top: -90px;background:white;z-index:1}
+.popup .adsSeoPop .ads .ad.header > div {height:91px;font-size:16px;text-align:center}
+.popup .adsSeoPop .ads .ad.header > .name div {height:91px;display:table-cell;vertical-align:bottom;font-size:14px}
+.popup .adsSeoPop .ads .ad.header > div > label > div {width:21px;height:21px;position:absolute;bottom:-10px;right:50%;transform:translateX(50%);background:#fff;border-radius:20px}
+.popup .adsSeoPop .ads .ad.header > div > label > div > svg {width:20px;vertical-align:top;margin-top:1px;margin-right:1px;transform:rotate(-90deg)}
+.popup .adsSeoPop .ads .ad > div {transition:all .2s ease;width:16%;display:inline-block;box-sizing:border-box;border:2px solid #ebebeb;height:60px;position:relative}
+.popup .adsSeoPop .ads .ad > div.active {background:#ffdcd7}
+.popup .adsSeoPop .ads .ad > div input {display:none}
+.popup .adsSeoPop .ads .ad > div input:checked + label {background:#ff5039;border-color:#ff5039;}
+.popup .adsSeoPop .ads .ad > div input:checked + label > svg {fill:#fff}
+.popup .adsSeoPop .ads .ad > div input:checked + label div svg{fill:#ff5039}
+.popup .adsSeoPop .ads .ad > div label {cursor:pointer;position:absolute;top:50%;right:50%;width:40px;height:40px;box-sizing:border-box;border:1px solid #acacac;border-radius:40px;line-height:38px;text-align:center;transform:translateY(-50%) translateX(50%);transition:all .2s ease}
+.popup .adsSeoPop .ads .ad > div label svg {vertical-align:middle;fill:#dadada}
+.popup .adsSeoPop .ads .ad > .name {width:52%;font-size:18px;font-weight:500;color:#111111;box-sizing:border-box;padding-right:20px;line-height:60px}
+.popup .adsSeoPop .ads .ad > .name label {position:absolute;left:20px;right:auto;transform:translateY(-50%)}
+.popup .adsSeoPop .ads .ad > .name label div {width:21px;height:21px;position:absolute;top:50%;left:-10px;transform:translateY(-50%);background:#fff;border-radius:20px}
+.popup .adsSeoPop .ads .ad > .name label div svg {vertical-align:top;width:20px;margin-top:1px;margin-right:1px;}
+
+input, button, textarea {font-family:inherit}
+
+.popup .maxClickCostPop .col.adHeader .fixedTitle {position: fixed;margin-top: 5px;background: white;font-size: 18px;line-height: 20px;z-index: 10;font-weight: 500;width: calc(15% - 4px);box-sizing: border-box;margin-right: -2px;}
+
+.popup .maxClickCostPop {width:100%;max-width:800px;max-height:600px;height:100%;position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);background:#fff;border-radius:6px;padding:0 10px;box-sizing:border-box}
+.popup .maxClickCostPop .col {width:15%;display:inline-block;font-size:18px;min-height:91px;border:2px solid #ebebeb;box-sizing:border-box;text-align:center;position:relative;}
+.popup .maxClickCostPop .col.first {width:40%}
+.popup .maxClickCostPop .area {display:block;width:100%;font-size:0;max-height:calc(100% - 80px);overflow:auto}
+.popup .maxClickCostPop .col > .title {font-size:18px;font-weight:500;display:block;text-align:center;height:32px;}
+.popup .maxClickCostPop .maxClickCost-header .col.first > .title span {display:table-cell;height:32px;vertical-align:middle;width:40%}
+.popup .maxClickCostPop .col > .title span {display:table-cell;height:32px;vertical-align:middle;width:15%}
+.popup .maxClickCostPop .maxClickCost-header .col.first input[type=text] {display:inline-block;box-sizing: border-box;width: 60px;height: 44px;border-radius: 6px;border: 1px solid #000000;background: transparent;font-size: 20px;text-align: center;font-family: inherit;margin-right: 20px;padding: 0 5px;}
+.popup .maxClickCostPop .maxClickCost-header .col.first input[type=button] {margin-top:2px;display:inline-block;box-sizing: border-box;width: 56px;height: 40px;border-radius: 6px;background:#0dabb6;font-size: 20px;text-align: center;font-family: inherit;margin-right: 7px;font-weight:500;color:#fff}
+.popup .maxClickCostPop .maxClickCost-header .col .off .editPrice {top:auto;bottom:10px;transform:translateX(50%);}
+.popup .maxClickCostPop .maxClickCost-header .col .off .editPrice:before {content:'';width:100%;height:10px;background:#fff;top:-11px;right:0;left:0;position:absolute}
+.popup .maxClickCostPop .maxClickCost-header .col .on .toggle {margin-top:-15px}
+.popup .maxClickCostPop input[type=checkbox]:checked + label .slider {background:#0dabb6}
+.popup .maxClickCostPop input[type=checkbox]:checked + label .active {color:#fff}
+.popup .maxClickCostPop .cats .cat {margin-bottom:2px}
+.popup .maxClickCostPop .cats .cat .col {min-height:60px}
+.popup .maxClickCostPop .cats .cat .col > .off {display:table-cell;height:56px;vertical-align:middle;width:15%}
+.popup .maxClickCostPop .cats .cat .col.first {font-size:18px;font-weight:500;text-align:right;line-height:56px;padding:0 20px}
+.popup .maxClickCostPop .mid .col {min-height:43px;border-color:transparent;position:relative}
+.popup .maxClickCostPop .col .auto {display:inline-block;text-align:center;}
+.popup .maxClickCostPop .col .auto .title {color:#777777;font-size:10px}
+.popup .maxClickCostPop .col .auto .circle {display:block;width:30px;height:30px;border-radius:30px;background:#cccccc;position:relative;cursor:pointer;margin-top:2px}
+.popup .maxClickCostPop .col .auto .circle svg {position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);fill:#fff;width:24px;height:24px}
+.popup .maxClickCostPop .col .max {display:inline-block;text-align:center;}
+.popup .maxClickCostPop .col .max .title {color:#777777;font-size:10px}
+.popup .maxClickCostPop .col .max input {display:inline-block;box-sizing: border-box;width: 40px;height: 34px;border-radius: 6px;border: 1px solid #aaaaaa;background: transparent;font-size: 18px;text-align: center;font-family: inherit;padding: 0 5px;position:relative;z-index:2}
+.popup .maxClickCostPop .col .max input:focus {border:none}
+.popup .maxClickCostPop .col .max input:focus + .editPrice {display:block}
+.popup .maxClickCostPop .col .off .editPrice {position: absolute;top: 50%;right: 50%;transform: translateY(-50%) translateX(50%);width: calc(100% - 6px);border: 1px solid #aaaaaa;height: 34px;box-sizing: border-box;border-radius: 6px;background: #ffff;z-index: 1;display:none}
+.popup .maxClickCostPop .col .off .editPrice .title {font-size:12px;position:absolute;top:50%;right:5px;transform:translateY(-50%)}
+.popup .maxClickCostPop .col .off .editPrice button {cursor:pointer;width:30px;height:30px;position:absolute;top:50%;left:1px;transform:translateY(-50%);border-radius:6px;background:#0dabb6}
+.popup .maxClickCostPop .col .off .editPrice button:before {content:'';position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%) rotate(-45deg);border-top:2px solid #fff;border-left:2px solid #fff;width:8px;height:8px}
+.popup .maxClickCostPop .col .reset {display:inline-block;text-align:center;}
+.popup .maxClickCostPop .col .reset.disabled {opacity:0.5;pointer-events:none}
+.popup .maxClickCostPop .col .reset .title {color:#777777;font-size:10px}
+.popup .maxClickCostPop .col .reset .circle {display:block;width:30px;height:30px;border-radius:30px;border:1px solid #cdcdcd;box-sizing:border-box;position:relative;cursor:pointer;margin-top:2px}
+.popup .maxClickCostPop .col .reset .circle svg {position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);fill:rgb(119, 119, 119);width:18px;height:19px}
+.popup .maxClickCostPop .col .on {display:none}
+.popup .maxClickCostPop .col .off {display:block}
+.popup .maxClickCostPop .col > input[type=checkbox]:checked + .off {display:none}
+.popup .maxClickCostPop .col > input[type=checkbox]:checked + .off + .on {display:table-cell;height:56px;vertical-align:middle;width:15%}
+.popup .maxClickCostPop .col > input[type=checkbox]:checked + .off + .on .switch .slider:before {-webkit-transform: translateX(30px);-ms-transform: translateX(30px);transform: translateX(30px);}
+.popup .maxClickCostPop .col > input[type=checkbox]:checked + .off + .on .switch .slider {background:#0dabb6}
+.popup .maxClickCostPop .col > input[type=checkbox]:checked + .off + .on .switch .active {color:#fff}
+.popup .maxClickCostPop .mid .col svg {position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%)}
+.popup .maxClickCostPop .mid .col.first {text-align:right;color:#111111;font-size:14px;font-weight:500}
+.popup .maxClickCostPop .mid .col.first > div {height:43px;display:table-cell;vertical-align:bottom}
+.popup .maxClickCostPop input[type=checkbox] {display:none}
+.popup .maxClickCostPop .toggle {display:inline-block;text-align:center;font-size:14px}
+.popup .maxClickCostPop .toggle .title {color:#0dabb6}
+.popup .maxClickCostPop .slider:before {background-image:url('../img/toggle.png');background-position:center center;background-size:cover}
+
+.popup .benefitWizardPop {box-sizing:border-box;padding:10px 15px 20px 15px;position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);background:#fff;min-height:100px;max-height:90%;min-width:360px;max-width:360px;border-radius:6px;border:1px solid #000000;overflow:auto}
+.popup .benefitWizardPop .bWTitle {font-size:20px;font-weight:500;line-height:30px;margin-bottom:20px}
+.popup .benefitWizardPop .bWTitle span {font-size:0}
+.popup.add .benefitWizardPop .bWTitle {font-size:0}
+.popup.add .benefitWizardPop .bWTitle span {font-size:20px}
+.popup .benefitWizardPop .benefitWizard-steps {font-size:0}
+.popup .benefitWizardPop .benefitWizard-steps .item {cursor:pointer;transition:all .2s ease;opacity:0.4;-webkit-opacity:0.4;-moz-opacity:0.4;display:inline-block;width:33.33%;text-align:center}
+.popup .benefitWizardPop .benefitWizard-steps .item:hover, .popup .benefitWizardPop .benefitWizard-steps .item.active {opacity:1;-webkit-opacity:1;-moz-opacity:1;}
+.popup .benefitWizardPop .benefitWizard-steps .item i {margin-bottom:5px;font-style:normal;line-height:36px;font-size:24px;font-weight:500;color:#111111;width:40px;height:40px;border:2px solid #111111;box-sizing:border-box;display:inline-block;text-align:center;border-radius:50%}
+.popup .benefitWizardPop .benefitWizard-steps .item div {font-size:14px;font-weight:500;color:#111}
+
+.popup .benefitWizardPop .benefitWizard-step {display:none;box-sizing:border-box;padding:0 15px;min-height:280px}
+.popup .benefitWizardPop .benefitWizard-step.active {display:block}
+.popup .benefitWizardPop .wizardsub, .popup .benefitWizardPop .benefitWizard-step input[type=submit] {width:120px;height:44px;color:#fff;font-size:24px;font-weight:500;background:#0dabb6;border-radius:6px;font-family:inherit;float:left;clear:both;margin-top:20px}
+.popup .benefitWizardPop .benefitWizard-step .item {margin-top:30px;display:block;width:100%;min-height:45px}
+.popup .benefitWizardPop .benefitWizard-step .item .title {min-width:85px;display:inline-block;font-size:14px}
+.popup .benefitWizardPop .benefitWizard-step .item .title span {font-size:12px}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item ul {float:left;list-style:none}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item ul li {transition:all .2s ease;position:relative;color:#a6a6a6;cursor:pointer;border-radius:6px;border:1px solid #cccccc;display:inline-block;text-align:center;width:40px;height:44px;box-sizing:border-box;}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item ul li input {display:none}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item ul li:hover, .popup .benefitWizardPop .benefitWizard-step .item ul li.active {border:2px solid #0dabb6;background:#e6f6fb;color:#0dabb6}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item ul li:hover > label div, .popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item ul li input:checked + label div, .popup .benefitWizardPop .benefitWizard-step .item ul li.active > label div {color:#0dabb6}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item ul li > label div {transition:all .2s ease;line-height:1;font-size:10px;color:#a6a6a6;position:absolute;bottom:5px;width:100%;right:0;left:0}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item ul li > label i {font-style:normal;height:25px;line-height:25px;text-align:center;display:block}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item ul li > label i svg {display:inline-block;vertical-align:middle;fill:currentColor}
+.popup .benefitWizardPop .benefitWizard-step .item .calc {width:170px;float:left;font-size:0}
+.popup .benefitWizardPop .benefitWizard-step .item .bDiscount .calc {display:none}
+.popup .benefitWizardPop .benefitWizard-step .item .bDiscount .calc.active {display:inline-block}
+.popup .benefitWizardPop .benefitWizard-step .item .freenight {display:none}
+.popup .benefitWizardPop .benefitWizard-step .item .freenight.active {display:inline-block}
+
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item .calc .number span:not(.dchar) {font-size:20px;color:#fe5039;font-weight:500}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item .calc .number span input {font-size:20px;color:#fe5039;font-weight:500;width:45%;text-align:center;font-family:inherit;pointer-events:unset;position:relative;z-index:5}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item .calc .number span span.dchar {width:15%;display:inline-block}
+
+.popup .benefitWizardPop .benefitWizard-step .item .calc .number {width:114px;display:inline-block;text-align:center;padding-top:13px}
+.popup .benefitWizardPop .benefitWizard-step .item .calc .number span {font-size:20px;color:#fe5039;font-weight:500}
+.popup .benefitWizardPop .benefitWizard-step .item .calc .number span input {font-size:20px;color:#fe5039;font-weight:500;width:100%;text-align:center;font-family:inherit;pointer-events:none}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item .bWho {}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item .bWho .bWhoButtons {float:left}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item .bWho .bWhoButtons > label {font-size:16px;width:90px;margin-right:5px;color:#a6a6a6;font-weight:500;transition:all .2s ease;height:44px;border:1px solid #a6a6a6;box-sizing:border-box;text-align:center;cursor:pointer;display:inline-block;border-radius:6px;position:relative}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item .bWho .bWhoButtons > input:checked + label, .popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item .bWho .bWhoButtons > label:hover, .popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item .bWho .bWhoButtons > label.active {background:#e6f6fb;border:2px solid #0dabb6;color:#0dabb6}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item .bWho .bWhoButtons > input {display:none}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item .bWho .bWhoButtons > label span {position:absolute;right:0;left:0;top:50%;transform:translateY(-50%);padding:0 10px;}
+.popup .benefitWizardPop .benefitWizard-step hr {border-bottom:4px dotted #cccccc;display:inline-block;width:105%;margin:20px -2.5% 0 0}
+.popup .benefitWizardPop .benefitWizard-step[data-step="1"] .item:last-child {margin-top:20px}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bButtons {font-size:0}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bButtons > div {font-size:14px;width:23.33%;margin-left:2%;color:#a6a6a6;font-weight:500;transition:all .2s ease;height:44px;border:1px solid #a6a6a6;box-sizing:border-box;text-align:center;cursor:pointer;display:inline-block;border-radius:6px;position:relative}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bButtons > div label {display:block;cursor:pointer;width:100%;height:100%}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bButtons > div:last-child {margin-left:0}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bButtons > div:hover, .popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bButtons > div.active {background:#e6f6fb;border:2px solid #0dabb6;color:#0dabb6}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bButtons > div input {display:none}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bButtons > div span {position:absolute;right:0;left:0;top:50%;transform:translateY(-50%);padding:0 10px;}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bDiscount {}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bDays {}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bDays .calc {display:none}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bDays .dates {display:none}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bDays .dates.active {display:inline-block}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bDays .dates {float:left}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bDays .dates input {height:44px;box-sizing:border-box;border:1px solid #cccccc;border-radius:6px;font-size:14px;padding:0 5px;}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bDays .calc.active {display:inline-block}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bDays .calc .number span {color:#111111}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bDays .calc .number span input {color:#111111}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bDays .calc .number div {font-size:12px;color:#111111}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bWeekend {}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bWeekend .bWeekend-buttons {float:left;font-size:0}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bWeekend .bWeekend-buttons > label {font-weight:500;color:#aaaaaa;width:90px;height:44px;text-align:center;line-height:42px;box-sizing:border-box;cursor:pointer;transition:all .2s ease;border:1px solid #cccccc;border-radius:6px;display:inline-block;font-size:16px}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bWeekend .bWeekend-buttons > label:hover, .popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bWeekend .bWeekend-buttons > label.active, .popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bWeekend .bWeekend-buttons > input:checked + label {border:2px solid #0dabb6;background:#e6f6fb;color:#0dabb6}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bWeekend .bWeekend-buttons > label:not(:last-child) {margin-left:5px}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bWeekend .bWeekend-buttons > label svg {width:14px;height:11px;fill:currentColor;display:inline-block;vertical-align:middle}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bWeekend .bWeekend-buttons > input {display:none}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bMinNights .calc .number {}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bMinNights .calc .number span {color:#111111}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bMinNights .calc .number span input {color:#111111}
+.popup .benefitWizardPop .benefitWizard-step[data-step="2"] .item .bMinNights .calc .number div {font-size:12px}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOrderDate {}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOrderDate .bOrderDate-buttons {float:left}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOrderDate .bOrderDate-buttons > div {position:relative;color:#aaaaaa;width:90px;height:44px;text-align:center;font-weight:500;box-sizing:border-box;cursor:pointer;transition:all .2s ease;border:1px solid #cccccc;border-radius:6px;display:inline-block;font-size:16px}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOrderDate .bOrderDate-buttons > div label {display:block;width:100%;height:100%;cursor:pointer}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOrderDate .bOrderDate-buttons > div input {display:none}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOrderDate .bOrderDate-buttons > div p {position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);width:80px}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOrderDate .bOrderDate-buttons > div:hover, .popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOrderDate .bOrderDate-buttons > div.active {border:2px solid #0dabb6;background:#e6f6fb;color:#0dabb6}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOrderDate .bOrderDate-buttons > div:not(:last-child) {margin-left:5px}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOnRooms .bOnRooms-buttons {float:left}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOnRooms .bOnRooms-buttons > div {position:relative;color:#aaaaaa;width:90px;height:44px;text-align:center;font-weight:500;box-sizing:border-box;cursor:pointer;transition:all .2s ease;border:1px solid #cccccc;border-radius:6px;display:inline-block;font-size:16px}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOnRooms .bOnRooms-buttons > div label {display:block;width:100%;height:100%;cursor:pointer}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOnRooms .bOnRooms-buttons > div input {display:none}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOnRooms .bOnRooms-buttons > div p {position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);width:80px}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOnRooms .bOnRooms-buttons > div:hover, .popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOnRooms .bOnRooms-buttons > div.active {border:2px solid #0dabb6;background:#e6f6fb;color:#0dabb6}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bOnRooms .bOnRooms-buttons > div:not(:last-child) {margin-left:5px}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bSelectRooms {display:none;width:100%;font-size:0;margin-top:25px}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bSelectRooms.active {display:inline-block}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bSelectRooms > label {font-size:14px;width:31.33%;margin:1%;color:#a6a6a6;font-weight:500;transition:all .2s ease;height:44px;border:1px solid #a6a6a6;box-sizing:border-box;text-align:center;cursor:pointer;display:inline-block;border-radius:6px;position:relative}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bSelectRooms input:checked + label, .popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bSelectRooms > label:hover, .popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bSelectRooms > label.active {background:#e6f6fb;border:2px solid #0dabb6;color:#0dabb6}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bSelectRooms input {display:none}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bSelectRooms > label p {position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);width:85px}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bBetweenDates {display:none}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bBetweenDates.active {display:block}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bBetweenDates .bBetweenDates-inputs {float:left}
+.popup .benefitWizardPop .benefitWizard-step[data-step="3"] .item .bBetweenDates .bBetweenDates-inputs input {height:44px;box-sizing:border-box;border:1px solid #cccccc;border-radius:6px;font-size:14px;padding:0 5px;text-align:center}
+
+
+.popup .benefitPresentPop {box-sizing:border-box;padding:10px 15px 20px 15px;position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);background:#fff;min-height:100px;max-height:90%;min-width:360px;max-width:360px;border-radius:6px;border:1px solid #000000;overflow:auto}
+.popup .benefitPresentPop .bPTitle {font-size:20px;font-weight:500;line-height:30px;margin-bottom:20px}
+.popup .benefitPresentPop .button {width:200px;height:49px;background:#0dabb5;border:0;outline:0;color:#fff;text-align:center;line-height:49px;margin:0 auto;display:block;font-size:20px;font-family: 'Rubik', sans-serif;cursor:pointer}
+.closeTabMobile {display:none}
+
+.popup .wrap_input{height:50px;border-radius:6px;background-color:rgba(255,255,255,0.5);border:1px solid #a9a9a9;margin-bottom:10px;padding:5px;box-sizing:border-box;position:relative}
+.popup .wrap_input.has_error{border:1px solid #ff5039}
+.popup .wrap_input.has_error label{font-size:0}
+.popup .wrap_input.has_error label::before{content:attr(data-error);color:#ff5039;font-size:18px}
+.popup .wrap_input.has_error input.error_input + label{top:0;font-size:0!important}
+.popup .wrap_input.has_error label::before{font-size:12px}
+.popup .wrap_input.has_error{background-color:#fff}
+.popup .wrap_input.required::before{content:'*';font-size:18px;color:#ff5039;position:absolute;top:19px;right:5px;font-family:'Hebbo';font-weight:700}
+.popup .wrap_input.textarea{height:170px}
+.popup .wrap_input.textarea textarea{height:100%;border:0;resize:none;font-size:18px;background-color:transparent;width:100%;padding:12px;box-sizing:border-box}
+.popup .wrap_input input.form_inp:focus,.popup .wrap_input textarea:focus{outline:none}
+.popup .wrap_input.half{width:calc(50% - 5px);float:right}
+.popup .wrap_input.half select{width:100%;height:100%;border:none;-webkit-appearance:none;appearance:none;padding-right:14px;padding-top:5px}
+.popup .wrap_input.half select:focus{outline:0}
+.popup .wrap_input.half.fir{margin-left:10px}
+.popup .wrap_input input.form_inp{width:100%;height:100%;background-color:transparent;border:0;padding:22px 11px;box-sizing:border-box;font-size:18px}
+.popup .wrap_input label{font-size:18px;color:#888;position:absolute;right:0;padding-right:16px;top:15px;pointer-events:none;transition:.2s ease all;-moz-transition:.2s ease all;-webkit-transition:.2s ease all}
+.popup .wrap_input .form_inp:focus + label,.popup .wrap_input .form_inp:valid + label,.popup .wrap_input.textarea textarea:focus + label,.popup .wrap_input.textarea textarea:valid + label{top:2px;font-size:12px}
+.popup .wrap_input.has_error .form_inp:focus + label,.popup .wrap_input.has_error .form_inp:valid + label{font-size:0}
+.popup .wrap_input.has_error .form_inp:focus + label::before,.popup .wrap_input.has_error .form_inp:valid + label::before{font-size:12px}
+
+
+	
+
+@media (max-width: 1200px) {
+	#rightMenu {min-width:55px;transition:all .2s ease}
+	#rightMenu ul li {font-size:0;transition:all .2s ease}
+	#rightMenu ul li.menuTitle {font-size:0}
+	#rightMenu ul li.menuTitle svg {height:18px;position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%)}
+	
+	#rightMenu:hover {min-width:250px}
+	#rightMenu:hover ul li {font-size:18px!important}
+	#rightMenu:hover ul li.menuTitle svg {position:static;height:0;transform:none}
+	#rightMenu:hover ul li.menuTitle {font-size:16px!important}
+	
+	.tabin.priceList .periodsPrices {font-size:0}
+	.tabin.priceList .periodsPrices .r {min-width:auto;}	
+	.tabin.priceList .periodsPrices .l {/* width:76% */}
+
+	
+
+}
+	
+@media (max-width: 1000px) {
+	.tabin {padding: 0;}
+	.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period {position:relative}
+	.editRoomsPrices .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .month_botton{background:#0dabb5;height:30px;width:140px;font-size:16px;text-align:center;position:absolute;z-index:9;left:0;right:0;margin:auto;color:white;padding:0 10px;line-height:30px;border-radius:10px;top:0}
+	.tabin.priceList .periodsPrices .r div:first-child{font-size:14px;line-height:1;height:40px;padding-left:10px}
+	.tabin.priceList .periodsPrices .r div:not(:first-child) {font-size:12px;line-height:1;height:50px;padding-left:10px}
+	.tabin.priceList .periodsPrices .l .day{width:14%;min-width:auto}
+	.tabin.priceList .periodsPrices .l .day .title {height:50px;box-sizing:border-box;padding-top:10px}
+	.tabin.priceList .periodsPrices .l .day{font-size:12px}
+	.tabin.priceList .periodsPrices .l .day select {;box-sizing:border-box;border:1px #ccc solid;font-size:16px;margin-top:0;margin-bottom:20px}
+	.tabin.priceList .periodsPrices .l .day label {font-size: 11px;text-align: center;background: #eee;line-height: 40px;border: 1px #CCC solid;box-sizing: border-box;max-width: 100%;}
+	.tabin.priceList .periodsPrices .l .day input:checked + label {background:#0dabb5;}
+	.tabin.priceList .periodsPrices .l .day input:checked + label span{font-size:11px;color:white;}
+	.tabin.priceList .periodsPrices.perRoom.open{height:130px}
+	.editRoomsPrices .editRoomsPrices-periods{width:100%}
+	.editRoomsPrices .editRoomsPrices-periods{}
+	.editRoomsPrices .editRoomsPrices-months .lftWeekArrow, .editRoomsPrices .editRoomsPrices-months .rgtWeekArrow {top:0}
+	.editRoomsPrices .editRoomsPrices-months{position:absolute;background:white;width:calc(100% - 10px);transition:0.5s all;left:-100%}
+	.editRoomsPrices .editRoomsPrices-months .monthscarousel .editRoomsPrices-day .row .cell{font-size:12px;color:#000}
+	
+	.editRoomsPrices.open .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .month_botton{font-size:0}
+	.editRoomsPrices.open .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .month_botton::after{font-size:16px;content:"סגור"}
+	.editRoomsPrices.open .editRoomsPrices-months{left:0}
+	.editRoomsPrices.open .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .tableLike .row:not(:first-child) .cell{position:relative;}
+	.editRoomsPrices.open .editRoomsPrices-periods .periodcarousel .editRoomsPrices-period .tableLike .row:not(:first-child) .cell span{display:block;transform: rotate(90deg);position: absolute;right: -20px;font-size: 10px;line-height: 10px;background: white;width: 50px;height: 10px;top: 0;bottom: 0;margin: auto;text-align: center;border-right: 1px #CCC solid;box-sizing: border-box;overflow: hidden;text-overflow: ellipsis;}
+	
+	.tabin.clicks .auto-campaign > .lft, .tabin.clicks .auto.on .auto-campaign .lft .rgt .rgt {max-width:100%}	
+	
+	#rightMenu ul li.menuTitle {font-size:16px}
+	#rightMenu ul li.menuTitle svg {position:static;height:0;transform:none}
+	#rightMenu ul li {font-size:18px}
+	
+	#rightMenu {width:100%;}
+	
+	html.tabOpen {overflow:hidden}
+	html.tabOpen body {overflow:hidden}
+	
+	
+	#leftSide {z-index:1}
+	#leftSide .tab {position: absolute;height: 100vh;overflow: auto;z-index: 100;width: 0;background:#fff;right:0;left:0;}
+	#leftSide .tab.active {overflow:auto;width:100vw;position:absolute;}
+	
+	.closeTabMobile {font-size:35px;color:#0dabb5;position:fixed;z-index:200;top:10px;right:10px;cursor:pointer;background:white;text-align:center;border-radius:50%;width:36px;height:36px;display:block}
+	#leftSide .closeTabMobile {display:none}
+	.tabOpen .closeTabMobile {display:block}
+	
+	.tabin.clicks .auto-campaign {height:auto}
+	.tabin.clicks .auto-campaign > .rgt {width:100%;padding-bottom:10px}
+	.tabin.clicks .twoBlocks .block {margin-left:0;margin-bottom:20px}
+	.tabin.clicks .beforeList .rButtons {text-align:center;margin-bottom:15px}
+	.tabin.clicks .beforeList {text-align:center;position:relative;padding-top:80px;}
+	.tabin.clicks .beforeList .lButton {top:0;position:absolute;}
+	.tabin.clicks .beforeList .lButton#clickCost {left:120px;right:0;margin:auto}
+	.tabin.clicks .beforeList .lButton#seoHoursB {left:0;right:120px;margin:auto}
+	.tabin.clicks .yourPlan .plans {font-size:0}
+	.tabin.clicks .yourPlan .plans .plan {width:33.33%;margin-left:0;font-size:14px;margin-bottom:20px}
+	.tabin.clicks .beforeList .lButton {float:none;display:inline-block;clear:both}
+	
+	.tabin.clicks .list > .daysList, .tabin.clicks .list > .clickList {width:calc(100% + 60px);margin-right:-30px;border-radius:0}
+	
+	.popup .maxClickCostPop .col > .title {font-size:12px}
+	
+	.tabin.clicks .list .item > div {}
+	.tabin.clicks .list .item {height:auto;font-size:0}
+	.tabin.clicks .list .item .title {width:100%;text-align:center;padding:0 10px;display:block}
+	.tabin.clicks .list .item .title div {width:100%;height:40px}
+	.tabin.clicks .list .item > div:not(.title){width:16%;text-align:center}
+	.tabin.clicks .list .item > div:not(.title) > div{width:100%;text-align:center;display:block;height:55px;position:relative;margin-bottom:15px}
+	.tabin.clicks .list .item > div:not(.title) > div span{position:absolute;bottom:0;font-size:14px;text-align:center;width:100%}
+
+	/*.tabin.clicks .list .item .views {width:20%;text-align:center}
+	.tabin.clicks .list .item .ratio > div {width:20%}
+	.tabin.clicks .list .item .views > div {width:20%}
+	.tabin.clicks .list .item .auto {width:33.3%}
+	.tabin.clicks .list .item .clicks {width:20%}
+	.tabin.clicks .list .item .clicks > div {width:20%}
+	.tabin.clicks .list .item .max {width:33.3%}
+	.tabin.clicks .list .item .max > div {width:33.3%}
+	.tabin.clicks .list .item .max input {margin-right:auto;margin-left:auto}
+	.tabin.clicks .list .item .auto .toggle {width:33.3%}
+	.tabin.clicks .list .item .ratio {width:20%}
+	.tabin.clicks .list .item .actually {width:20%}
+	.tabin.clicks .list .item .actually > div {width:20%}
+	.tabin.clicks .list .item .position {width:20%;text-align:center}
+	.tabin.clicks .list .item .position div {width:20%}
+	.tabin.clicks .list .item .totalpaid {width:50%;text-align:center}
+	.tabin.clicks .list .item .totalpaid div {width:50%}
+	.tabin.clicks .list .item .details {width:50%;text-align:center}
+	.tabin.clicks .list .item .details div {width:50%}*/
+	.tabin.clicks .auto.on .auto-campaign .lft .on .rgt > svg:last-child {display:none}
+	.tabin.clicks .auto-campaign > .lft svg {margin-right:0}
+	.tabin.clicks .auto.on .auto-campaign .on {min-height:85px}
+	
+	.tabin.clicks .list > .daysList table, .tabin.clicks .list > .clickList table {overflow:auto}
+	.tabin.clicks .list > .daysList table thead, .tabin.clicks .list > .clickList table thead {display:table-header-group;margin-right:0}
+	.tabin.clicks .list > .daysList tbody, .tabin.clicks .list > .clickList tbody {display:table-row-group;margin-right:0;width:auto}
+	.tabin.clicks .list > .daysList table tbody tr:last-child, .tabin.clicks .list > .clickList table tbody tr:last-child {position:static;margin-left:0}
+	.tabin.clicks .list > .daysList table tbody tr:last-child td:last-child, .tabin.clicks .list > .clickList table tbody tr:last-child td:last-child {position:static;left:auto}
+	
+	.tabin.breakfast .table .singleRoom .slide {width:160px}
+}
+
+@media(max-width:768px){
+	body{padding:10px}
+	.tabin.priceList .periodsPrices .r{width:24%}
+	.tabin.priceList .periodsPrices .l{width:76%}
+	#leftSide {min-height:auto;position:static;}
+	.calendarWrap{border:0;}
+	.calendar .tableRow .tblCell{height: 60px;}
+	.calendar .tableRow{margin-right: 10px;}
+	.calendar .divScroll{border:0;}
+	.calendar .tableRow.date .tblCell .sLine{margin-top: 2px;}
+	.calendarWrap .monthLine .rArrowMonth{right: 10px;}
+	.calendar .divScroll{right: 0;}
+	.calendar .tableRow.siteOcc{overflow: hidden;position: static !important;display: none !important;}
+	.calendar .tableRow.siteOcc.open{display: table-row !important;}
+	.calendar .tableRow.sum .tblCell:first-child{background:#d6d6d6;}
+	.calendar .tableRow.site .tblCell:first-child{background:#8ec7e4;}
+
+	.calendar .tableRow.siteOcc .tblCell:first-child{display: table-cell !important;width: 10px !important;right: 0 !important;position: static !important;}/*fix this line*/
+
+
+	.calendar .tableRow.date .tblCell .specialDate{bottom: 0;}
+	.mobTtl{display: block;}
+	.calendar .tableRow.sum .tblCell .free, .calendar .tableRow.sum .tblCell .occ{width: 100%;float: none;}
+	.calendar .tableRow.sum .tblCell .free .num,.calendar .tableRow.sum .tblCell .free .label{display: inline-block;vertical-align: middle;line-height: 20px;}
+	.calendar .tableRow.sum .tblCell .occ .num{font-size: 12px;}
+	.calendar .tableRow.sum .tblCell .occ .num,.calendar .tableRow.sum .tblCell .occ .label{display: inline-block;vertical-align: middle;line-height: 20px;}
+	.calendar .tableRow.date .tblCell .fLine{margin-top: 10px;}
+	.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .all{display: none;}
+	.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .unitDet{float: none;width: 100%;margin-top:0px;height: 30px}
+	.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .unitDet .num{display: inline-block;margin-top: 10px;vertical-align: middle;}
+	.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .unitDet .lbl{display: inline-block;margin-top: 10px;vertical-align: middle;}
+	.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .unitDet .freeArr{transform:rotateZ(-90deg);top: -6px;right: 0;left: 0;}
+	.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .unitDet .occArr{transform:rotateZ(-90deg);top: 12px;right: 0;left: 0;height: 20px;}
+	.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .unitDet:nth-child(2) .num{margin-top: 0px;font-size: 12px;}
+	.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .unitDet:nth-child(2) .lbl{margin-top: 0px;	}
+	.calendar .tableRow.site .tblCell .topCellSite .siteTDetails .sep{width: 100%;height: 1px;border-right: 0;top: 50%;border-top: 1px dotted #e0e0e0;}
+	.calendar .tableRow.siteOcc .tblCell .siteNum::before{display: none;}
+
+	.info_place .title h1{font-size: 22px;}
+	.info_place .title .sub{font-size: 16px;}
+	.info_place .title .sub span{font-size: 14px;}
+	
+	.tabin.benefits .benefitsList .benefit:before {content:'';width:100%;height:40px;background:#0dabb6;position:absolute;top:0;left:0;right:0}
+	.tabin.benefits .benefitsList .benefit .col:first-child {width:100%;margin-top:40px}
+	.tabin.benefits .benefitsList .benefit .col:nth-child(2) {width:100%}
+	.tabin.benefits .benefitsList .benefit .col:nth-child(3) {width:100%}
+	.tabin.benefits .benefitsList .benefit .col:last-child {position:absolute;top:0;left:10px;min-height:40px}
+	.tabin.benefits .benefitsList .benefit .col:last-child .close {height:40px}
+	.tabin.benefits .benefitsList .benefit .col:last-child .close svg {fill:#fff}
+	.tabin.benefits .benefitsList .benefit .col .right {height:40px;background:transparent!important;border-radius:0;position:absolute;top:-40px;right:0}
+	.tabin.benefits .benefitsList .benefit .col > .sale {float:right;padding-left:5px;padding-right:0;margin-left:0;margin-right:10px}
+	.tabin.benefits .benefitsList .benefit .benefitType {float:left;margin-right:0;margin-left:10px}
+	.tabin.benefits .benefitsList .benefit .col:after {width:100%;height:1px;top:auto;bottom:0;right:0;transform:none}
+	
+	
+	.popup .seoHoursPop .hours .hour {width:calc(50% - 4px)}
+	.tabin.clicks .auto.on .auto-campaign .lft .rgt .rgt {max-width:90%}
+	
+	.popup .adsSeoPop .ads .ad:not(.header) > .name {height:60px;line-height:20px;padding-top:10px;padding-left:60px;font-size:14px}
+	.popup .adsSeoPop .ads .ad.header > div {font-size:12px;line-height:12px}
+	.popup .adsSeoPop .ads .ad.header > .name div {line-height:90px}
+
+	.popup .maxClickCostPop .col.first{width:100%}
+	.popup .maxClickCostPop .col.adHeader .fixedTitle {width:auto;font-size:12px;margin-top:-95px;margin-right:auto;width:30%}
+	.popup .maxClickCostPop .area .header {z-index:10;position:relative}
+	.popup .maxClickCostPop .maxClickCost-header .col.first {z-index:99;background:white}
+
+	.popup .maxClickCostPop .col {width:33.3%}
+	.popup .maxClickCostPop .col .off {font-size:0}
+	.popup .maxClickCostPop .col .auto {width:32%;margin-left:2%}
+	.popup .maxClickCostPop .col .max {width:32%;margin-left:2%}
+	.popup .maxClickCostPop .col .reset {width:32%;}
+	.popup .maxClickCostPop .col .max input {width:100%;font-size:16px}
+	.popup .maxClickCostPop .mid .col.first > div {display:block;text-align:center;height:20px;padding-top:18px}
+
+	.popup .maxClickCostPop .mid .col {display:none}
+	.popup .maxClickCostPop .mid .col.first {display:block}
+
+}
+
+@media(max-width:600px) {
+	.tabin.clicks .auto.on .auto-campaign .lft .rgt .rgt {max-width:70%}
+	.tabin.roomSettings #roomSettings .cell .roomSettings-right {font-size:14px}
+}
+	
+
+@media(max-width:400px) {
+
+	.info_place .infoSec::before{display: none;}
+	.calendar .tableRow.siteOcc .tblCell div{font-size: 12px !important;padding-right: 0 !important;text-align: center !important;}
+}
+
+
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('/css/fonts/rubik/Rubik-Regular.ttf');
+	font-weight: normal;
+	font-display: fallback;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('/css/fonts/rubik/Rubik-BlackItalic.ttf');
+	font-style: italic;
+	font-weight:900;
+	font-display: fallback;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('/css/fonts/rubik/Rubik-Black.ttf');
+	font-weight:900;
+	font-display: fallback;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('/css/fonts/rubik/Rubik-BoldItalic.ttf');
+	font-style: italic;
+	font-weight:700;
+	font-display: fallback;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('/css/fonts/rubik/Rubik-Bold.ttf');
+	font-weight:700;
+	font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('/css/fonts/rubik/Rubik-Italic.ttf');
+	font-style: italic;
+	font-display: fallback;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('/css/fonts/rubik/Rubik-MediumItalic.ttf');
+	font-style: italic;
+	font-weight:500;
+	font-display: fallback;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('/css/fonts/rubik/Rubik-Medium.ttf');
+	font-weight:500;
+	font-display: fallback;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('/css/fonts/rubik/Rubik-LightItalic.ttf');
+	font-style: italic;
+	font-weight:300;
+	font-display: fallback;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('/css/fonts/rubik/Rubik-Light.ttf');
+	font-weight:300;
+	font-display: fallback;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/css/fonts/icoFonts/icomoon.eot?9oy6gn');
+  src:  url('/css/fonts/icoFonts/icomoon.eot?9oy6gn#iefix') format('embedded-opentype'),
+		url('/css/fonts/icoFonts/icomoon.ttf?9oy6gn') format('truetype'),
+		url('/css/fonts/icoFonts/icomoon.woff?9oy6gn') format('woff'),
+		url('/css/fonts/icoFonts/icomoon.svg?9oy6gn#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fullogo:before {
+  content: "\e92b";
+}
+.icon-Settings:before {
+  content: "\e93a";
+}
+.icon-Searched:before {
+  content: "\e934";
+}
+.icon-Liked:before {
+  content: "\e935";
+}
+.icon-Watched:before {
+  content: "\e936";
+}
+.icon-Myreserv:before {
+  content: "\e937";
+}
+.icon-Myrevs:before {
+  content: "\e938";
+}
+.icon-Mymsgs:before {
+  content: "\e939";
+}
+.icon-magn:before {
+  content: "\e933";
+}
+.icon-phone3:before {
+  content: "\e930";
+}
+.icon-alert:before {
+  content: "\e931";
+}
+.icon-right:before {
+  content: "«";
+}
+.icon-mappin:before {
+  content: "\e92c";
+}
+.icon-play2:before {
+  content: "\e92d";
+}
+.icon-left:before {
+  content: "»";
+}
+.icon-cam:before {
+  content: "\e92f";
+}
+.icon-fav:before {
+  content: "\e92a";
+}
+.icon-mr:before {
+  content: "\e916";
+}
+.icon-bed:before {
+  content: "\e917";
+}
+.icon-tv:before {
+  content: "\e918";
+}
+.icon-sat:before {
+  content: "\e919";
+}
+.icon-meh:before {
+  content: "\e91a";
+}
+.icon-loved:before {
+  content: "\e91b";
+}
+.icon-check:before {
+  content: "\e91c";
+}
+.icon-info:before {
+  content: "\e91d";
+}
+.icon-reco:before {
+  content: "\e91e";
+}
+.icon-guest:before {
+  content: "\e91f";
+}
+.icon-poolcover:before {
+  content: "\e920";
+}
+.icon-sauna:before {
+  content: "\e921";
+}
+.icon-jacuzi:before {
+  content: "\e922";
+}
+.icon-dog:before {
+  content: "\e923";
+}
+.icon-handicap:before {
+  content: "\e924";
+}
+.icon-video:before {
+  content: "\e925";
+}
+.icon-gallery:before {
+  content: "\e926";
+}
+.icon-share:before {
+  content: "\e927";
+}
+.icon-contact:before {
+  content: "\e928";
+}
+.icon-like:before {
+  content: "\e929";
+}
+.icon-megaphone:before {
+  content: "\e903";
+}
+.icon-room2:before {
+  content: "\e90b";
+}
+.icon-date2:before {
+  content: "\e913";
+}
+.icon-phone:before {
+  content: "\e910";
+}
+.icon-logo2:before {
+  content: "\e914";
+}
+.icon-sinun:before {
+  content: "\e911";
+}
+.icon-logo:before {
+  content: "\e90f";
+}
+.icon-arrow_left:before {
+  content: "\e900";
+}
+.icon-arrow_right:before {
+  content: "\e901";
+}
+.icon-category:before {
+  content: "\e902";
+}
+.icon-date:before {
+  content: "\e904";
+}
+.icon-Lang:before {
+  content: "\e905";
+}
+.icon-lang_arrow:before {
+  content: "\e906";
+}
+.icon-play:before {
+  content: "\e907";
+}
+.icon-plus1:before {
+  content: "\e908";
+}
+.icon-plus2:before {
+  content: "\e909";
+}
+.icon-q_1:before {
+  content: "\e90a";
+}
+.icon-q_2:before {
+  content: "\e90c";
+}
+.icon-room:before {
+  content: "\e90d";
+}
+.icon-search:before {
+  content: "\e90e";
+}
+.icon-star:before {
+  content: "\e912";
+}
+.icon-user:before {
+  content: "\e915";
+}

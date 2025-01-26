@@ -1,0 +1,38 @@
+#today-luz{font-size:18px}
+.luz-pop {position:fixed;top:0;right:0;left:0;bottom:0;height:100%;background:rgba(0,0,0,0.6);z-index:999;display:none}
+.luz-pop .pop-cont {position:absolute;top:50%;right:50%;transform:translateY(-50%) translateX(50%);width:100%;max-width:900px;height:auto;max-height:700px;padding:10px;box-sizing:border-box;background:#fff;text-align:center;overflow:auto}
+.luz-pop .pop-cont h1 {font-size:22px;font-weight:500;text-align:right;}
+.luz-pop .pop-cont select, .luz-pop .pop-cont input  {width:200px;border:1px solid #000;border-radius:6px;padding:10px;box-sizing:border-box;font-size:16px;display:inline-block;vertical-align:middle;}
+.luz-pop .pop-cont .close {position:absolute;top:10px;left:10px;cursor:pointer}
+.luz-pop .pop-cont iframe {display:none;width:100%;min-height:600px;}
+#printfr {font-weight: 600;font-size: 18px;text-decoration: underline;cursor: pointer;vertical-align: middle;margin-right: 10px;color: white;display: inline-flex;background: #0dabb6;height: 50px;align-items: center;padding: 0 20px;border-radius: 5px;}
+#printfr svg {width: 20px;height: auto;fill: white;padding-right: 10px;}
+
+.printpop {font-weight: 600;font-size: 18px;text-decoration: underline;cursor: pointer;vertical-align: middle;margin-right: 10px;color: white;display: inline-flex;background: #0dabb6;height: 50px;align-items: center;padding: 0 20px;border-radius: 5px;}
+.printpop svg {width: 20px;height: auto;fill: white;padding-right: 10px;}
+
+
+@media(min-width:992px){
+body:not(.menu-closed) .luz-pop{right:300px}
+}
+
+.day_line {line-height: 50px;background: #cfeef0;margin-top: 10px;border-radius: 10px;padding: 0 20px;font-size: 16px;font-weight: bold;}
+.last-orders .items .order.day_event_line {background: white;display: table;width: 100%;font-size: 16px;min-height: 60px;border-radius: 10px;margin: 2px 0 0;max-width: none;border: 0;box-shadow:none;border-bottom:1px #ccc solid;cursor:pointer}
+.day_event_line .time {width: 100px;display: table-cell;text-align: center;vertical-align: middle;border-left: 2px #0dabb6 solid;position:relative}
+.day_line_gender {display: block;font-size: 14px;position: absolute;top: 24px;right: 2px;}
+.day_event_line .details {display: table-cell;vertical-align: middle;padding-right: 10px;}
+.day_event_line .details div ~ div {font-size:14px;max-height: 30px;overflow: hidden;line-height: 1;margin-top: 2px;}
+.day_event_line .details div.pextras span{position:relative;color: #777;}
+.day_event_line .details div.pextras span::before{content:"";width: 4px;height: 4px;border-radius:50%;background:black;margin: 2px 2px 2px 4px;position:relative;display: inline-block;}
+
+.extras{font-size:14px;}
+.dateTabs{font-size:16px;font-weight:bold;margin-top:30px}
+.dateTabs .dateTab{padding:5px 10px;color:#0dabb6;background:#cfeef0;border-radius:10px;margin:2px;display:inline-block;cursor:pointer}
+.dateTabs .dateTab.selected{background:#0dabb6;color:white}
+.extras-wrapper{margin-top:10px}
+.extras{display:none}
+.extras.show{display:flex;flex-flow:wrap;justify-content:right;margin-bottom:30px}
+.extras .extra {width: 48%;box-sizing: border-box;min-width: 280px;background: white;height: 40px;display: flex;align-items: center;border: 1px #ccc solid;padding-left: 10px;margin-left: 2%;margin-bottom:1%}
+.extras .extra span:first-child {width: 38px;font-size: 18px;font-weight: bold;border-left: 1px #ccc solid;height: 38px;line-height: 38px;margin-left: 6px;text-align:center}
+.extras .print_extras{text-align:center;width:100%}
+.extras .print_extras div{text-align:center;cursor:pointer;padding:0 20px;color:white;background:#0dabb6;line-height:40px;display:inline-block;font-size:18px;margin:0 10px}

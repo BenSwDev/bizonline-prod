@@ -1,0 +1,646 @@
+[
+    {
+        "id": 1734533282,
+        "issue_type": "הצעות ובקשות",
+        "username": "שירין - ספא אחוזת אסיינדה",
+        "problem": "סימון עזיבת האורח\/ סיום ההגעה",
+        "description": "אשמח אם יהיה אפשרי להקים סימון (באפשרויות של הוזכר, הגיע),המתיחס לעזיבת האורח  (סיום היום כיף), קידום זה יעזור לדעת מי נמצא במתחם (במקרה חירום), ומה אחוז תפוסת המתחם.",
+        "images": [],
+        "status": "not started",
+        "date_reported": "2024-12-18 16:48:02",
+        "ended_at": null,
+        "comments": [],
+        "assigned_admin": ""
+    },
+    {
+        "id": 1734594407,
+        "issue_type": "דיווח על תקלה",
+        "username": "נועה זדורוביאק - Darya Spa Netanya",
+        "problem": "ארוחת בוקר דולצה ויטה",
+        "description": "זה אמור להיות 90 לא 100",
+        "images": [],
+        "status": "done",
+        "date_reported": "2024-12-19 09:46:47",
+        "ended_at": "2024-12-24 18:24:12",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734608794,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "ניהול גיפטקארד",
+        "description": "לחיצה על \" שליחה ללקוח\" לא ממקם את הפופ אפ באמצע",
+        "images": [
+            "img_6764079a91685.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 13:46:34",
+        "ended_at": "2024-12-26 22:00:07",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734609021,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "מנויים",
+        "description": "בהוספת מנוי חדש , השורה של ההוספת מנוי לא ממקומת בצד אנגלית תקין",
+        "images": [
+            "img_6764087d185b4.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 13:50:21",
+        "ended_at": "2024-12-26 21:58:21",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734609152,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "מנויים",
+        "description": "לא יודעת עד כמה קריטי,  אבל שוב בהזמנה של מנויים , הסכום לתשלום בעברית ממקום מתחת למחירון\nבאנגלית הוא ממוקם מתתחת להנחה.",
+        "images": [
+            "img_6764090007f8c.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 13:52:32",
+        "ended_at": "2024-12-24 18:24:24",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734609408,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "מנויים",
+        "description": "1. מסגרת נראית לעין ל\"מקור הזמנה\" ו\"טלפון נוסף\"\n2. ה BOOKING, לא ברור למה , אמורים להיות רשומים מספרי הזמנה.\n3.המימוש טיפול שמאוד דבוק לסכום ביחס לעברית",
+        "images": [
+            "img_67640a00377b5.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 13:56:48",
+        "ended_at": "2024-12-26 21:58:11",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734609499,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "מנויים",
+        "description": "הטיפולים שלא ממוקמים נכון\nמסגרת לכל הרובריקות",
+        "images": [
+            "img_67640a5b27c82.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 13:58:19",
+        "ended_at": "2024-12-26 21:57:25",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734609577,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "מנויים",
+        "description": "הכותרת שלא מכילה את מס המנוי הרצוי.",
+        "images": [
+            "img_67640aa97fb47.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 13:59:37",
+        "ended_at": "2024-12-26 21:57:18",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734609761,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "מנויים",
+        "description": "1.לחשוב על לשנות באנגלית את הצגת התאריך (בארהב מציגים יום וחודש בצורה הפוכה מבארץ)\n2. להגדיל את שורת החיפש של איתור שירות מהיר",
+        "images": [
+            "img_67640b61f1f48.png"
+        ],
+        "status": "not started",
+        "date_reported": "2024-12-19 14:02:41",
+        "ended_at": null,
+        "comments": [
+            {
+                "text": "תאריכים צריך לחשוב על פתרון\r\nגודל שדה סודר",
+                "timestamp": "2024-12-26 21:56:52",
+                "author": "shlomi"
+            }
+        ],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734610092,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "יומן תפוסה",
+        "description": "תאריכים לא מוטמעים ( אם אפשר לקרוא לזה ככה)\nברגע שלוחצים בתוכנה באנגלית על תאריך מסויים , זה עובר חזרה לעברית. \n2. ומתחת ל\"thursday\" חסר מספר שנה",
+        "images": [
+            "img_67640cac0bf7a.png"
+        ],
+        "status": "not started",
+        "date_reported": "2024-12-19 14:08:12",
+        "ended_at": null,
+        "comments": [
+            {
+                "text": "לא קשור לתאריכים\r\nלפעמים יש קפיצה חזרה לעברית צריך להבין למה",
+                "timestamp": "2024-12-26 21:56:19",
+                "author": "shlomi"
+            }
+        ],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734610234,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "יצירת הזמנה",
+        "description": "כמו במנויים , זה אמור להיות ממוקם במקום הנגדי",
+        "images": [
+            "img_67640d3a65acb.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 14:10:34",
+        "ended_at": "2024-12-26 21:55:35",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734610403,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "יצירת הזמנה",
+        "description": "הכתב גדול מידי לתצוגה (???)",
+        "images": [
+            "img_67640de3bbe24.png"
+        ],
+        "status": "not started",
+        "date_reported": "2024-12-19 14:13:23",
+        "ended_at": null,
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734610886,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "הגדרות ספא",
+        "description": "1. מיקום ה \"therapist managment\" , הוא בצד ימין מידי, אפילו לא באמצע .\n2. בלחיצת \"add dummy\" א יופיע מספר ליד מטפל , וגם לא מופיע לקימים",
+        "images": [
+            "img_67640fc6edc9d.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 14:21:26",
+        "ended_at": "2024-12-26 21:55:10",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734613378,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "הגדרות ספא",
+        "description": "הגדרת חדרים, הכותרת בטהלה ממוקמים הפוך",
+        "images": [
+            "img_67641982c433e.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 15:02:58",
+        "ended_at": "2024-12-26 21:55:02",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734613459,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "הגדרות ספא",
+        "description": "טיפולי ספא , אין דק לזמן ניקיון - בעברית יש",
+        "images": [
+            "img_676419d3386b1.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 15:04:19",
+        "ended_at": "2024-12-26 21:54:55",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734613690,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "הגדרות ספא",
+        "description": "שעות פעילות וחגים, בפתיחת \"הוסף חג או  מועד\" בתוכנה באנגלית , הפופ אפ נפתח צדדי ולא באמצע",
+        "images": [
+            "img_67641aba62a7c.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 15:08:10",
+        "ended_at": "2024-12-26 21:54:48",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734614165,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "הגדרות ספא",
+        "description": "ניהול הגדרות:\n1. הכיתוב כביכול על הגדרת  כתב עברית . הטקסט לא רשום בכיוון הנכון של האנגלית . \n2. ב online booking למטה - הכתב מעל התיבה ולא מופיעים מספרים של שעות",
+        "images": [
+            "img_67641c958478c.png",
+            "img_67641c958495a.png",
+            "img_67641c9584a29.png",
+            "img_67641c9584aaa.png"
+        ],
+        "status": "not started",
+        "date_reported": "2024-12-19 15:16:05",
+        "ended_at": null,
+        "comments": [
+            {
+                "text": "טופלה ניראות\r\nטופלו שעות - select שמתי את אותו פתרון עקום כמו בהגדרות ביז פופ\r\nנשאר לטפל בבעיות תרגום",
+                "timestamp": "2024-12-26 21:54:16",
+                "author": "shlomi"
+            }
+        ],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734614373,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "הגדרות ספא",
+        "description": "תצוגה אונליין . אין שעות או דקות לטיפולים",
+        "images": [
+            "img_67641d65f31cd.png",
+            "img_67641d65f3338.png",
+            "img_67641d65f3455.png"
+        ],
+        "status": "not started",
+        "date_reported": "2024-12-19 15:19:33",
+        "ended_at": null,
+        "comments": [
+            {
+                "text": "1. דקות למעלה טופל\r\n2. דקות בסלקט מחקתי את ערך הדקות מתוך תוכן ה option והוספתי סקריפט שפותר את זה, קצת עקום, צריך לבנות משהו בתוך התרגום למקרים כאלו כנראה\r\n<script>\r\n\t\t\tsetTimeout(function(){\r\n\t\t\t\t$('#bizPopDefaultTDur option').each(function(){\r\n\t\t\t\t\tif($(this).val()>0){\r\n\t\t\t\t\t\t$(this).html($(this).val()+\" \"+$(this).html())\r\n\t\t\t\t\t}\r\n\t\t\t\t});\r\n\t\t\t},1000)\r\n\t\t<\/script>\r\n3. כיתוב על הכפתור תלוי בשפת הדפדפן",
+                "timestamp": "2024-12-26 21:38:12",
+                "author": "shlomi"
+            }
+        ],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734614800,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "דוחות",
+        "description": "בסיכום החודשי - התצוגה אמורה להראות קודם את התאריך ואז search and clear",
+        "images": [
+            "img_67641f1056a9f.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 15:26:40",
+        "ended_at": "2024-12-26 21:19:53",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734615093,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "הצהרת בריאות",
+        "description": "בטבלאות יותר מידי צדדיות , וכשלוחצים על שליחת הצהרת , הפופ אפ גם צדדי ולא באמצע . \nכותרת הפופ אפ בעברית היא \" מילוי הצהרת בריאות\" ולא חושבת שcomplete זה פירוש נכון למילוי",
+        "images": [
+            "img_6764203510ec6.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 15:31:33",
+        "ended_at": "2024-12-26 21:17:05",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734616356,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "הצהרת בריאות",
+        "description": "1.איו מספר בהצהרה בdeclaration number\n2. אין מספר במס הזמנה \"booking \" \n3. הטקסט גובל את תיבת הטקסט.\n4. מומלץ להוסיף am\\pm לארהב . ככה הם מתנהלים שם\n\nבנוסף , בלחיצה על האייקונים של \"הזמנה\" \" הצהרה\" וכו , הדף ייפתח בעברית ולא באנגלית",
+        "images": [
+            "img_67642524853ed.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 15:52:36",
+        "ended_at": "2024-12-26 21:16:21",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734616633,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "לקוחות",
+        "description": "המספר בשורות \" סהכ לקוחות \" לא מופיע",
+        "images": [
+            "img_676426390db1d.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 15:57:13",
+        "ended_at": "2024-12-26 19:48:34",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734616908,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "חיפוש הזמנה",
+        "description": "המלל דבוק מידי",
+        "images": [
+            "img_6764274cd8767.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 16:01:48",
+        "ended_at": "2024-12-26 19:46:10",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734617137,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "חיפוש הזמנה",
+        "description": "הזמנות מבוטלוץ-\nמיקום לא נכון של טבלת טקסט.\nהתרגום של אייקון המחיקה לא נמשך .",
+        "images": [
+            "img_676428317f494.png"
+        ],
+        "status": "not started",
+        "date_reported": "2024-12-19 16:05:37",
+        "ended_at": null,
+        "comments": [
+            {
+                "text": "המיקום נכון\r\nזה 2 הזמנות בשורה\r\nמלל - באחריות בן",
+                "timestamp": "2024-12-26 19:44:42",
+                "author": "shlomi"
+            }
+        ],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734617249,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "הסכמים",
+        "description": "המספרים של הטקסטים לא נמשכו .",
+        "images": [
+            "img_676428a1cd79d.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 16:07:29",
+        "ended_at": "2024-12-26 19:43:41",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734617576,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "הגדרות",
+        "description": "קופונים -\n1.הכותרת לא ממוקמת טוב\n2. בלחיצה על הוסף קופון , המלל בתיבת הטקסט לא במיקום נכון לשפת האנגלית .  \nכולל בלחיצה על עריכה\nבכותרת שך הפופ אפ גם לא תורגם לאנגלית אלא נשאר בעברית",
+        "images": [
+            "img_676429e8e4f29.png",
+            "img_676429e8e59cb.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 16:12:56",
+        "ended_at": "2025-01-06 14:09:23",
+        "comments": [
+            {
+                "text": "טופלו ההביטים הגרפיים",
+                "timestamp": "2024-12-26 19:41:29",
+                "author": "shlomi"
+            }
+        ],
+        "assigned_admin": "ben"
+    },
+    {
+        "id": 1734617685,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "הגדרות",
+        "description": "ספקין ותשלומים \nטקסט מעל טקסט אחר\nגם בעברית וגם באנגלית",
+        "images": [
+            "img_67642a5531eb0.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 16:14:45",
+        "ended_at": "2024-12-26 19:31:53",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734617789,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "הגדרות",
+        "description": "מקורות הגעה\nטקסט הכותרת לא במקום הנכון\nכולל כותרות הקטגוריות",
+        "images": [
+            "img_67642abd2c9bc.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 16:16:29",
+        "ended_at": "2024-12-26 19:27:47",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734618088,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "חוות דעת",
+        "description": "מלל הדף עצמו ממוקם ימינה מידי , \n2. לא מופיע מספר ליד כותרת ה FEEDBACK \n3. בלחיצה על send a review הדף ייפתח בצד ולא באמצע\n4. בלחיצה על link to fill out an opinion הדף ייפתח בעברית",
+        "images": [
+            "img_67642be8b02b9.png",
+            "img_67642be8b0437.png",
+            "img_67642be8b0508.png"
+        ],
+        "status": "not started",
+        "date_reported": "2024-12-19 16:21:28",
+        "ended_at": null,
+        "comments": [
+            {
+                "text": "בדיקת הערה",
+                "timestamp": "2024-12-26 19:20:00",
+                "author": "shlomi"
+            },
+            {
+                "text": "מלל הדף עצמו ממוקם ימינה מידי - זה המבנה התקין\r\n2. לא מופיע מספר ליד כותרת ה FEEDBACK - זה המבנה התקין\r\n3. בלחיצה על send a review הדף ייפתח בצד ולא באמצע - טופל\r\n4. בלחיצה על link to fill out an opinion הדף ייפתח בעברית - בן",
+                "timestamp": "2024-12-26 19:25:34",
+                "author": "shlomi"
+            }
+        ],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734618172,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "לשונית צד ראשית",
+        "description": "טקסט מעל טקסט אחר",
+        "images": [
+            "img_67642c3c4f600.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 16:22:52",
+        "ended_at": "2025-01-01 15:11:52",
+        "comments": [
+            {
+                "text": "סודר התפריט\r\nבעיגול למעלה בעברית מופיעה האות מ\r\nשמתורגמת באנגלית ל From\r\nצריך להכיל טאג data-dontTranslate שיבטל את פעולת התרגום על אלמנטים שלא מעוניינים לתרגם\r\nהוספתי את הטאג לאלמנט data-dontTranslate=\"1\"",
+                "timestamp": "2024-12-26 19:06:08",
+                "author": "shlomi"
+            },
+            {
+                "text": "סודר התפריט\r\nבעיגול למעלה בעברית מופיעה האות מ\r\nשמתורגמת באנגלית ל From\r\nצריך להכיל טאג data-dontTranslate שיבטל את פעולת התרגום על אלמנטים שלא מעוניינים לתרגם\r\nהוספתי את הטאג לאלמנט data-dontTranslate=\"1\"",
+                "timestamp": "2024-12-26 19:06:22",
+                "author": "shlomi"
+            },
+            {
+                "text": "סודר התפריט\r\nבעיגול למעלה בעברית מופיעה האות מ\r\nשמתורגמת באנגלית ל From\r\nצריך להכיל טאג data-dontTranslate שיבטל את פעולת התרגום על אלמנטים שלא מעוניינים לתרגם\r\nהוספתי את הטאג לאלמנט data-dontTranslate=\"1\"",
+                "timestamp": "2024-12-26 19:06:28",
+                "author": "shlomi"
+            }
+        ],
+        "assigned_admin": "ben"
+    },
+    {
+        "id": 1734619108,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "חוות דעת",
+        "description": "1.בלחיצת add a comment הפופ אפ ייפתח בצד . \n2.הפופ בעברית ולא תורגם .",
+        "images": [
+            "img_67642fe48c128.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 16:38:28",
+        "ended_at": "2025-01-06 14:09:20",
+        "comments": [
+            {
+                "text": "בוצע תיקון ניראות\r\nיש לבצע תיקוני תרגום",
+                "timestamp": "2024-12-26 18:54:37",
+                "author": "shlomi"
+            }
+        ],
+        "assigned_admin": "ben"
+    },
+    {
+        "id": 1734619219,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "דף ראשי",
+        "description": "לשונית טקסט שלא כתובה נכון",
+        "images": [
+            "img_67643053cd5ff.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 16:40:19",
+        "ended_at": "2024-12-26 18:42:53",
+        "comments": [],
+        "assigned_admin": "shlomi"
+    },
+    {
+        "id": 1734619275,
+        "issue_type": "בעיית תצוגה",
+        "username": "מנהל ראשי - רבקה ספא",
+        "problem": "הדפסת לוז",
+        "description": "הדפסת לוז\nמה שכן תורגם לאנגלית לא במקום נכון , כל שאר הדף לא מתורגם , באף קטגוריה.",
+        "images": [
+            "img_6764308b5178c.png"
+        ],
+        "status": "done",
+        "date_reported": "2024-12-19 16:41:15",
+        "ended_at": "2025-01-06 14:09:11",
+        "comments": [
+            {
+                "text": "שד",
+                "timestamp": "2024-12-24 18:20:19",
+                "author": "shlomi"
+            },
+            {
+                "text": "טופלה תצוגה צריך לטפל בבעית תרגום",
+                "timestamp": "2024-12-26 18:44:09",
+                "author": "shlomi"
+            }
+        ],
+        "assigned_admin": "ben"
+    },
+    {
+        "id": "1736266623",
+        "issue_type": "דיווח על תקלה",
+        "username": "שוש - ריין דרופ",
+        "problem": "בדיקה",
+        "description": "בדיקה של יהודה",
+        "images": [],
+        "status": "done",
+        "date_reported": "2025-01-07 18:17:03",
+        "ended_at": "2025-01-09 10:45:30",
+        "comments": [],
+        "assigned_admin": ""
+    },
+    {
+        "id": "1736414373",
+        "issue_type": "דיווח על תקלה",
+        "username": "- ספא בונסאי",
+        "problem": "נהול עובדים",
+        "description": "לא נותן למחוק את ה עובדים",
+        "images": [],
+        "status": "in progress",
+        "date_reported": "2025-01-09 11:19:33",
+        "ended_at": null,
+        "comments": [],
+        "assigned_admin": "ben"
+    },
+    {
+        "id": "1736621755",
+        "issue_type": "דיווח על תקלה",
+        "username": "Assemblage Spa - Assemblage Spa",
+        "problem": "לשנות דברים בתוספות ספא",
+        "description": "אני רוצה לשנות את מה שמופיע בתוספות הספא ושעות פעילות וזה לא נותן לי. ניסיתי בשני מחשבים שונים. אתם לא נותנים לי לנהל את זה כפי שאני רוצה . מה שלחיץ הוא השובר להדפסה בלבד",
+        "images": [],
+        "status": "in progress",
+        "date_reported": "2025-01-11 20:55:55",
+        "ended_at": null,
+        "comments": [],
+        "assigned_admin": "ben"
+    },
+    {
+        "id": "1736622762",
+        "issue_type": "דיווח על תקלה",
+        "username": "Assemblage Spa - Assemblage Spa",
+        "problem": "לשנות שעות עבודה",
+        "description": "לא ניתן לערוך את שעות העבודה , נראה לי בסיסי",
+        "images": [],
+        "status": "in progress",
+        "date_reported": "2025-01-11 21:12:42",
+        "ended_at": null,
+        "comments": [],
+        "assigned_admin": "ben"
+    },
+    {
+        "id": "1737637705",
+        "issue_type": "דיווח על תקלה",
+        "username": "Shlomit Sever - OKOA SPA",
+        "problem": "מערכת איטית מאוד",
+        "description": "",
+        "images": [],
+        "status": "not started",
+        "date_reported": "2025-01-23 15:08:25",
+        "ended_at": null,
+        "comments": [],
+        "assigned_admin": ""
+    }
+]

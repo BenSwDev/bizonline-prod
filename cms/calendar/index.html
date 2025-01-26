@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+    <title>CLNDR Demo</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/clndr.css">
+
+</head>
+<body>
+    <div class="container">
+		<div class="cal0">
+			<div class="unitsSlct">
+				<div class="allUnits" onclick="$('#calTbody').attr('class', 'allunits');">כל היחידות</div>
+				<div onclick="$('#calTbody').attr('class', 'unit1');">סוויטה 1</div>
+				<div onclick="$('#calTbody').attr('class', 'unit2');">סוויטה 2</div>
+				<div onclick="$('#calTbody').attr('class', 'unit3');">סוויטה 3</div>
+				<div onclick="$('#calTbody').attr('class', 'unit4');">סוויטה 4</div>
+			</div>
+		</div>
+		<div class="cal1">
+			
+        <script type="text/template" id="calTemp">
+			<div class="clndr-controls">
+				<div class="clndr-control-button"><span class="clndr-previous-button">הקודם</span></div>
+				<div class="month"><%= month %> <%= year %></div>
+				<div class="clndr-control-button rightalign"><span class="clndr-next-button">הבא</span></div>
+			</div>
+			<table class="clndr-table" border="0" cellspacing="0" cellpadding="0">
+				<thead>
+					<tr class="header-days">
+						<% _.each(daysOfTheWeek, function (day) { %>
+    						<td class="header-day"><%= day %></td>
+    					<% }); %>
+					</tr>
+				</thead>
+				<tbody id="calTbody"><% console.log(this); %>
+					<% var i = 0; _.each(days, function (day) { %>
+						<% var free = this.options.extras.free[day.date.format('YYYY-MM')]; %>
+						<% if(i===0){%><tr><% } %>
+						<% if(i===7 || i===14 || i===21 || i===28 || i===35){%></tr><tr><% } %>
+						<td class="<%= day.classes %>">
+							<div class="day-contents"><%= day.day %></div>
+							<div class='units'>
+							<% day.properties.isAdjacentMonth || _.each(this.options.extras.units, function(u, i){ %>
+								<% var f = free[i] ? free[i][day.day] : 0 %>
+								<div class="u<%= u %> a<%= (f ? f : 0) %>"></div>
+							<% }); %>
+							</div>
+						</td>
+			        <% i++ }, this); %>
+			        </tr>
+				</tbody>
+			</table>
+        </script>
+        </div>
+    </div>
+
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="clndr.js"></script>
+    <script src="demo.js"></script>
+</body>
+</html>
+
+<style>
+	.unitsSlct {display:table;width:100%;height:50px;}	
+	.unitsSlct div {display:table-cell;background:#68a219;color:white;text-align:center;vertical-align:middle;cursor:pointer}
+	.unitsSlct div:nth-child(2n+1){background:#7dd10b}
+	.unitsSlct div.allUnits {background:#4bbdde}
+
+	.units {  border-spacing: 2px;  display: table;  height: 54px;  width: 100%;}
+	.units div { display: table-cell;position:relative}
+	.units div::before {content:" ";min-height:0px;left:0;right:0;bottom:0;position:absolute;background:repeating-linear-gradient(0deg, #dd0000, #dd0000 8px, rgba(0,0,0,0) 8px, rgba(0,0,0,0) 10px )}
+	.units div::after {content:" ";min-height:0px;left:0;right:0;bottom:0;position:absolute;background:repeating-linear-gradient(0deg, #68a219, #68a219 8px, rgba(0,0,0,0) 8px, rgba(0,0,0,0) 10px )}
+	.units div:nth-child(2n)::after {background:repeating-linear-gradient(0deg, #7dd10b, #7dd10b 8px, rgba(0,0,0,0) 8px, rgba(0,0,0,0) 10px )}
+	.u1::before , .a1::after {height:10px}
+	.u2::before , .a2::after {height:20px}
+	.u3::before , .a3::after {height:30px}
+	.u4::before , .a4::after {height:40px}
+	.u5::before , .a5::after {height:50px}
+	.u6::before , .a6::after {height:60px}
+	.u7::before , .a7::after {height:70px}
+	.u8::before , .a8::after {height:80px}
+	.u9::before , .a9::after {height:90px}
+	.u10::before , .a10 {height:100px}
+	.unit1 .units div , .unit2 .units div , .unit3 .units div , .unit4 .units div , .unit5 .units div , .unit6 .units div , .unit7 .units div , .unit8 .units div , .unit9 .units div , .unit10 .units div {display:none}
+	.unit1 .units div:nth-child(1){display:table-cell !important}
+	.unit2 .units div:nth-child(2){display:table-cell !important}
+	.unit3 .units div:nth-child(3){display:table-cell !important}
+	.unit4 .units div:nth-child(4){display:table-cell !important}
+	.unit5 .units div:nth-child(5){display:table-cell !important}
+	.unit6 .units div:nth-child(6){display:table-cell !important}
+	.unit7 .units div:nth-child(7){display:table-cell !important}
+	.unit8 .units div:nth-child(8){display:table-cell !important}
+	.unit9 .units div:nth-child(9){display:table-cell !important}
+	.unit10 .units div:nth-child(10){display:table-cell !important}
+	
+</style>

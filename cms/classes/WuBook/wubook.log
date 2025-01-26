@@ -1,0 +1,2528 @@
+2023-12-26 15:30:38
+Array
+(
+    [0] => 1604225514
+    [1] => 04/01/2024
+    [2] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 481829
+                    [days] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+Ok
+
+2023-12-26 15:32:56
+Array
+(
+    [0] => 1604225514
+    [1] => 04/01/2024
+    [2] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 481829
+                    [days] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [avail] => 1
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+
+Ok
+
+2023-12-26 15:33:09
+Array
+(
+    [0] => 1604225514
+    [1] => 04/01/2024
+    [2] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 481829
+                    [days] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [avail] => 2
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+
+Ok
+
+2023-12-26 15:33:16
+Array
+(
+    [0] => 1604225514
+    [1] => 04/01/2024
+    [2] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 481829
+                    [days] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [avail] => 1
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+
+Ok
+
+2023-12-26 15:33:17
+Array
+(
+    [0] => 1604225514
+    [1] => 04/01/2024
+    [2] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 481829
+                    [days] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [avail] => 2
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+
+Ok
+
+2023-12-26 15:33:18
+Array
+(
+    [0] => 1604225514
+    [1] => 04/01/2024
+    [2] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 481829
+                    [days] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [avail] => 1
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+
+Ok
+
+2023-12-26 15:33:34
+Array
+(
+    [0] => 1604225514
+    [1] => 04/01/2024
+    [2] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 481829
+                    [days] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [avail] => 2
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+
+Ok
+
+2023-12-26 15:33:35
+Array
+(
+    [0] => 1604225514
+    [1] => 03/01/2024
+    [2] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 481829
+                    [days] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [avail] => 0
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+
+Ok
+
+2023-12-26 15:34:22
+Array
+(
+    [0] => 1604225514
+    [1] => 03/01/2024
+    [2] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 481829
+                    [days] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [avail] => 1
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+
+Ok
+
+2023-12-26 18:10:45
+Array
+(
+    [0] => 1604225514
+    [1] => https://bizdev.c-ssd.com/api/wubook/newOrder.php
+)
+
+Ok
+
+2023-12-26 18:10:47
+Array
+(
+    [0] => 1604225514
+    [1] => https://bizdev.c-ssd.com/api/wubook/newOrder.php
+)
+
+Ok
+
+2025-01-18 23:02:21
+Array
+(
+    [0] => 1604225514
+)
+
+Array
+(
+    [0] => Array
+        (
+            [name] => idan test 4
+            [id] => 628896
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => it4
+            [subroom] => 481829
+            [board] => nb
+            [price] => 150
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [1] => Array
+        (
+            [name] => tt
+            [id] => 482538
+            [occupancy] => 1
+            [men] => 1
+            [children] => 0
+            [shortname] => tt1
+            [subroom] => 481813
+            [board] => bb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [2] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496495
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => devk
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 7
+            [rtype_name] => Villa
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 1000
+            [max_price] => 1500
+        )
+
+    [3] => Array
+        (
+            [name] => idan test1
+            [id] => 481829
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => test
+            [subroom] => 0
+            [board] => nb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [4] => Array
+        (
+            [name] => test apartment for 4pax
+            [id] => 481815
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => apt4
+            [subroom] => 481813
+            [board] => nb
+            [price] => 1200
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [5] => Array
+        (
+            [name] => test Apartment1
+            [id] => 481813
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => apt
+            [subroom] => 0
+            [board] => nb
+            [price] => 1000
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => Array
+                (
+                    [bb] => Array
+                        (
+                            [dtype] => 1
+                            [value] => 10
+                        )
+
+                )
+
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [6] => Array
+        (
+            [name] => suite stav
+            [id] => 489877
+            [occupancy] => 8
+            [men] => 8
+            [children] => 0
+            [shortname] => stav
+            [subroom] => 0
+            [board] => nb
+            [price] => 3900
+            [availability] => 0
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [7] => Array
+        (
+            [name] => suite shay
+            [id] => 489878
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => shay
+            [subroom] => 0
+            [board] => nb
+            [price] => 3700
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [8] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496353
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => edev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [9] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496355
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => gdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [10] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496352
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => tdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [11] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496354
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => fdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+)
+
+
+2025-01-18 23:13:44
+Array
+(
+    [0] => 1604225514
+)
+
+Array
+(
+    [0] => Array
+        (
+            [name] => idan test 4
+            [id] => 628896
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => it4
+            [subroom] => 481829
+            [board] => nb
+            [price] => 150
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [1] => Array
+        (
+            [name] => tt
+            [id] => 482538
+            [occupancy] => 1
+            [men] => 1
+            [children] => 0
+            [shortname] => tt1
+            [subroom] => 481813
+            [board] => bb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [2] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496495
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => devk
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 7
+            [rtype_name] => Villa
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 1000
+            [max_price] => 1500
+        )
+
+    [3] => Array
+        (
+            [name] => idan test1
+            [id] => 481829
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => test
+            [subroom] => 0
+            [board] => nb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [4] => Array
+        (
+            [name] => test apartment for 4pax
+            [id] => 481815
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => apt4
+            [subroom] => 481813
+            [board] => nb
+            [price] => 1200
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [5] => Array
+        (
+            [name] => test Apartment1
+            [id] => 481813
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => apt
+            [subroom] => 0
+            [board] => nb
+            [price] => 1000
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => Array
+                (
+                    [bb] => Array
+                        (
+                            [dtype] => 1
+                            [value] => 10
+                        )
+
+                )
+
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [6] => Array
+        (
+            [name] => suite stav
+            [id] => 489877
+            [occupancy] => 8
+            [men] => 8
+            [children] => 0
+            [shortname] => stav
+            [subroom] => 0
+            [board] => nb
+            [price] => 3900
+            [availability] => 0
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [7] => Array
+        (
+            [name] => suite shay
+            [id] => 489878
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => shay
+            [subroom] => 0
+            [board] => nb
+            [price] => 3700
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [8] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496353
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => edev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [9] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496355
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => gdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [10] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496352
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => tdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [11] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496354
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => fdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+)
+
+
+2025-01-19 13:05:07
+Array
+(
+    [0] => 1604225514
+)
+
+Array
+(
+    [0] => Array
+        (
+            [name] => idan test 4
+            [id] => 628896
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => it4
+            [subroom] => 481829
+            [board] => nb
+            [price] => 150
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [1] => Array
+        (
+            [name] => tt
+            [id] => 482538
+            [occupancy] => 1
+            [men] => 1
+            [children] => 0
+            [shortname] => tt1
+            [subroom] => 481813
+            [board] => bb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [2] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496495
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => devk
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 7
+            [rtype_name] => Villa
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 1000
+            [max_price] => 1500
+        )
+
+    [3] => Array
+        (
+            [name] => idan test1
+            [id] => 481829
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => test
+            [subroom] => 0
+            [board] => nb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [4] => Array
+        (
+            [name] => test apartment for 4pax
+            [id] => 481815
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => apt4
+            [subroom] => 481813
+            [board] => nb
+            [price] => 1200
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [5] => Array
+        (
+            [name] => test Apartment1
+            [id] => 481813
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => apt
+            [subroom] => 0
+            [board] => nb
+            [price] => 1000
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => Array
+                (
+                    [bb] => Array
+                        (
+                            [dtype] => 1
+                            [value] => 10
+                        )
+
+                )
+
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [6] => Array
+        (
+            [name] => suite stav
+            [id] => 489877
+            [occupancy] => 8
+            [men] => 8
+            [children] => 0
+            [shortname] => stav
+            [subroom] => 0
+            [board] => nb
+            [price] => 3900
+            [availability] => 0
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [7] => Array
+        (
+            [name] => suite shay
+            [id] => 489878
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => shay
+            [subroom] => 0
+            [board] => nb
+            [price] => 3700
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [8] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496353
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => edev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [9] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496355
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => gdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [10] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496352
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => tdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [11] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496354
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => fdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+)
+
+
+2025-01-20 10:44:16
+Array
+(
+    [0] => 1604225514
+)
+
+Array
+(
+    [0] => Array
+        (
+            [name] => idan test 4
+            [id] => 628896
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => it4
+            [subroom] => 481829
+            [board] => nb
+            [price] => 150
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [1] => Array
+        (
+            [name] => tt
+            [id] => 482538
+            [occupancy] => 1
+            [men] => 1
+            [children] => 0
+            [shortname] => tt1
+            [subroom] => 481813
+            [board] => bb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [2] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496495
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => devk
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 7
+            [rtype_name] => Villa
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 1000
+            [max_price] => 1500
+        )
+
+    [3] => Array
+        (
+            [name] => idan test1
+            [id] => 481829
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => test
+            [subroom] => 0
+            [board] => nb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [4] => Array
+        (
+            [name] => test apartment for 4pax
+            [id] => 481815
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => apt4
+            [subroom] => 481813
+            [board] => nb
+            [price] => 1200
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [5] => Array
+        (
+            [name] => test Apartment1
+            [id] => 481813
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => apt
+            [subroom] => 0
+            [board] => nb
+            [price] => 1000
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => Array
+                (
+                    [bb] => Array
+                        (
+                            [dtype] => 1
+                            [value] => 10
+                        )
+
+                )
+
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [6] => Array
+        (
+            [name] => suite stav
+            [id] => 489877
+            [occupancy] => 8
+            [men] => 8
+            [children] => 0
+            [shortname] => stav
+            [subroom] => 0
+            [board] => nb
+            [price] => 3900
+            [availability] => 0
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [7] => Array
+        (
+            [name] => suite shay
+            [id] => 489878
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => shay
+            [subroom] => 0
+            [board] => nb
+            [price] => 3700
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [8] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496353
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => edev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [9] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496355
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => gdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [10] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496352
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => tdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [11] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496354
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => fdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+)
+
+
+2025-01-20 10:45:29
+Array
+(
+    [0] => 1604225514
+)
+
+Array
+(
+    [0] => Array
+        (
+            [name] => idan test 4
+            [id] => 628896
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => it4
+            [subroom] => 481829
+            [board] => nb
+            [price] => 150
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [1] => Array
+        (
+            [name] => tt
+            [id] => 482538
+            [occupancy] => 1
+            [men] => 1
+            [children] => 0
+            [shortname] => tt1
+            [subroom] => 481813
+            [board] => bb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [2] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496495
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => devk
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 7
+            [rtype_name] => Villa
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 1000
+            [max_price] => 1500
+        )
+
+    [3] => Array
+        (
+            [name] => idan test1
+            [id] => 481829
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => test
+            [subroom] => 0
+            [board] => nb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [4] => Array
+        (
+            [name] => test apartment for 4pax
+            [id] => 481815
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => apt4
+            [subroom] => 481813
+            [board] => nb
+            [price] => 1200
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [5] => Array
+        (
+            [name] => test Apartment1
+            [id] => 481813
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => apt
+            [subroom] => 0
+            [board] => nb
+            [price] => 1000
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => Array
+                (
+                    [bb] => Array
+                        (
+                            [dtype] => 1
+                            [value] => 10
+                        )
+
+                )
+
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [6] => Array
+        (
+            [name] => suite stav
+            [id] => 489877
+            [occupancy] => 8
+            [men] => 8
+            [children] => 0
+            [shortname] => stav
+            [subroom] => 0
+            [board] => nb
+            [price] => 3900
+            [availability] => 0
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [7] => Array
+        (
+            [name] => suite shay
+            [id] => 489878
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => shay
+            [subroom] => 0
+            [board] => nb
+            [price] => 3700
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [8] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496353
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => edev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [9] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496355
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => gdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [10] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496352
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => tdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [11] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496354
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => fdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+)
+
+
+2025-01-20 10:46:07
+Array
+(
+    [0] => 1604225514
+)
+
+Array
+(
+    [0] => Array
+        (
+            [name] => idan test 4
+            [id] => 628896
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => it4
+            [subroom] => 481829
+            [board] => nb
+            [price] => 150
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [1] => Array
+        (
+            [name] => tt
+            [id] => 482538
+            [occupancy] => 1
+            [men] => 1
+            [children] => 0
+            [shortname] => tt1
+            [subroom] => 481813
+            [board] => bb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [2] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496495
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => devk
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 7
+            [rtype_name] => Villa
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 1000
+            [max_price] => 1500
+        )
+
+    [3] => Array
+        (
+            [name] => idan test1
+            [id] => 481829
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => test
+            [subroom] => 0
+            [board] => nb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [4] => Array
+        (
+            [name] => test apartment for 4pax
+            [id] => 481815
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => apt4
+            [subroom] => 481813
+            [board] => nb
+            [price] => 1200
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [5] => Array
+        (
+            [name] => test Apartment1
+            [id] => 481813
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => apt
+            [subroom] => 0
+            [board] => nb
+            [price] => 1000
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => Array
+                (
+                    [bb] => Array
+                        (
+                            [dtype] => 1
+                            [value] => 10
+                        )
+
+                )
+
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [6] => Array
+        (
+            [name] => suite stav
+            [id] => 489877
+            [occupancy] => 8
+            [men] => 8
+            [children] => 0
+            [shortname] => stav
+            [subroom] => 0
+            [board] => nb
+            [price] => 3900
+            [availability] => 0
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [7] => Array
+        (
+            [name] => suite shay
+            [id] => 489878
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => shay
+            [subroom] => 0
+            [board] => nb
+            [price] => 3700
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [8] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496353
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => edev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [9] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496355
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => gdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [10] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496352
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => tdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [11] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496354
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => fdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+)
+
+
+2025-01-20 10:46:14
+Array
+(
+    [0] => 1604225514
+)
+
+Array
+(
+    [0] => Array
+        (
+            [name] => idan test 4
+            [id] => 628896
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => it4
+            [subroom] => 481829
+            [board] => nb
+            [price] => 150
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [1] => Array
+        (
+            [name] => tt
+            [id] => 482538
+            [occupancy] => 1
+            [men] => 1
+            [children] => 0
+            [shortname] => tt1
+            [subroom] => 481813
+            [board] => bb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [2] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496495
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => devk
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 7
+            [rtype_name] => Villa
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 1000
+            [max_price] => 1500
+        )
+
+    [3] => Array
+        (
+            [name] => idan test1
+            [id] => 481829
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => test
+            [subroom] => 0
+            [board] => nb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [4] => Array
+        (
+            [name] => test apartment for 4pax
+            [id] => 481815
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => apt4
+            [subroom] => 481813
+            [board] => nb
+            [price] => 1200
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [5] => Array
+        (
+            [name] => test Apartment1
+            [id] => 481813
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => apt
+            [subroom] => 0
+            [board] => nb
+            [price] => 1000
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => Array
+                (
+                    [bb] => Array
+                        (
+                            [dtype] => 1
+                            [value] => 10
+                        )
+
+                )
+
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [6] => Array
+        (
+            [name] => suite stav
+            [id] => 489877
+            [occupancy] => 8
+            [men] => 8
+            [children] => 0
+            [shortname] => stav
+            [subroom] => 0
+            [board] => nb
+            [price] => 3900
+            [availability] => 0
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [7] => Array
+        (
+            [name] => suite shay
+            [id] => 489878
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => shay
+            [subroom] => 0
+            [board] => nb
+            [price] => 3700
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [8] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496353
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => edev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [9] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496355
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => gdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [10] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496352
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => tdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [11] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496354
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => fdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+)
+
+
+2025-01-20 10:46:19
+Array
+(
+    [0] => 1604225514
+)
+
+Array
+(
+    [0] => Array
+        (
+            [name] => idan test 4
+            [id] => 628896
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => it4
+            [subroom] => 481829
+            [board] => nb
+            [price] => 150
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [1] => Array
+        (
+            [name] => tt
+            [id] => 482538
+            [occupancy] => 1
+            [men] => 1
+            [children] => 0
+            [shortname] => tt1
+            [subroom] => 481813
+            [board] => bb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [2] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496495
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => devk
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 7
+            [rtype_name] => Villa
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 1000
+            [max_price] => 1500
+        )
+
+    [3] => Array
+        (
+            [name] => idan test1
+            [id] => 481829
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => test
+            [subroom] => 0
+            [board] => nb
+            [price] => 100
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 2
+            [rtype_name] => Apartment
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [4] => Array
+        (
+            [name] => test apartment for 4pax
+            [id] => 481815
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => apt4
+            [subroom] => 481813
+            [board] => nb
+            [price] => 1200
+            [availability] => 2
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [5] => Array
+        (
+            [name] => test Apartment1
+            [id] => 481813
+            [occupancy] => 3
+            [men] => 3
+            [children] => 0
+            [shortname] => apt
+            [subroom] => 0
+            [board] => nb
+            [price] => 1000
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => Array
+                (
+                    [bb] => Array
+                        (
+                            [dtype] => 1
+                            [value] => 10
+                        )
+
+                )
+
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [6] => Array
+        (
+            [name] => suite stav
+            [id] => 489877
+            [occupancy] => 8
+            [men] => 8
+            [children] => 0
+            [shortname] => stav
+            [subroom] => 0
+            [board] => nb
+            [price] => 3900
+            [availability] => 0
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [7] => Array
+        (
+            [name] => suite shay
+            [id] => 489878
+            [occupancy] => 4
+            [men] => 4
+            [children] => 0
+            [shortname] => shay
+            [subroom] => 0
+            [board] => nb
+            [price] => 3700
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [8] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496353
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => edev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [9] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496355
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => gdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [10] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496352
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => tdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+    [11] => Array
+        (
+            [name] => Rooms dev test
+            [id] => 496354
+            [occupancy] => 2
+            [men] => 2
+            [children] => 0
+            [shortname] => fdev
+            [subroom] => 0
+            [board] => ai
+            [price] => 80.5
+            [availability] => 1
+            [woodoo] => 0
+            [rtype] => 1
+            [rtype_name] => Room
+            [boards] => 
+            [anchorate] => 0
+            [dec_avail] => 0
+            [min_price] => 0
+            [max_price] => 0
+        )
+
+)
+
+

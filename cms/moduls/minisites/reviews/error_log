@@ -1,0 +1,26 @@
+[04-Aug-2024 17:07:24 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/biz2cssd/public_html/cms/moduls/minisites/reviews/ajax_showInDomain.php on line 14
+[04-Aug-2024 17:07:30 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/biz2cssd/public_html/cms/moduls/minisites/reviews/ajax_showInDomain.php on line 14
+[04-Aug-2024 17:08:30 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/biz2cssd/public_html/cms/moduls/minisites/reviews/ajax_showInDomain.php on line 14
+[04-Aug-2024 17:11:09 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected 'define' (T_STRING) in /home/biz2cssd/public_html/cms/moduls/minisites/reviews/ajax_showInDomain.php on line 6
+[04-Aug-2024 17:11:22 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/biz2cssd/public_html/cms/moduls/minisites/reviews/ajax_showInDomain.php on line 19
+[04-Aug-2024 17:12:06 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/biz2cssd/public_html/cms/moduls/minisites/reviews/ajax_showInDomain.php on line 22
+[04-Aug-2024 17:12:13 Asia/Jerusalem] PHP Notice:  Undefined index: host in /home/biz2cssd/public_html/cms/classes/class.udb.php on line 140
+[04-Aug-2024 17:12:13 Asia/Jerusalem] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/biz2cssd/public_html/cms/bin/system.php on line 6
+[04-Aug-2024 17:12:24 Asia/Jerusalem] PHP Notice:  Undefined index: host in /home/biz2cssd/public_html/cms/classes/class.udb.php on line 140
+[04-Aug-2024 17:12:24 Asia/Jerusalem] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/biz2cssd/public_html/cms/bin/system.php on line 6
+[04-Aug-2024 17:12:39 Asia/Jerusalem] PHP Notice:  Undefined index: host in /home/biz2cssd/public_html/cms/classes/class.udb.php on line 140
+[04-Aug-2024 17:12:39 Asia/Jerusalem] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/biz2cssd/public_html/cms/bin/system.php on line 6
+[04-Aug-2024 17:12:47 Asia/Jerusalem] PHP Notice:  Undefined index: host in /home/biz2cssd/public_html/cms/classes/class.udb.php on line 140
+[04-Aug-2024 17:12:47 Asia/Jerusalem] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/biz2cssd/public_html/cms/bin/system.php on line 6
+[04-Aug-2024 17:14:30 Asia/Jerusalem] PHP Warning:  include_once(../../bin/system.php): failed to open stream: No such file or directory in /home/biz2cssd/public_html/cms/moduls/minisites/reviews/ajax_showInDomain.php on line 9
+[04-Aug-2024 17:14:30 Asia/Jerusalem] PHP Warning:  include_once(): Failed opening '../../bin/system.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/biz2cssd/public_html/cms/moduls/minisites/reviews/ajax_showInDomain.php on line 9
+[04-Aug-2024 17:14:43 Asia/Jerusalem] PHP Warning:  include_once(../../bin/system.php): failed to open stream: No such file or directory in /home/biz2cssd/public_html/cms/moduls/minisites/reviews/ajax_showInDomain.php on line 9
+[04-Aug-2024 17:14:43 Asia/Jerusalem] PHP Warning:  include_once(): Failed opening '../../bin/system.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/biz2cssd/public_html/cms/moduls/minisites/reviews/ajax_showInDomain.php on line 9
+[04-Aug-2024 17:14:57 Asia/Jerusalem] PHP Notice:  Undefined index: host in /home/biz2cssd/public_html/cms/classes/class.udb.php on line 140
+[04-Aug-2024 17:14:57 Asia/Jerusalem] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/biz2cssd/public_html/cms/bin/system.php on line 6
+[04-Aug-2024 17:17:45 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/biz2cssd/public_html/cms/moduls/minisites/reviews/ajax_showInDomain.php on line 23
+[04-Aug-2024 17:17:53 Asia/Jerusalem] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/biz2cssd/public_html/cms/moduls/minisites/reviews/ajax_showInDomain.php on line 23
+[04-Aug-2024 17:19:28 Asia/Jerusalem] PHP Notice:  Undefined index: host in /home/biz2cssd/public_html/cms/classes/class.udb.php on line 140
+[04-Aug-2024 17:19:28 Asia/Jerusalem] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/biz2cssd/public_html/cms/bin/system.php on line 6
+[04-Aug-2024 17:20:04 Asia/Jerusalem] PHP Notice:  Undefined index: host in /home/biz2cssd/public_html/cms/classes/class.udb.php on line 140
+[04-Aug-2024 17:20:04 Asia/Jerusalem] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/biz2cssd/public_html/cms/bin/system.php on line 6
