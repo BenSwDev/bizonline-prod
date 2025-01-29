@@ -7,13 +7,14 @@ if (!$_CURRENT_USER->select_site()){
     echo '<script>$(function(){$(".sites-select select").val(' , $_CURRENT_USER->active_site() , ');});</script>';
 }
 
+// Active site
 $sid = $_CURRENT_USER->active_site() ?: 0;
 
+// Will hold the selected unitID, if any
 $uid = 0;
-if($_GET["uid"] || $_POST['uid']) {
-    $uid = intval($_GET["uid"] ? $_GET["uid"] : $_POST['uid']);
+if (isset($_GET["uid"]) || isset($_POST['uid'])) {
+    $uid = intval($_GET["uid"] ?? $_POST['uid']);
 }
-
 ?>
 <h1>הגדרות חדרים</h1>
 <style>
@@ -31,8 +32,6 @@ if($_GET["uid"] || $_POST['uid']) {
     .mainSectionWrapper {
         border: 1px solid #f3f3f3;
         clear: both;
-        /*overflow: hidden;*/
-        /*height: 50px;*/
         margin-top: 10px;
     }
     .mainSectionWrapper .sectionName {
@@ -40,7 +39,7 @@ if($_GET["uid"] || $_POST['uid']) {
         line-height: 50px;
         margin-bottom: 20px;
         cursor: pointer;
-        text-align: start;
+        text-align: right;
         box-sizing: border-box;
         font-weight: bold;
         font-size: 20px;
@@ -81,7 +80,7 @@ if($_GET["uid"] || $_POST['uid']) {
         font-weight: bold;
         margin-bottom: 5px;
     }
-    .editItems input[type='text'], .editItems input[type='password'], .editItems input.submit, .editItems input[type='submit'], .editItems input[type='number'], .editItems textarea {
+    .editItems input[type='text'], .editItems input[type='password'], .editItems input[type='submit'], .editItems input[type='number'], .editItems textarea {
         line-height: 32px;
         height: 32px;
         background: #f5f5f5;
@@ -122,8 +121,6 @@ if($_GET["uid"] || $_POST['uid']) {
     }
     .editItems input[type='checkbox'] {
         margin: 4px !important;
-    }
-    .editItems input[type='checkbox'] {
         -webkit-appearance: checkbox !important;
     }
     input, select, textarea {
@@ -150,12 +147,8 @@ if($_GET["uid"] || $_POST['uid']) {
         border-right: none;
         background: transparent;
         opacity: 0;
-        -webkit-transform: rotate(
-            -45deg
-        );
-        transform: rotate(
-            -45deg
-        );
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
     }
     .checkLabel > label {
         font-size: 16px;
@@ -174,7 +167,6 @@ if($_GET["uid"] || $_POST['uid']) {
         font-weight: bold;
         margin-bottom: 5px;
     }
-    /*select{background:0 0;font-size:20px;color:#333;padding:0 10px;box-sizing:border-box}*/
     .manageItems table {
         margin-top: 25px;
         margin-bottom: 10px;
@@ -192,7 +184,7 @@ if($_GET["uid"] || $_POST['uid']) {
     }
 
     .manageItems table > thead > tr > th {
-        text-align: start;
+        text-align: right;
         padding-right: 5px;
         border: 2px solid #f5f5f5;
         line-height: 1;
@@ -219,236 +211,423 @@ if($_GET["uid"] || $_POST['uid']) {
         vertical-align: middle;
     }
 
-    @media (min-width: 1000px) {
-        .inputLblWrap {
-            margin: 4% 1%;
-            width: auto;
-        }
+    /* Additional style for toggle switch if needed */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 45px;
+        height: 24px;
+        margin-top: 5px;
+    }
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 24px;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+    }
+    input:checked + .slider {
+        background-color: #0dabb6;
+    }
+    input:checked + .slider:before {
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
+    }
+
+    /* New styles for add/remove buttons */
+    .addNewRoom {
+        height: 30px;
+        padding: 0 20px;
+        border-radius: 15px;
+        color: white;
+        background: #0dabb6;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+    }
+    .deleteRoom {
+        height: 30px;
+        padding: 0 20px;
+        border-radius: 15px;
+        color: white;
+        background: #0dabb6;
+        font-size: 12px;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
     }
 </style>
 <?php
 
-/*if (!$_CURRENT_USER->single_site){
-    $sname = udb::key_row("SELECT `siteID`, `siteName` FROM `sites` WHERE `siteID` IN (" . $_CURRENT_USER->sites(true) . ")",'siteID');
-?>
-    <div class="site-select">
-		    <label for="sid" class="labelTo">בחר מתחם</label>
-            <select name="sid" id="sid" title="שם מתחם" onchange="location.href = '?page=treatmentsrooms&asite=' + this[this.selectedIndex].value">
-                <?php
-                foreach($sname as $id => $name) {
-                    echo '<option value="' , $name['siteID'] , '" ' , ($name['siteID'] == $sid ? 'selected' : '') , '>' , $name['siteName'] , '</option>';
-                }
-                ?>
-            </select>
-        </div>
-<?
-}*/
-
-if ('POST' == $_SERVER['REQUEST_METHOD'] && $uid){
+//////////////////////////////////////////////////////////////////////////////////
+// Handle saving (insert/update) for either new or existing "rooms_units" record //
+//////////////////////////////////////////////////////////////////////////////////
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $isError = '';
     try {
         $data = typemap($_POST, [
             'hasTreatments'   => 'int',
             'hasStaying'      => 'int',
-            'maxTreatments'      => 'int',
-            'attributes' => ['int' => 'int'],
-            'uname'   => ['int' => 'string']
+            'maxTreatments'   => 'int',
+            'attributes'      => ['int' => 'int'],
+            'uname'           => ['int' => 'string'],
+            // We remove 'roomID' because user doesn't pick or see it
         ]);
 
-// main site data
+        // Build array for insertion or updating
         $siteData = [
             'hasTreatments'  => $data['hasTreatments'],
             'hasStaying'     => $data['hasStaying'],
-            'maxTreatments'     => $data['maxTreatments'],
+            'maxTreatments'  => $data['maxTreatments'],
         ];
 
-        if ($data['uname'][1])
+        if (!empty($data['uname'][1])) {
             $siteData['unitName'] = $data['uname'][1];
-
-        udb::update('rooms_units', $siteData, '`unitID` = ' . $uid);
-
-        empty($data['uname'][2]) ? Translation::clear('rooms_units', $uid, 'unitName', 2) : Translation::save('rooms_units', $uid, 'unitName', $data['uname'][2], 2);
-
-        udb::query("DELETE FROM `units_treats` WHERE `unitID` = " . $uid);
-		if($data['attributes'] && count($data['attributes'])){
-            $que = [];
-            foreach($data['attributes'] as $attr)
-                $que[] = '(' . $uid . ', ' . $attr . ')';
-            //print_r($que);
-			$upsql = "INSERT INTO `units_treats` (`unitID`, `treatmentID` ) VALUES" . implode(',', $que); //. " ON DUPLICATE KEY UPDATE `unitID` = VALUES(`unitID`)";
-            udb::query($upsql);
-            unset($que);
         }
 
+        // If uid == 0 => Insert new record
+        if ($uid === 0) {
+            // Auto-select the first "roomID" from `rooms` for the site, if any
+            $firstRoom = udb::single_row("SELECT * FROM `rooms` WHERE `siteID` = " . intval($sid) . " ORDER BY roomID ASC LIMIT 1");
+            $siteData['roomID'] = $firstRoom ? $firstRoom['roomID'] : 0;
 
+            // Insert
+            $uid = udb::insert('rooms_units', $siteData);
 
+            // English name if given
+            if (!empty($data['uname'][2])) {
+                Translation::save('rooms_units', $uid, 'unitName', $data['uname'][2], 2);
+            }
 
-    }
-    catch (LocalException $e){
-// show error
-        $isError = $e->getMessage();
-    } ?>
-    <script>
-    <?if($isError) {?>
-    alert('<?=$isError?>');
-    <?} ?>
-</script>
-    <?php
+        } else {
+            // Update existing
+            udb::update('rooms_units', $siteData, '`unitID` = ' . $uid);
 
-}
+            // If there's an English name or clearing it
+            if (empty($data['uname'][2])) {
+                Translation::clear('rooms_units', $uid, 'unitName', 2);
+            } else {
+                Translation::save('rooms_units', $uid, 'unitName', $data['uname'][2], 2);
+            }
+        }
 
-if(isset($_GET['uid'])) {
-    $uid = intval($_GET['uid']);
-    $siteData = udb::single_row("SELECT * FROM `rooms_units` where unitID=".$uid);
-    $usite = udb::single_value("SELECT `siteID` FROM `rooms` where roomID = " . $siteData['roomID']);
-    $sitesTretmentsSQL = "SELECT treatments FROM `sitesTratments` where bizSiteID in (".$usite.")";
-    $sitesTretments = udb::single_column($sitesTretmentsSQL);
-    $useTreats = [];
-    foreach ($sitesTretments as $t) {
-        $currTreats = json_decode($t,true);
-        if(is_array($currTreats)) {
-            foreach ($currTreats as $tr) {
-                if(isset($tr['id']))
-                    $useTreats[$tr['id']] = intval($tr['id']);
+        // Handle linked treatments
+        udb::query("DELETE FROM `units_treats` WHERE `unitID` = " . $uid);
+        if (!empty($data['attributes'])) {
+            $que = [];
+            foreach($data['attributes'] as $attr) {
+                $que[] = '(' . $uid . ', ' . intval($attr) . ')';
+            }
+            if ($que) {
+                $sqlInsert = "INSERT INTO `units_treats` (`unitID`, `treatmentID`) VALUES " . implode(',', $que);
+                udb::query($sqlInsert);
             }
         }
     }
-    $tTreats = [];
-    $tTreats = udb::single_column("select treatmentID from units_treats where unitID=".$uid);
-    $tratsSQL = "SELECT treatments.* FROM `treatments` INNER JOIN treatmentsPricesSites USING(`treatmentID`) where treatmentsPricesSites.siteID = " . $usite . " group by treatmentID";
+    catch (LocalException $e) {
+        $isError = $e->getMessage();
+    }
+    ?>
+    <script>
+        <?php if ($isError) { ?>
+        alert('<?= $isError ?>');
+        <?php } ?>
+    </script>
+    <?php
+}
+
+// If we have a 'del' GET param => remove the specified unit
+if (isset($_GET['del'])) {
+    $delID = intval($_GET['del']);
+    if ($delID > 0) {
+        // You can do a "soft delete" or a real "delete" from DB:
+        udb::query("DELETE FROM `rooms_units` WHERE `unitID` = " . $delID);
+        // Also remove any treatments linked to it
+        udb::query("DELETE FROM `units_treats` WHERE `unitID` = " . $delID);
+    }
+    // Redirect back to main to avoid repeated confirmations
+    echo '<script>window.location.href = "?page=' . $_GET['page'] . '";</script>';
+    exit;
+}
+
+//////////////////////////////////////////////////////
+// If we're editing (or creating) a single unit form //
+//////////////////////////////////////////////////////
+if (isset($_GET['uid'])) {
+    if ($uid > 0) {
+        // Existing
+        $siteData = udb::single_row("SELECT * FROM `rooms_units` WHERE `unitID`=" . $uid);
+        // For listing possible treatments, figure out which site:
+        $usite = 0;
+        if ($siteData) {
+            $usite = udb::single_value("SELECT `siteID` FROM `rooms` WHERE `roomID` = " . $siteData['roomID']);
+        }
+        if (!$usite) {
+            // fallback to current $sid
+            $usite = $sid;
+        }
+        $tTreats = udb::single_column("SELECT treatmentID FROM `units_treats` WHERE `unitID`=" . $uid);
+        if (!$siteData) {
+            // If not found, just treat as new
+            $siteData = [
+                'unitName'      => '',
+                'hasTreatments' => 0,
+                'hasStaying'    => 0,
+                'maxTreatments' => 1,
+            ];
+            $tTreats = [];
+        }
+    } else {
+        // brand new
+        $siteData = [
+            'unitName'      => '',
+            'hasTreatments' => 0,
+            'hasStaying'    => 0,
+            'maxTreatments' => 1,
+        ];
+        $usite = $sid;
+        $tTreats = [];
+    }
+
+    // Fetch possible treatments for $usite
+    $tratsSQL = "SELECT t.* 
+                 FROM `treatments` t
+                 INNER JOIN `treatmentsPricesSites` USING(`treatmentID`) 
+                 WHERE treatmentsPricesSites.siteID = " . intval($usite) . " 
+                 GROUP BY t.treatmentID";
     $treatments = udb::full_list($tratsSQL);
-?>
-<div class="edit_subtitle"><?=$siteData['unitName']?></div>
-<div class="editItems">
-	<a class="backbtn" href="?page=<?=$_GET["page"]?>">חזרה</a>
-	<div class="inputLblWrap ">
-         <div class="frameContent">
-            <form method="post" enctype="multipart/form-data" >
-                <div class="mainSectionWrapper">
-                    <div class="sectionName">הגדרות</div>
 
-                    <div class="inputLblWrap">
-                        <div class="labelTo">שם החדר בעברית</div>
-                        <input type="text" name="uname[1]" value="<?=htmlentities($siteData['unitName'])?>" />
-                    </div>
-                    <div class="inputLblWrap">
-                        <div class="labelTo">שם החדר באנגלית</div>
-                        <input type="text" name="uname[2]" value="<?=htmlentities(Translation::rooms_units($siteData['unitID'], 'unitName', 2))?>" />
+    // For display title
+    $titleName = ($uid > 0 && !empty($siteData['unitName'])) ? $siteData['unitName'] : "חדר חדש";
+    ?>
+    <div class="edit_subtitle"><?= htmlentities($titleName) ?></div>
+    <div class="editItems">
+        <a class="backbtn" href="?page=<?= $_GET["page"] ?>">חזרה</a>
+        <div class="inputLblWrap">
+            <div class="frameContent">
+                <form method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="uid" value="<?= $uid ?>">
+
+                    <div class="mainSectionWrapper">
+                        <div class="sectionName">הגדרות</div>
+
+                        <!-- We no longer show “בחר חדר” since user should not deal with any IDs -->
+
+                        <div class="inputLblWrap">
+                            <div class="labelTo">שם החדר בעברית</div>
+                            <input type="text" name="uname[1]" value="<?= htmlentities($siteData['unitName']) ?>" />
+                        </div>
+                        <div class="inputLblWrap">
+                            <div class="labelTo">שם החדר באנגלית</div>
+                            <input type="text"
+                                   name="uname[2]"
+                                   value="<?= htmlentities(Translation::rooms_units(($uid ?: 0), 'unitName', 2)) ?>" />
+                        </div>
+
+                        <div class="inputLblWrap">
+                            <div class="labelTo">טיפולים בחדר?</div>
+                            <label class="switch">
+                                <input type="checkbox"
+                                       onchange="$('#maxTreats').toggleClass('show', this.checked)"
+                                       name="hasTreatments"
+                                       value="1"
+                                    <?= ($siteData['hasTreatments'] ? 'checked' : '') ?>>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="inputLblWrap">
+                            <div class="labelTo">שהות בחדר?</div>
+                            <label class="switch">
+                                <input type="checkbox"
+                                       name="hasStaying"
+                                       value="1"
+                                    <?= ($siteData['hasStaying'] ? 'checked' : '') ?>>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <style>
+                            #maxTreats { opacity:0; transition:0.2s all; }
+                            #maxTreats.show { opacity:1; }
+                        </style>
+                        <div class="inputLblWrap <?= ($siteData['hasTreatments'] ? 'show' : '') ?>" id="maxTreats">
+                            <div class="labelTo">כמות טיפולים מקסימלית במקביל</div>
+                            <select name="maxTreatments">
+                                <?php
+                                for ($i = 1; $i <= 10; $i++) {
+                                    echo '<option value="', $i, '"',
+                                    ($i == (int)$siteData['maxTreatments'] ? ' selected' : ''),
+                                    '>', $i, '</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>
                     </div>
 
-                    <div class="inputLblWrap">
-                        <div class="labelTo">טיפולים בחדר?</div>
-                        <label class="switch">
-                        <input type="checkbox" onchange=" if($(this).is(':checked')){ $('#maxTreats').addClass('show')}else{$('#maxTreats').removeClass('show')}"  name="hasTreatments" value="1" <?=$siteData['hasTreatments'] == 1 ? ' checked="checked" ' : ''?>>
-                        <span class="slider round"></span>
-                        </label>
+                    <div class="mainSectionWrapper attr">
+                        <div class="sectionName">טיפולים</div>
+                        <div class="checksWrap">
+                            <div><span class="checkall">סמן הכל</span></div>
+                            <?php
+                            if (is_array($treatments)) {
+                                foreach ($treatments as $attribute) {
+                                    $tid = $attribute['treatmentID'];
+                                    ?>
+                                    <div class="checkLabel checkIb">
+                                        <div class="checkBoxWrap">
+                                            <input class="checkBoxGr"
+                                                   type="checkbox"
+                                                   name="attributes[]"
+                                                   value="<?= $tid ?>"
+                                                   id="ch<?= $tid ?>"
+                                                <?= in_array($tid, $tTreats) ? 'checked' : '' ?>>
+                                            <label for="ch<?= $tid ?>"></label>
+                                        </div>
+                                        <label for="ch<?= $tid ?>"><?= $attribute['treatmentName'] ?></label>
+                                    </div>
+                                    <?php
+                                }
+                            }
+                            ?>
+                        </div>
                     </div>
-                    <div class="inputLblWrap">
-                        <div class="labelTo">שהות בחדר?</div>
-                        <label class="switch">
-                        <input type="checkbox"  name="hasStaying" value="1" <?=$siteData['hasStaying'] == 1 ? ' checked="checked" ' : ''?>>
-                        <span class="slider round"></span>
-                        </label>
-                    </div>
-					<style>
-						#maxTreats{opacity:0;transition:0.2s all}
-						#maxTreats.show{opacity:1}
-					</style>
-					<div class="inputLblWrap <?=$siteData['hasTreatments']? "show" : ""?>" id='maxTreats'>
-						<div class="labelTo">כמות טיפולים מקסימלית במקביל</div>
-						<SELECT  name="maxTreatments" value="<?=$siteData['maxTreatments']?>" />
-							<?for($i=1;$i<11;$i++){?>
-								<option value="<?=$i?>" <?=$i== $siteData['maxTreatments']? "selected" : ""?>><?=$i?></option>
-							<?}?>
-						</SELECT>
-					</div>
-                </div>
-                <div class="mainSectionWrapper attr">
-				<div class="sectionName">טיפולים </div>
-                    <div class="checksWrap">
-						<div><span class="checkall">סמן הכל</span></div>
-						<?php foreach($treatments as $attribute) { ?>
-                            <div class="checkLabel checkIb">
-							<div class="checkBoxWrap">
-								<input class="checkBoxGr" type="checkbox" name="attributes[]" <?=(in_array($attribute['treatmentID'],$tTreats)?"checked":"")?> value="<?=$attribute['treatmentID']?>" id="ch<?=$attribute['treatmentID']?>">
-								<label for="ch<?=$attribute['treatmentID']?>"></label>
-							</div>
-							<label for="ch<?=$attribute['treatmentID']?>"><?=$attribute['treatmentName']?></label>
-						</div>
-                        <?php } ?>
-					</div>
-			</div>
-			<input type="submit" value="שמור" id="submitTreats" class="submit not-empty">
-            </form>
+
+                    <input type="submit" value="שמור" id="submitTreats" class="submit not-empty">
+                </form>
+            </div>
         </div>
     </div>
-</div>
-    <?
+    <script>
+        // "Select all" toggle
+        $('.checkall').on('click',function(){
+            $(this).toggleClass('checked');
+            const checked = $(this).hasClass('checked');
+            $(this).html(checked ? 'בטל הכל' : 'סמן הכל');
+            $(this).closest('.mainSectionWrapper').find('input[type=checkbox]').prop('checked', checked);
+        });
+    </script>
+    <?php
 }
+////////////////////////////////////////////////////////
+// Otherwise, show the main table listing all "units" //
+////////////////////////////////////////////////////////
 else {
+    ?>
+    <div class="manageItems" id="manageItems">
+        <h2>רשימת חדרים / יחידות</h2>
 
+        <!-- "Add new" button -->
+        <div style="margin-top: 20px;">
+            <button type="button"
+                    class="addNewRoom"
+                    onclick="openPop(0)">
+                הוסף חדש
+            </button>
+        </div>
 
-?>
-<div class="manageItems" id="manageItems">
-	<div class="tblMobile">
-    <table>
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>חדר</th>
-			<th>חדר טיפולים</th>
-            <th>שהות</th>
-        </tr>
-        </thead>
-        <tbody id="sortRow">
-        <?php
-        $roomsSql = "select * from rooms where siteID=".$sid ;
-        $rooms = udb::full_list($roomsSql);
-        if (count($rooms)){
-            foreach($rooms as $room){
-                $roomID = $room['roomID'];
-                $que = "SELECT u.* 
-                    FROM `rooms_units` AS `u` 
-                    WHERE u.roomID = " . $roomID . " 
-                    GROUP BY u.unitID";
-                $units = udb::key_row($que, 'unitID');
-                foreach($units as $uid => $unit) {
-                    //hasStaying
-                    //hasTreatments
-
-                ?>
-                <tr id="<?=$unit['unitID']?>">
-					<td onclick="openPop(<?=$unit['unitID']?>,'')"><?=$unit['unitID']?></td>
-					<td onclick="openPop(<?=$unit['unitID']?>,'')"><?=outDb($unit['unitName'])?></td>
-					<tD onclick="openPop(<?=$unit['unitID']?>,'')"><?=($unit['hasTreatments']?"<span style='color:green;'>כן</span>":"<span style='color:red;'>לא</span>")?><?=$unit['hasTreatments']? " <span style='display:inline-block'> (".$unit['maxTreatments'].")</span>": "";?></tD>
-					<tD onclick="openPop(<?=$unit['unitID']?>,'')"><?=($unit['hasStaying']?"<span style='color:green;'>כן</span>":"<span style='color:red;'>לא</span>")?></tD>
-
-				</tr>
+        <div class="tblMobile">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>חדר</th>
+                    <th>חדר טיפולים</th>
+                    <th>שהות</th>
+                    <th>מחיקה</th>
+                </tr>
+                </thead>
+                <tbody id="sortRow">
                 <?php
-            }
-            }
+                // We fetch each "parent" room, then child "units"
+                $roomsSql = "SELECT * FROM `rooms` WHERE `siteID`=" . intval($sid);
+                $rooms = udb::full_list($roomsSql);
+                if ($rooms) {
+                    foreach ($rooms as $room) {
+                        $roomID = $room['roomID'];
+                        $que = "SELECT u.*
+                                FROM `rooms_units` AS u
+                                WHERE u.roomID = " . $roomID . "
+                                ORDER BY u.unitID ASC";
+                        $units = udb::key_row($que, 'unitID');
+
+                        if (!empty($units)) {
+                            foreach ($units as $uID => $unit) {
+                                $utitle = outDb($unit['unitName']);
+                                // "חדר טיפולים" boolean
+                                $isTreat = $unit['hasTreatments'] ?
+                                    ("<span style='color:green;'>כן</span> (" . $unit['maxTreatments'] . ")") :
+                                    ("<span style='color:red;'>לא</span>");
+                                // "שהות בחדר" boolean
+                                $isStay  = $unit['hasStaying'] ?
+                                    "<span style='color:green;'>כן</span>" :
+                                    "<span style='color:red;'>לא</span>";
+                                ?>
+                                <tr>
+                                    <td onclick="openPop(<?= $unit['unitID'] ?>)"><?= $unit['unitID'] ?></td>
+                                    <td onclick="openPop(<?= $unit['unitID'] ?>)"><?= $utitle ?></td>
+                                    <td onclick="openPop(<?= $unit['unitID'] ?>)"><?= $isTreat ?></td>
+                                    <td onclick="openPop(<?= $unit['unitID'] ?>)"><?= $isStay ?></td>
+                                    <td>
+                                        <div class="deleteRoom"
+                                             onclick="delRoom(<?= $unit['unitID'] ?>)">
+                                            מחק
+                                        </div>
+                                    </td>
+                                </tr>
+                                <?php
+                            }
+                        }
+                    }
+                }
+                ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        function openPop(uID){
+            location.href = "?page=<?= $_GET['page'] ?>&uid=" + uID;
         }
-        ?>
-        </tbody>
-    </table>
-	</div>
-</div>
-<?} ?><script>
-var pageType="<?=$pageType?>";
-function openPop(pageID, siteName){
-    location.href = "?page=<?=$_GET['page']?>&sid=<?=$sid?>&uid=" + pageID;
+        function delRoom(uID) {
+            if (!confirm('למחוק את החדר?')) return;
+            // Use GET param for simplicity:
+            location.href = "?page=<?= $_GET['page'] ?>&del=" + uID;
+        }
+    </script>
+    <?php
 }
-
-$('.checkall').on('click',function(){
-	//debugger;
-	$(this).toggleClass('checked');
-	if($(this).hasClass('checked')){	
-		$(this).html('בטל הכל');
-		$(this).closest('.mainSectionWrapper').find('input').each(function(){$(this).prop('checked',true)});
-	}else{
-		$(this).closest('.mainSectionWrapper').find('input').each(function(){$(this).prop('checked', false)});
-		$(this).html('סמן הכל');
-	}
-});
-
+?>
+<script>
+    // "Select all" toggle for the main list, if needed
+    $('.checkall').on('click',function(){
+        $(this).toggleClass('checked');
+        if($(this).hasClass('checked')){
+            $(this).html('בטל הכל');
+            $(this).closest('.mainSectionWrapper').find('input').prop('checked',true);
+        } else {
+            $(this).closest('.mainSectionWrapper').find('input').prop('checked', false);
+            $(this).html('סמן הכל');
+        }
+    });
 </script>
